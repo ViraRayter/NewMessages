@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="C:\lazarus\fpc\3.2.0\bin\x86_64-win64\fpc.exe" Date="1381338938"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -g -gl -WG -l -vewnhibq -FiC:\Users\Alexander\Documents\GitHub\NewMessages\lib\x86_64-win64 -FuC:\Users\Alexander\Documents\GitHub\NewMessages\ -FUC:\Users\Alexander\Documents\GitHub\NewMessages\lib\x86_64-win64\ -FEC:\Users\Alexander\Documents\GitHub\NewMessages\ -oC:\Users\Alexander\Documents\GitHub\NewMessages\NewMessages.exe umain.pas"/>
+  <Complete Value="False"/>
+</CONFIG>
