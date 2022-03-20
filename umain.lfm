@@ -1,7 +1,7 @@
 object Main: TMain
-  Left = 559
+  Left = 427
   Height = 497
-  Top = 173
+  Top = 140
   Width = 317
   BorderStyle = bsDialog
   Caption = 'Main'
@@ -40634,10 +40634,10 @@ object Main: TMain
     Transparent = True
   end
   object bMail: TButton
-    Left = 32
-    Height = 63
-    Top = 160
-    Width = 247
+    Left = 64
+    Height = 51
+    Top = 152
+    Width = 192
     Caption = 'E-mail'
     Font.Height = -20
     Font.Name = 'Courier'
@@ -40662,10 +40662,10 @@ object Main: TMain
     WordWrap = True
   end
   object bVK: TButton
-    Left = 32
-    Height = 63
-    Top = 256
-    Width = 247
+    Left = 64
+    Height = 51
+    Top = 232
+    Width = 192
     Caption = 'VK'
     Font.Height = -20
     Font.Name = 'Courier'
@@ -40674,10 +40674,10 @@ object Main: TMain
     TabOrder = 1
   end
   object bDiscord: TButton
-    Left = 32
-    Height = 63
-    Top = 352
-    Width = 247
+    Left = 62
+    Height = 51
+    Top = 308
+    Width = 192
     Caption = 'Discord'
     Font.Height = -20
     Font.Name = 'Courier'
