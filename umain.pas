@@ -15,6 +15,7 @@ type
     bMail: TButton;
     bVK: TButton;
     bDiscord: TButton;
+    Image1: TImage;
     LabelMain: TLabel;
   private
 

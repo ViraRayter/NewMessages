@@ -1,0 +1,64 @@
+object Main: TMain
+  Left = 559
+  Height = 497
+  Top = 173
+  Width = 317
+  BorderStyle = bsDialog
+  Caption = 'Main'
+  ClientHeight = 497
+  ClientWidth = 317
+  Position = poDesktopCenter
+  LCLVersion = '2.0.12.0'
+  object LabelMain: TLabel
+    Left = 32
+    Height = 48
+    Top = 80
+    Width = 251
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'Выберите платформу для рассылки'
+    Font.Height = -20
+    Font.Name = 'Courier'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    ParentShowHint = False
+    WordWrap = True
+  end
+  object bMail: TButton
+    Left = 32
+    Height = 63
+    Top = 160
+    Width = 247
+    Caption = 'E-mail'
+    Font.Height = -20
+    Font.Name = 'Courier'
+    Font.Style = [fsItalic]
+    ParentFont = False
+    TabOrder = 0
+  end
+  object bVK: TButton
+    Left = 32
+    Height = 63
+    Top = 256
+    Width = 247
+    Caption = 'VK'
+    Font.Height = -20
+    Font.Name = 'Courier'
+    Font.Style = [fsItalic]
+    ParentFont = False
+    TabOrder = 1
+  end
+  object bDiscord: TButton
+    Left = 32
+    Height = 63
+    Top = 352
+    Width = 247
+    Caption = 'Discord'
+    Font.Height = -20
+    Font.Name = 'Courier'
+    Font.Style = [fsItalic]
+    ParentFont = False
+    TabOrder = 2
+  end
+end
