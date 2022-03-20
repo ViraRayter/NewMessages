@@ -1,0 +1,108 @@
+object FSend: TFSend
+  Left = 800
+  Height = 500
+  Top = 155
+  Width = 300
+  Caption = 'FSend'
+  ClientHeight = 500
+  ClientWidth = 300
+  LCLVersion = '2.2.0.4'
+  object MText: TMemo
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = Owner
+    AnchorSideTop.Side = asrCenter
+    Left = 25
+    Height = 200
+    Top = 150
+    Width = 250
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -16
+    Font.Name = 'Courier'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    ParentFont = False
+    ParentShowHint = False
+    ScrollBars = ssAutoVertical
+    ShowHint = True
+    TabOrder = 0
+  end
+  object LText: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Side = asrBottom
+    AnchorSideBottom.Control = MText
+    Left = 75
+    Height = 16
+    Top = 124
+    Width = 151
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Bottom = 10
+    Caption = 'Текст сообщения'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -16
+    Font.Name = 'Courier'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object ETopic: TEdit
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideBottom.Control = LText
+    Left = 25
+    Height = 24
+    Top = 85
+    Width = 250
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Bottom = 15
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -16
+    Font.Name = 'Courier'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 1
+    TextHint = 'Тема сообщения'
+  end
+  object LTopic: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideBottom.Control = ETopic
+    Left = 130
+    Height = 16
+    Top = 59
+    Width = 41
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Bottom = 10
+    Caption = 'Тема'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -16
+    Font.Name = 'Courier'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Button1: TButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = MText
+    AnchorSideTop.Side = asrBottom
+    Left = 90
+    Height = 40
+    Top = 375
+    Width = 120
+    BorderSpacing.Top = 25
+    Caption = 'Готово'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -16
+    Font.Name = 'Courier'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+  end
+end

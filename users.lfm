@@ -1,0 +1,74 @@
+object fUsers: TfUsers
+  Left = 473
+  Height = 297
+  Top = 108
+  Width = 300
+  Caption = 'Авторизация'
+  ClientHeight = 297
+  ClientWidth = 300
+  LCLVersion = '2.0.10.0'
+  object Label1: TLabel
+    Left = 56
+    Height = 52
+    Top = 40
+    Width = 192
+    Alignment = taCenter
+    Caption = 'Авторизация'#13#10'пользователя'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -27
+    Font.Name = 'Courier'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object bNext: TButton
+    Left = 96
+    Height = 48
+    Top = 216
+    Width = 120
+    Caption = 'Далее'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -20
+    Font.Name = 'Courier'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    Font.Style = [fsItalic]
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Choose: TCheckComboBox
+    Left = 58
+    Height = 24
+    Top = 136
+    Width = 190
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -13
+    Font.Name = 'Courier'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    ItemHeight = 16
+    Items.Strings = (
+      'Пример1'
+      'Пример2'
+      'Пример3'
+      'Пример4'
+      'Пример5'
+      'Пример6'
+      'Пример7'
+      'Пример8'
+      'Пример9'
+      'Пример10'
+      'Пример11'
+      'Пример12'
+      'Пример13'
+      'Пример14'
+      'Пример15'
+    )
+    ParentFont = False
+    TabOrder = 1
+  end
+end
