@@ -1,19 +1,20 @@
 object Main: TMain
-  Left = 428
-  Height = 497
-  Top = 158
-  Width = 317
+  Left = 602
+  Height = 500
+  Top = 170
+  Width = 300
   BorderStyle = bsDialog
   Caption = 'Main'
-  ClientHeight = 497
-  ClientWidth = 317
+  ClientHeight = 500
+  ClientWidth = 300
   Position = poDesktopCenter
   LCLVersion = '2.0.12.0'
   object Image1: TImage
     Left = 0
-    Height = 497
+    Height = 501
     Top = 0
-    Width = 317
+    Width = 300
+    Anchors = [akLeft, akRight]
     Picture.Data = {
       1754506F727461626C654E6574776F726B4772617068696386D4130089504E47
       0D0A1A0A0000000D49484452000002A8000003E708020000006CA32906000000
@@ -40634,10 +40635,11 @@ object Main: TMain
     Transparent = True
   end
   object bMail: TButton
-    Left = 64
-    Height = 51
-    Top = 152
-    Width = 192
+    Left = 65
+    Height = 28
+    Top = 176
+    Width = 173
+    Anchors = [akLeft, akRight]
     Caption = 'E-mail'
     Font.Height = -20
     Font.Name = 'Courier'
@@ -40646,11 +40648,12 @@ object Main: TMain
     TabOrder = 0
   end
   object LabelMain: TLabel
-    Left = 32
-    Height = 48
-    Top = 88
-    Width = 251
+    Left = 33
+    Height = 64
+    Top = 72
+    Width = 234
     Alignment = taCenter
+    Anchors = [akLeft, akRight]
     AutoSize = False
     Caption = 'Выберите платформу для рассылки'
     Font.Height = -20
@@ -40662,10 +40665,11 @@ object Main: TMain
     WordWrap = True
   end
   object bVK: TButton
-    Left = 64
-    Height = 51
-    Top = 232
-    Width = 192
+    Left = 65
+    Height = 29
+    Top = 256
+    Width = 175
+    Anchors = [akLeft, akRight]
     Caption = 'VK'
     Font.Height = -20
     Font.Name = 'Courier'
@@ -40674,10 +40678,11 @@ object Main: TMain
     TabOrder = 1
   end
   object bDiscord: TButton
-    Left = 62
-    Height = 51
-    Top = 308
-    Width = 192
+    Left = 63
+    Height = 33
+    Top = 328
+    Width = 178
+    Anchors = [akLeft, akRight]
     Caption = 'Discord'
     Font.Height = -20
     Font.Name = 'Courier'
