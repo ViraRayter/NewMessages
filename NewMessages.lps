@@ -79,7 +79,7 @@
         <UsageCount Value="10"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="2">
+    <JumpHistory HistoryIndex="3">
       <Position>
         <Filename Value="umain.pas"/>
         <Caret Line="8" Column="22"/>
@@ -91,6 +91,9 @@
       <Position>
         <Filename Value="umain.pas"/>
         <Caret Line="8" Column="22"/>
+      </Position>
+      <Position>
+        <Filename Value="usend.pas"/>
       </Position>
     </JumpHistory>
     <RunParams>
