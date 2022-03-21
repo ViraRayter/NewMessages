@@ -40643,7 +40643,6 @@ object fend: Tfend
     Caption = 'Выйти'
     Font.Height = -20
     Font.Name = 'Courier'
-    Font.Style = [fsItalic]
     ParentFont = False
     TabOrder = 0
   end

@@ -40643,7 +40643,6 @@ object Main: TMain
     Caption = 'E-mail'
     Font.Height = -20
     Font.Name = 'Courier'
-    Font.Style = [fsItalic]
     ParentFont = False
     TabOrder = 0
   end
@@ -40672,7 +40671,6 @@ object Main: TMain
     Caption = 'VK'
     Font.Height = -20
     Font.Name = 'Courier'
-    Font.Style = [fsItalic]
     ParentFont = False
     TabOrder = 1
   end
@@ -40685,7 +40683,6 @@ object Main: TMain
     Caption = 'Discord'
     Font.Height = -20
     Font.Name = 'Courier'
-    Font.Style = [fsItalic]
     ParentFont = False
     TabOrder = 2
   end
