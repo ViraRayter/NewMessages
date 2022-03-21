@@ -40635,10 +40635,10 @@ object Main: TMain
     Transparent = True
   end
   object bMail: TButton
-    Left = 65
-    Height = 28
-    Top = 176
-    Width = 173
+    Left = 19
+    Height = 35
+    Top = 168
+    Width = 263
     Anchors = [akLeft, akRight]
     Caption = 'E-mail'
     Font.Height = -20
@@ -40648,10 +40648,10 @@ object Main: TMain
     TabOrder = 0
   end
   object LabelMain: TLabel
-    Left = 33
+    Left = 26
     Height = 64
-    Top = 72
-    Width = 234
+    Top = 96
+    Width = 246
     Alignment = taCenter
     Anchors = [akLeft, akRight]
     AutoSize = False
@@ -40665,10 +40665,10 @@ object Main: TMain
     WordWrap = True
   end
   object bVK: TButton
-    Left = 65
-    Height = 29
-    Top = 256
-    Width = 175
+    Left = 19
+    Height = 35
+    Top = 240
+    Width = 263
     Anchors = [akLeft, akRight]
     Caption = 'VK'
     Font.Height = -20
@@ -40678,10 +40678,10 @@ object Main: TMain
     TabOrder = 1
   end
   object bDiscord: TButton
-    Left = 63
-    Height = 33
-    Top = 328
-    Width = 178
+    Left = 19
+    Height = 35
+    Top = 312
+    Width = 263
     Anchors = [akLeft, akRight]
     Caption = 'Discord'
     Font.Height = -20

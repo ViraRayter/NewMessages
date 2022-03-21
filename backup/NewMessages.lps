@@ -9,7 +9,6 @@
         <ComponentName Value="Main"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <CursorPos X="22" Y="8"/>
         <UsageCount Value="10"/>
         <Loaded Value="True"/>
@@ -43,17 +42,22 @@
       </Unit3>
       <Unit4>
         <Filename Value="NewMessages.lpr"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="3"/>
+        <CursorPos X="29" Y="13"/>
         <UsageCount Value="10"/>
         <Loaded Value="True"/>
       </Unit4>
     </Units>
-    <JumpHistory Count="1">
+    <JumpHistory Count="2" HistoryIndex="1">
       <Position1>
         <Filename Value="umain.pas"/>
         <Caret Line="8" Column="22"/>
       </Position1>
+      <Position2>
+        <Filename Value="NewMessages.lpr"/>
+        <Caret Line="13" Column="38"/>
+      </Position2>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
