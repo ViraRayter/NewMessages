@@ -1,10 +1,10 @@
-object uend: Tuend
+object fend: Tfend
   Left = 699
   Height = 500
   Top = 120
   Width = 300
   BorderStyle = bsDialog
-  Caption = 'uend'
+  Caption = 'fend'
   ClientHeight = 500
   ClientWidth = 300
   Position = poDesktopCenter
@@ -14,6 +14,7 @@ object uend: Tuend
     Height = 506
     Top = -2
     Width = 306
+    Anchors = [akLeft, akRight]
     Picture.Data = {
       1754506F727461626C654E6574776F726B4772617068696386D4130089504E47
       0D0A1A0A0000000D49484452000002A8000003E708020000006CA32906000000

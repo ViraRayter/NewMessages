@@ -1,7 +1,7 @@
 object FSend: TFSend
-  Left = 800
+  Left = 672
   Height = 500
-  Top = 155
+  Top = 123
   Width = 300
   Caption = 'FSend'
   ClientHeight = 500

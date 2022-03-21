@@ -9,7 +9,6 @@
         <Filename Value="NewMessages.lpr"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="3"/>
         <CursorPos X="35" Y="13"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
@@ -24,6 +23,7 @@
         <EditorIndex Value="1"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="umain.pas"/>
@@ -47,6 +47,19 @@
         <Loaded Value="True"/>
       </Unit>
       <Unit>
+        <Filename Value="uend.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fend"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="7"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
         <Filename Value="umain.lfm"/>
         <ComponentName Value="Main"/>
         <HasResources Value="True"/>
@@ -64,20 +77,8 @@
         <WindowIndex Value="-1"/>
         <UsageCount Value="10"/>
       </Unit>
-      <Unit>
-        <Filename Value="uend.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="uend"/>
-        <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="2"/>
-        <TopLine Value="8"/>
-        <UsageCount Value="20"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
-      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="2">
+    <JumpHistory HistoryIndex="5">
       <Position>
         <Filename Value="umain.pas"/>
         <Caret Line="8" Column="22"/>
@@ -89,6 +90,17 @@
       <Position>
         <Filename Value="umain.pas"/>
         <Caret Line="8" Column="22"/>
+      </Position>
+      <Position>
+        <Filename Value="usend.pas"/>
+      </Position>
+      <Position>
+        <Filename Value="uend.pas"/>
+        <Caret Line="25" Column="3" TopLine="8"/>
+      </Position>
+      <Position>
+        <Filename Value="uend.pas"/>
+        <Caret Line="27" Column="12"/>
       </Position>
     </JumpHistory>
     <RunParams>

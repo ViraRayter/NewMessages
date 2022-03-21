@@ -22,7 +22,7 @@ begin
   Application.CreateForm(TMain, Main);
   Application.CreateForm(TFSend, FSend);
   Application.CreateForm(TfUsers, fUsers);
-  Application.CreateForm(Tuend, uend);
+  Application.CreateForm(Tfend, fend);
   Application.Run;
 end.
 

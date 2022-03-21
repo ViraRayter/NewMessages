@@ -9,9 +9,9 @@ uses
 
 type
 
-  { Tuend }
+  { Tfend }
 
-  Tuend = class(TForm)
+  Tfend = class(TForm)
     bExit: TButton;
     Image1: TImage;
     LabelEnd: TLabel;
@@ -22,7 +22,7 @@ type
   end;
 
 var
-  uend: Tuend;
+  fend: Tfend;
 
 implementation
 

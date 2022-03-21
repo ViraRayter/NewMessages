@@ -5,7 +5,7 @@ unit USend;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls;
 
 type
 
@@ -14,6 +14,7 @@ type
   TFSend = class(TForm)
     Button1: TButton;
     ETopic: TEdit;
+    Image1: TImage;
     LText: TLabel;
     LTopic: TLabel;
     MText: TMemo;

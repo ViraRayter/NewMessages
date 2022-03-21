@@ -59,7 +59,7 @@
       <Unit>
         <Filename Value="uend.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="uend"/>
+        <ComponentName Value="fend"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit>
