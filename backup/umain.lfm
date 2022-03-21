@@ -1,14 +1,14 @@
 object Main: TMain
-  Left = 602
+  Left = 1179
   Height = 500
-  Top = 170
+  Top = 153
   Width = 300
   BorderStyle = bsDialog
   Caption = 'Main'
   ClientHeight = 500
   ClientWidth = 300
   Position = poDesktopCenter
-  LCLVersion = '2.0.12.0'
+  LCLVersion = '2.2.0.4'
   object Image1: TImage
     Left = 0
     Height = 501
@@ -40659,7 +40659,6 @@ object Main: TMain
     Font.Height = -20
     Font.Name = 'Courier'
     Font.Style = [fsBold]
-    ParentColor = False
     ParentFont = False
     ParentShowHint = False
     WordWrap = True

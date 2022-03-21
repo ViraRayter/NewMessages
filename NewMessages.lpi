@@ -46,12 +46,20 @@
         <Filename Value="umain.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Main"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit>
       <Unit>
         <Filename Value="users.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="fUsers"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uend.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="uend"/>
         <ResourceBaseClass Value="Form"/>
       </Unit>
     </Units>
@@ -67,6 +75,9 @@
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>
+      <Debugging>
+        <DebugInfoType Value="dsDwarf2Set"/>
+      </Debugging>
       <Options>
         <Win32>
           <GraphicApplication Value="True"/>
