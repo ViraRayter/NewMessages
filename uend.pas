@@ -15,6 +15,7 @@ type
     bExit: TButton;
     Image1: TImage;
     LabelEnd: TLabel;
+    procedure bExitClick(Sender: TObject);
   private
 
   public
@@ -26,7 +27,16 @@ var
 
 implementation
 
+uses usend;
 {$R *.lfm}
+
+{ Tfend }
+
+procedure Tfend.bExitClick(Sender: TObject);
+begin
+  fend.Visible:=false;
+  fsend.ShowModal;
+end;
 
 end.
 

@@ -1,7 +1,7 @@
 object fend: Tfend
-  Left = 699
+  Left = 102
   Height = 500
-  Top = 120
+  Top = 164
   Width = 300
   BorderStyle = bsDialog
   Caption = 'fend'
@@ -8284,6 +8284,7 @@ object fend: Tfend
     Caption = 'Выйти'
     Font.Height = -20
     Font.Name = 'Courier'
+    OnClick = bExitClick
     ParentFont = False
     TabOrder = 0
   end

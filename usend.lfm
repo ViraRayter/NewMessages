@@ -1,15 +1,15 @@
 object FSend: TFSend
-  Left = 672
-  Height = 500
-  Top = 123
+  Left = 751
+  Height = 510
+  Top = 109
   Width = 300
   Caption = 'FSend'
-  ClientHeight = 500
+  ClientHeight = 510
   ClientWidth = 300
   LCLVersion = '2.2.0.4'
   object Fon: TImage
     Left = 0
-    Height = 500
+    Height = 510
     Top = 0
     Width = 300
     Align = alClient
@@ -8277,7 +8277,7 @@ object FSend: TFSend
     AnchorSideTop.Side = asrCenter
     Left = 25
     Height = 200
-    Top = 150
+    Top = 155
     Width = 250
     Font.CharSet = RUSSIAN_CHARSET
     Font.Height = -16
@@ -8301,7 +8301,7 @@ object FSend: TFSend
     AnchorSideBottom.Control = MText
     Left = 65
     Height = 20
-    Top = 120
+    Top = 125
     Width = 170
     Anchors = [akLeft, akBottom]
     BorderSpacing.Bottom = 10
@@ -8321,7 +8321,7 @@ object FSend: TFSend
     AnchorSideBottom.Control = LText
     Left = 25
     Height = 24
-    Top = 81
+    Top = 86
     Width = 250
     Anchors = [akLeft, akBottom]
     BorderSpacing.Bottom = 15
@@ -8341,7 +8341,7 @@ object FSend: TFSend
     AnchorSideBottom.Control = ETopic
     Left = 59
     Height = 20
-    Top = 51
+    Top = 56
     Width = 183
     Anchors = [akLeft, akBottom]
     BorderSpacing.Bottom = 10
@@ -8362,7 +8362,7 @@ object FSend: TFSend
     AnchorSideTop.Side = asrBottom
     Left = 50
     Height = 35
-    Top = 425
+    Top = 430
     Width = 200
     BorderSpacing.Top = 25
     Caption = 'Готово'
@@ -8381,7 +8381,7 @@ object FSend: TFSend
     AnchorSideTop.Side = asrBottom
     Left = 25
     Height = 35
-    Top = 365
+    Top = 370
     Width = 35
     BorderSpacing.Left = 25
     BorderSpacing.Top = 15
@@ -8499,7 +8499,7 @@ object FSend: TFSend
     AnchorSideTop.Side = asrCenter
     Left = 70
     Height = 16
-    Top = 374
+    Top = 379
     Width = 117
     BorderSpacing.Left = 10
     BorderSpacing.Bottom = 10
@@ -8518,7 +8518,7 @@ object FSend: TFSend
     AnchorSideTop.Side = asrBottom
     Left = 25
     Height = 23
-    Top = 16
+    Top = 17
     Width = 80
     Anchors = [akLeft]
     AutoSize = True

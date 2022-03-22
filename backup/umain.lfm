@@ -11,7 +11,7 @@ object Main: TMain
   LCLVersion = '2.2.0.4'
   object Image1: TImage
     Left = 0
-    Height = 501
+    Height = 500
     Top = 0
     Width = 300
     Align = alClient
@@ -8284,6 +8284,7 @@ object Main: TMain
     Caption = 'E-mail'
     Font.Height = -20
     Font.Name = 'Courier'
+    OnClick = bMailClick
     ParentFont = False
     TabOrder = 0
   end
@@ -8312,6 +8313,7 @@ object Main: TMain
     Caption = 'VK'
     Font.Height = -20
     Font.Name = 'Courier'
+    OnClick = bVKClick
     ParentFont = False
     TabOrder = 1
   end
@@ -8324,6 +8326,7 @@ object Main: TMain
     Caption = 'Discord'
     Font.Height = -20
     Font.Name = 'Courier'
+    OnClick = bDiscordClick
     ParentFont = False
     TabOrder = 2
   end

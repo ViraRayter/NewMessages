@@ -9,8 +9,8 @@
         <Filename Value="NewMessages.lpr"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="3"/>
-        <CursorPos X="35" Y="13"/>
-        <UsageCount Value="21"/>
+        <CursorPos X="47" Y="13"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -21,7 +21,7 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="USend"/>
         <EditorIndex Value="1"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -31,8 +31,9 @@
         <ComponentName Value="Main"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <CursorPos X="22" Y="8"/>
-        <UsageCount Value="21"/>
+        <TopLine Value="31"/>
+        <CursorPos Y="41"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -43,7 +44,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="4"/>
-        <UsageCount Value="21"/>
+        <TopLine Value="10"/>
+        <CursorPos X="15" Y="28"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -55,11 +58,10 @@
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="8"/>
-        <CursorPos X="7"/>
-        <UsageCount Value="21"/>
+        <TopLine Value="17"/>
+        <CursorPos X="12" Y="30"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="umain.lfm"/>
@@ -79,33 +81,138 @@
         <WindowIndex Value="-1"/>
         <UsageCount Value="10"/>
       </Unit>
+      <Unit>
+        <Filename Value="selectuser.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fSelectU"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="29"/>
+        <CursorPos Y="42"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="6">
+    <JumpHistory HistoryIndex="29">
       <Position>
         <Filename Value="umain.pas"/>
-        <Caret Line="8" Column="22"/>
-      </Position>
-      <Position>
-        <Filename Value="NewMessages.lpr"/>
-        <Caret Line="13" Column="38"/>
+        <Caret Line="40" Column="3" TopLine="19"/>
       </Position>
       <Position>
         <Filename Value="umain.pas"/>
-        <Caret Line="8" Column="22"/>
+        <Caret Line="51" Column="3" TopLine="27"/>
       </Position>
       <Position>
-        <Filename Value="usend.pas"/>
+        <Filename Value="users.pas"/>
+        <Caret Line="30" Column="12" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="umain.pas"/>
+        <Caret Line="42" Column="9" TopLine="34"/>
+      </Position>
+      <Position>
+        <Filename Value="users.pas"/>
+        <Caret Line="30" Column="10" TopLine="6"/>
+      </Position>
+      <Position>
+        <Filename Value="umain.pas"/>
+        <Caret Line="33" Column="13" TopLine="22"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="21" Column="17"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Column="16"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="20" Column="28" TopLine="6"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="21" Column="28" TopLine="21"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="20" Column="28" TopLine="20"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="19" Column="28" TopLine="19"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="18" Column="20" TopLine="18"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="19" Column="20" TopLine="19"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="20" Column="28" TopLine="20"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="21" Column="28" TopLine="21"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="22" Column="28" TopLine="22"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="21" Column="28" TopLine="21"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="20" Column="28" TopLine="20"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="19" Column="20" TopLine="19"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="18" Column="20" TopLine="18"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="19" Column="24" TopLine="19"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="18" Column="20" TopLine="18"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="19" Column="20" TopLine="19"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="18" Column="20" TopLine="18"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="19" Column="20" TopLine="19"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="21" Column="43" TopLine="11"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="34" Column="12" TopLine="22"/>
       </Position>
       <Position>
         <Filename Value="uend.pas"/>
-        <Caret Line="25" Column="3" TopLine="8"/>
+        <Caret Column="7" TopLine="8"/>
       </Position>
       <Position>
         <Filename Value="uend.pas"/>
-        <Caret Line="27" Column="12"/>
-      </Position>
-      <Position>
-        <Filename Value="usend.pas"/>
+        <Caret Line="37" Column="4" TopLine="16"/>
       </Position>
     </JumpHistory>
     <RunParams>

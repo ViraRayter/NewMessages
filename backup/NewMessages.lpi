@@ -63,6 +63,12 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit>
+      <Unit>
+        <Filename Value="selectuser.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fSelectU"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

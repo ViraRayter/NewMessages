@@ -26,7 +26,6 @@ var
   fUsers: TfUsers;
 
 implementation
-
 {$R *.lfm}
 
 { TfUsers }
