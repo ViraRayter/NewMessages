@@ -13,9 +13,13 @@ type
   { TfUsers }
 
   TfUsers = class(TForm)
-    bNext: TButton;
-    Choose: TCheckComboBox;
-    Label1: TLabel;
+    BBack: TButton;
+    BNext: TButton;
+    EName: TEdit;
+    EPass: TEdit;
+    Fon: TImage;
+    LName: TLabel;
+    LPass: TLabel;
   private
 
   public

@@ -1,5 +1,5 @@
 object FSend: TFSend
-  Left = 709
+  Left = 751
   Height = 510
   Top = 109
   Width = 300
