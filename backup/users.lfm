@@ -1,12 +1,12 @@
 object fUsers: TfUsers
-  Left = 473
+  Left = 18
   Height = 297
-  Top = 108
+  Top = 340
   Width = 300
   Caption = 'Авторизация'
   ClientHeight = 297
   ClientWidth = 300
-  LCLVersion = '2.0.10.0'
+  LCLVersion = '2.2.0.4'
   object Label1: TLabel
     Left = 56
     Height = 52
@@ -20,7 +20,6 @@ object fUsers: TfUsers
     Font.Name = 'Courier'
     Font.Pitch = fpFixed
     Font.Quality = fqDraft
-    ParentColor = False
     ParentFont = False
   end
   object bNext: TButton
@@ -41,7 +40,7 @@ object fUsers: TfUsers
   end
   object Choose: TCheckComboBox
     Left = 58
-    Height = 24
+    Height = 22
     Top = 136
     Width = 190
     Font.CharSet = RUSSIAN_CHARSET

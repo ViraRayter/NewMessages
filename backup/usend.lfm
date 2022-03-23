@@ -1,15 +1,15 @@
 object FSend: TFSend
-  Left = 709
-  Height = 510
+  Left = 751
+  Height = 500
   Top = 109
   Width = 300
   Caption = 'FSend'
-  ClientHeight = 510
+  ClientHeight = 500
   ClientWidth = 300
   LCLVersion = '2.2.0.4'
   object Fon: TImage
     Left = 0
-    Height = 510
+    Height = 500
     Top = 0
     Width = 300
     Align = alClient
@@ -8277,7 +8277,7 @@ object FSend: TFSend
     AnchorSideTop.Side = asrCenter
     Left = 25
     Height = 200
-    Top = 155
+    Top = 150
     Width = 250
     Font.CharSet = RUSSIAN_CHARSET
     Font.Height = -16
@@ -8301,7 +8301,7 @@ object FSend: TFSend
     AnchorSideBottom.Control = MText
     Left = 65
     Height = 20
-    Top = 125
+    Top = 120
     Width = 170
     Anchors = [akLeft, akBottom]
     BorderSpacing.Bottom = 10
@@ -8321,7 +8321,7 @@ object FSend: TFSend
     AnchorSideBottom.Control = LText
     Left = 25
     Height = 24
-    Top = 86
+    Top = 81
     Width = 250
     Anchors = [akLeft, akBottom]
     BorderSpacing.Bottom = 15
@@ -8341,7 +8341,7 @@ object FSend: TFSend
     AnchorSideBottom.Control = ETopic
     Left = 59
     Height = 20
-    Top = 56
+    Top = 51
     Width = 183
     Anchors = [akLeft, akBottom]
     BorderSpacing.Bottom = 10
@@ -8362,7 +8362,7 @@ object FSend: TFSend
     AnchorSideTop.Side = asrBottom
     Left = 50
     Height = 35
-    Top = 430
+    Top = 425
     Width = 200
     BorderSpacing.Top = 25
     Caption = 'Готово'
@@ -8381,7 +8381,7 @@ object FSend: TFSend
     AnchorSideTop.Side = asrBottom
     Left = 25
     Height = 35
-    Top = 370
+    Top = 365
     Width = 35
     BorderSpacing.Left = 25
     BorderSpacing.Top = 15
@@ -8499,7 +8499,7 @@ object FSend: TFSend
     AnchorSideTop.Side = asrCenter
     Left = 70
     Height = 16
-    Top = 379
+    Top = 374
     Width = 117
     BorderSpacing.Left = 10
     BorderSpacing.Bottom = 10
@@ -8514,16 +8514,14 @@ object FSend: TFSend
   end
   object BBack: TButton
     AnchorSideLeft.Control = Owner
-    AnchorSideTop.Control = MText
-    AnchorSideTop.Side = asrBottom
+    AnchorSideTop.Control = Owner
     Left = 25
     Height = 23
-    Top = 17
+    Top = 15
     Width = 80
-    Anchors = [akLeft]
     AutoSize = True
     BorderSpacing.Left = 25
-    BorderSpacing.Top = 25
+    BorderSpacing.Top = 15
     Caption = '<Назад'
     Font.CharSet = RUSSIAN_CHARSET
     Font.Color = clBlack
