@@ -31,6 +31,7 @@
         <ComponentName Value="Main"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <TopLine Value="31"/>
         <CursorPos Y="41"/>
         <UsageCount Value="22"/>
@@ -46,6 +47,7 @@
         <EditorIndex Value="4"/>
         <TopLine Value="10"/>
         <CursorPos X="15" Y="28"/>
+        <ComponentState Value="1"/>
         <UsageCount Value="22"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -56,11 +58,22 @@
         <ComponentName Value="fend"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
         <TopLine Value="17"/>
         <CursorPos X="12" Y="30"/>
         <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="selectuser.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fSelectU"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="29"/>
+        <CursorPos Y="42"/>
+        <UsageCount Value="21"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -81,19 +94,8 @@
         <WindowIndex Value="-1"/>
         <UsageCount Value="10"/>
       </Unit>
-      <Unit>
-        <Filename Value="selectuser.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="fSelectU"/>
-        <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="5"/>
-        <TopLine Value="29"/>
-        <CursorPos Y="42"/>
-        <UsageCount Value="21"/>
-        <Loaded Value="True"/>
-      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="29">
+    <JumpHistory HistoryIndex="28">
       <Position>
         <Filename Value="umain.pas"/>
         <Caret Line="40" Column="3" TopLine="19"/>
@@ -205,10 +207,6 @@
       <Position>
         <Filename Value="selectuser.pas"/>
         <Caret Line="34" Column="12" TopLine="22"/>
-      </Position>
-      <Position>
-        <Filename Value="uend.pas"/>
-        <Caret Column="7" TopLine="8"/>
       </Position>
       <Position>
         <Filename Value="uend.pas"/>
