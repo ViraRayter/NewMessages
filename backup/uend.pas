@@ -27,7 +27,6 @@ var
 
 implementation
 
-uses usend;
 {$R *.lfm}
 
 { Tfend }

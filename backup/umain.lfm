@@ -1,7 +1,7 @@
 object Main: TMain
-  Left = 1052
+  Left = 1002
   Height = 500
-  Top = 109
+  Top = 120
   Width = 300
   BorderStyle = bsDialog
   Caption = 'Main'
