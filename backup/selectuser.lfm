@@ -1,7 +1,7 @@
 object fSelectU: TfSelectU
-  Left = 402
+  Left = 153
   Height = 500
-  Top = 120
+  Top = 128
   Width = 300
   Caption = 'fSelectU'
   ClientHeight = 500
@@ -8276,16 +8276,18 @@ object fSelectU: TfSelectU
     Top = 8
     Width = 75
     Caption = '<Назад'
+    OnClick = bBackClick
     TabOrder = 0
   end
   object Label1: TLabel
-    Left = 36
+    Left = 26
     Height = 20
     Top = 96
-    Width = 228
+    Width = 248
     Caption = 'Выберите получателя'
     Font.Height = -20
     Font.Name = 'Courier'
+    Font.Style = [fsBold]
     ParentFont = False
   end
   object bAdd: TButton

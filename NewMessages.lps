@@ -43,7 +43,6 @@
         <ComponentName Value="fUsers"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="4"/>
         <TopLine Value="10"/>
         <CursorPos X="15" Y="28"/>
@@ -68,12 +67,15 @@
         <Filename Value="selectuser.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="fSelectU"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="5"/>
         <TopLine Value="29"/>
         <CursorPos Y="42"/>
         <UsageCount Value="21"/>
         <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="umain.lfm"/>

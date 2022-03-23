@@ -18,6 +18,7 @@ type
     bNext: TButton;
     Image1: TImage;
     Label1: TLabel;
+    procedure bBackClick(Sender: TObject);
     procedure bNextClick(Sender: TObject);
   private
 
@@ -30,7 +31,7 @@ var
 
 implementation
 
-uses usend;
+uses usend,users;
 {$R *.lfm}
 
 { TfSelectU }
@@ -40,6 +41,12 @@ procedure TfSelectU.bNextClick(Sender: TObject);
 begin
   fSelectU.Visible:=false;
   FSend.ShowModal;
+end;
+
+procedure TfSelectU.bBackClick(Sender: TObject);
+begin
+  fSelectU.Visible:=false;
+  fUsers.ShowModal;
 end;
 
 end.

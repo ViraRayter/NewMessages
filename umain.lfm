@@ -8282,8 +8282,9 @@ object Main: TMain
     Width = 263
     Anchors = [akLeft, akRight]
     Caption = 'E-mail'
-    Font.Height = -20
+    Font.Height = -16
     Font.Name = 'Courier'
+    Font.Style = [fsBold]
     OnClick = bMailClick
     ParentFont = False
     TabOrder = 0
@@ -8311,8 +8312,9 @@ object Main: TMain
     Width = 263
     Anchors = [akLeft, akRight]
     Caption = 'VK'
-    Font.Height = -20
+    Font.Height = -16
     Font.Name = 'Courier'
+    Font.Style = [fsBold]
     OnClick = bVKClick
     ParentFont = False
     TabOrder = 1
@@ -8324,8 +8326,9 @@ object Main: TMain
     Width = 263
     Anchors = [akLeft, akRight]
     Caption = 'Discord'
-    Font.Height = -20
+    Font.Height = -16
     Font.Name = 'Courier'
+    Font.Style = [fsBold]
     OnClick = bDiscordClick
     ParentFont = False
     TabOrder = 2
