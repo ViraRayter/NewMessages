@@ -1,7 +1,7 @@
 object fSelectU: TfSelectU
-  Left = 249
+  Left = 572
   Height = 500
-  Top = 104
+  Top = 106
   Width = 300
   Caption = 'fSelectU'
   ClientHeight = 500
@@ -8318,5 +8318,39 @@ object fSelectU: TfSelectU
     OnClick = bNextClick
     ParentFont = False
     TabOrder = 2
+  end
+  object CheckUsers: TCheckListBox
+    Left = 26
+    Height = 208
+    Top = 136
+    Width = 248
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -13
+    Font.Name = 'Courier'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    Items.Strings = (
+      'Пример1'
+      'Пример2'
+      'Пример3'
+      'Пример4'
+      'Пример5'
+      'Пример6'
+      'Пример7'
+      'Пример8'
+      'Пример9'
+      'Пример10'
+      'Пример11'
+      'Пример12'
+      'Пример13'
+      'Пример14'
+      'Пример15'
+    )
+    ItemHeight = 17
+    ParentFont = False
+    TabOrder = 3
+    Data = {
+      0F000000000000000000000000000000000000
+    }
   end
 end

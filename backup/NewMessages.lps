@@ -9,7 +9,7 @@
         <Filename Value="NewMessages.lpr"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="3"/>
-        <CursorPos X="47" Y="13"/>
+        <CursorPos Y="28"/>
         <UsageCount Value="22"/>
         <Loaded Value="True"/>
       </Unit>
@@ -32,7 +32,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <TopLine Value="31"/>
-        <CursorPos Y="41"/>
+        <CursorPos X="3" Y="41"/>
         <UsageCount Value="22"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -43,9 +43,9 @@
         <ComponentName Value="fUsers"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="4"/>
-        <TopLine Value="10"/>
-        <CursorPos X="15" Y="28"/>
+        <CursorPos X="22" Y="9"/>
         <UsageCount Value="22"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -69,10 +69,9 @@
         <ComponentName Value="fSelectU"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="5"/>
-        <TopLine Value="29"/>
-        <CursorPos Y="42"/>
+        <TopLine Value="16"/>
+        <CursorPos X="3" Y="9"/>
         <UsageCount Value="21"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -96,43 +95,7 @@
         <UsageCount Value="10"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="28">
-      <Position>
-        <Filename Value="umain.pas"/>
-        <Caret Line="40" Column="3" TopLine="19"/>
-      </Position>
-      <Position>
-        <Filename Value="umain.pas"/>
-        <Caret Line="51" Column="3" TopLine="27"/>
-      </Position>
-      <Position>
-        <Filename Value="users.pas"/>
-        <Caret Line="30" Column="12" TopLine="10"/>
-      </Position>
-      <Position>
-        <Filename Value="umain.pas"/>
-        <Caret Line="42" Column="9" TopLine="34"/>
-      </Position>
-      <Position>
-        <Filename Value="users.pas"/>
-        <Caret Line="30" Column="10" TopLine="6"/>
-      </Position>
-      <Position>
-        <Filename Value="umain.pas"/>
-        <Caret Line="33" Column="13" TopLine="22"/>
-      </Position>
-      <Position>
-        <Filename Value="selectuser.pas"/>
-        <Caret Line="21" Column="17"/>
-      </Position>
-      <Position>
-        <Filename Value="selectuser.pas"/>
-        <Caret Column="16"/>
-      </Position>
-      <Position>
-        <Filename Value="selectuser.pas"/>
-        <Caret Line="20" Column="28" TopLine="6"/>
-      </Position>
+    <JumpHistory HistoryIndex="29">
       <Position>
         <Filename Value="selectuser.pas"/>
         <Caret Line="21" Column="28" TopLine="21"/>
@@ -212,6 +175,46 @@
       <Position>
         <Filename Value="uend.pas"/>
         <Caret Line="37" Column="4" TopLine="16"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="42" TopLine="29"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="43" TopLine="30"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="44" TopLine="31"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="45" TopLine="32"/>
+      </Position>
+      <Position>
+        <Filename Value="NewMessages.lpr"/>
+        <Caret Line="28" TopLine="13"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="9" Column="3"/>
+      </Position>
+      <Position>
+        <Filename Value="users.pas"/>
+        <Caret Line="29" Column="15" TopLine="13"/>
+      </Position>
+      <Position>
+        <Filename Value="users.pas"/>
+        <Caret Line="41" Column="3" TopLine="29"/>
+      </Position>
+      <Position>
+        <Filename Value="umain.pas"/>
+        <Caret Line="41" TopLine="31"/>
+      </Position>
+      <Position>
+        <Filename Value="users.pas"/>
+        <Caret Line="41" Column="11" TopLine="29"/>
       </Position>
     </JumpHistory>
     <RunParams>

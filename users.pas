@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
-  ComboEx;
+  ComboEx, Selectuser;
 
 type
 
@@ -20,6 +20,7 @@ type
     Image1: TImage;
     Label1: TLabel;
     Label2: TLabel;
+    procedure bNextClick(Sender: TObject);
   private
 
   public
@@ -33,6 +34,12 @@ implementation
 {$R *.lfm}
 
 { TfUsers }
+
+procedure TfUsers.bNextClick(Sender: TObject);
+begin
+  fUsers.Visible:=false;
+  fSelectU.ShowModal;
+end;
 
 end.
 

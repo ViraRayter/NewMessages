@@ -8308,6 +8308,7 @@ object fUsers: TfUsers
     Font.Pitch = fpFixed
     Font.Quality = fqDraft
     Font.Style = [fsBold]
+    OnClick = bNextClick
     ParentFont = False
     TabOrder = 0
   end

@@ -16,6 +16,7 @@ type
     bBack: TButton;
     bAdd: TButton;
     bNext: TButton;
+    CheckUsers: TCheckListBox;
     Image1: TImage;
     Label1: TLabel;
     procedure bBackClick(Sender: TObject);

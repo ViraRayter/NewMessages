@@ -1,7 +1,7 @@
 object fUsers: TfUsers
-  Left = 497
+  Left = 536
   Height = 500
-  Top = 117
+  Top = 113
   Width = 300
   Caption = 'Авторизация'
   ClientHeight = 500
@@ -8308,6 +8308,7 @@ object fUsers: TfUsers
     Font.Pitch = fpFixed
     Font.Quality = fqDraft
     Font.Style = [fsBold]
+    OnClick = bNextClick
     ParentFont = False
     TabOrder = 0
   end
