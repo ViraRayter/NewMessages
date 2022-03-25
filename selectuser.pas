@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls,
-  CheckLst;
+  CheckLst, AddUser;
 
 type
 
@@ -19,6 +19,7 @@ type
     CheckUsers: TCheckListBox;
     Image1: TImage;
     Label1: TLabel;
+    procedure bAddClick(Sender: TObject);
     procedure bBackClick(Sender: TObject);
     procedure bNextClick(Sender: TObject);
   private
@@ -48,6 +49,12 @@ procedure TfSelectU.bBackClick(Sender: TObject);
 begin
   fSelectU.Visible:=false;
   fUsers.ShowModal;
+end;
+
+procedure TfSelectU.bAddClick(Sender: TObject);
+begin
+  fSelectU.Visible:=False;
+  fAddUser.ShowModal;
 end;
 
 end.

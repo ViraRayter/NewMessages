@@ -6,6 +6,7 @@ object fSelectU: TfSelectU
   Caption = 'fSelectU'
   ClientHeight = 500
   ClientWidth = 300
+  Position = poDesktopCenter
   LCLVersion = '2.2.0.4'
   object Image1: TImage
     Left = 0
@@ -8303,6 +8304,7 @@ object fSelectU: TfSelectU
     Font.Height = -16
     Font.Name = 'Courier'
     Font.Style = [fsBold]
+    OnClick = bAddClick
     ParentFont = False
     TabOrder = 1
   end
@@ -8319,11 +8321,16 @@ object fSelectU: TfSelectU
     ParentFont = False
     TabOrder = 2
   end
-  object CheckListBox1: TCheckListBox
+  object CheckUsers: TCheckListBox
     Left = 26
-    Height = 80
-    Top = 152
+    Height = 208
+    Top = 136
     Width = 248
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -13
+    Font.Name = 'Courier'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
     Items.Strings = (
       'Пример1'
       'Пример2'
@@ -8342,6 +8349,7 @@ object fSelectU: TfSelectU
       'Пример15'
     )
     ItemHeight = 17
+    ParentFont = False
     TabOrder = 3
     Data = {
       0F000000000000000000000000000000000000

@@ -6,6 +6,7 @@ object fUsers: TfUsers
   Caption = 'Авторизация'
   ClientHeight = 500
   ClientWidth = 300
+  Position = poDesktopCenter
   LCLVersion = '2.2.0.4'
   object Image1: TImage
     Left = 0

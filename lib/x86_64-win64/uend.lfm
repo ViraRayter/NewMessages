@@ -4,7 +4,6 @@ object fend: Tfend
   Top = 112
   Width = 300
   BorderStyle = bsDialog
-  Caption = 'fend'
   ClientHeight = 500
   ClientWidth = 300
   Position = poDesktopCenter

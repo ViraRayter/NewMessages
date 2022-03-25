@@ -6,6 +6,7 @@ object fUsers: TfUsers
   Caption = 'Авторизация'
   ClientHeight = 500
   ClientWidth = 300
+  Position = poDesktopCenter
   LCLVersion = '2.2.0.4'
   object Image1: TImage
     Left = 0
@@ -8310,7 +8311,7 @@ object fUsers: TfUsers
     Font.Style = [fsBold]
     OnClick = bNextClick
     ParentFont = False
-    TabOrder = 0
+    TabOrder = 2
   end
   object BBack: TButton
     AnchorSideLeft.Control = Owner
@@ -8331,7 +8332,7 @@ object fUsers: TfUsers
     Font.Quality = fqDraft
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 1
+    TabOrder = 3
   end
   object Edit1: TEdit
     AnchorSideLeft.Control = Owner
@@ -8348,9 +8349,8 @@ object fUsers: TfUsers
     Font.Name = 'Courier'
     Font.Pitch = fpFixed
     Font.Quality = fqDraft
-    Font.Style = [fsItalic]
     ParentFont = False
-    TabOrder = 2
+    TabOrder = 0
     TextHint = 'Введите имя'
   end
   object Edit2: TEdit
@@ -8362,14 +8362,15 @@ object fUsers: TfUsers
     Height = 24
     Top = 238
     Width = 250
+    EchoMode = emPassword
     Font.CharSet = RUSSIAN_CHARSET
     Font.Height = -16
     Font.Name = 'Courier'
     Font.Pitch = fpFixed
     Font.Quality = fqDraft
-    Font.Style = [fsItalic]
     ParentFont = False
-    TabOrder = 3
+    PasswordChar = '*'
+    TabOrder = 1
     TextHint = 'Введите пароль'
   end
   object Label2: TLabel

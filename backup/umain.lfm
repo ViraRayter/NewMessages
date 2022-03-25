@@ -4,7 +4,7 @@ object Main: TMain
   Top = 109
   Width = 300
   BorderStyle = bsDialog
-  Caption = 'Main'
+  Caption = 'New Messages'
   ClientHeight = 500
   ClientWidth = 300
   Position = poDesktopCenter
@@ -8282,11 +8282,13 @@ object Main: TMain
     Width = 263
     Anchors = [akLeft, akRight]
     Caption = 'E-mail'
-    Font.Height = -20
+    Font.Height = -16
     Font.Name = 'Courier'
+    Font.Style = [fsBold]
     OnClick = bMailClick
     ParentFont = False
     TabOrder = 0
+    TabStop = False
   end
   object LabelMain: TLabel
     Left = 24
@@ -8311,11 +8313,13 @@ object Main: TMain
     Width = 263
     Anchors = [akLeft, akRight]
     Caption = 'VK'
-    Font.Height = -20
+    Font.Height = -16
     Font.Name = 'Courier'
+    Font.Style = [fsBold]
     OnClick = bVKClick
     ParentFont = False
     TabOrder = 1
+    TabStop = False
   end
   object bDiscord: TButton
     Left = 19
@@ -8324,10 +8328,12 @@ object Main: TMain
     Width = 263
     Anchors = [akLeft, akRight]
     Caption = 'Discord'
-    Font.Height = -20
+    Font.Height = -16
     Font.Name = 'Courier'
+    Font.Style = [fsBold]
     OnClick = bDiscordClick
     ParentFont = False
     TabOrder = 2
+    TabStop = False
   end
 end
