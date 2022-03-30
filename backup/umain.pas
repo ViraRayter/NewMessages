@@ -5,21 +5,27 @@ unit umain;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
+  Buttons;
 
 type
 
   { TMain }
 
   TMain = class(TForm)
-    bMail: TButton;
-    bVK: TButton;
-    bDiscord: TButton;
-    Image1: TImage;
-    LabelMain: TLabel;
-    procedure bDiscordClick(Sender: TObject);
-    procedure bMailClick(Sender: TObject);
-    procedure bVKClick(Sender: TObject);
+    BBack: TButton;
+    BNext: TButton;
+    Fon: TImage;
+    LMain: TLabel;
+    BMail: TToggleBox;
+    BVK: TToggleBox;
+    BDiscord: TToggleBox;
+    SpeedButton1: TSpeedButton;
+    SpeedButton2: TSpeedButton;
+    SpeedButton3: TSpeedButton;
+    procedure BDiscordClick(Sender: TObject);
+    procedure BMailClick(Sender: TObject);
+    procedure BVKClick(Sender: TObject);
   private
 
   public
@@ -36,19 +42,19 @@ uses users;
 { TMain }
 
 
-procedure TMain.bMailClick(Sender: TObject);
+procedure TMain.BMailClick(Sender: TObject);
 begin
   Main.Visible:=false;
   fUsers.ShowModal;
 end;
 
-procedure TMain.bDiscordClick(Sender: TObject);
+procedure TMain.BDiscordClick(Sender: TObject);
 begin
   Main.Visible:=false;
   fUsers.ShowModal;
 end;
 
-procedure TMain.bVKClick(Sender: TObject);
+procedure TMain.BVKClick(Sender: TObject);
 begin
   Main.Visible:=false;
   fUsers.ShowModal;

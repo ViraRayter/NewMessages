@@ -5,18 +5,24 @@ unit umain;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
+  Buttons;
 
 type
 
   { TMain }
 
   TMain = class(TForm)
-    BMail: TButton;
-    BVK: TButton;
-    BDiscord: TButton;
+    BBack: TButton;
+    BNext: TButton;
     Fon: TImage;
     LMain: TLabel;
+    BMail: TToggleBox;
+    BVK: TToggleBox;
+    BDiscord: TToggleBox;
+    BAuthMail: TSpeedButton;
+    BAuthVK: TSpeedButton;
+    BAuthDiscord: TSpeedButton;
     procedure BDiscordClick(Sender: TObject);
     procedure BMailClick(Sender: TObject);
     procedure BVKClick(Sender: TObject);
