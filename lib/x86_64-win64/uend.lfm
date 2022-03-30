@@ -1,14 +1,14 @@
 object fend: Tfend
-  Left = 741
+  Left = 285
   Height = 500
-  Top = 112
+  Top = 205
   Width = 300
   BorderStyle = bsDialog
   ClientHeight = 500
   ClientWidth = 300
   Position = poDesktopCenter
   LCLVersion = '2.2.0.4'
-  object Image1: TImage
+  object Fon: TImage
     Left = 0
     Height = 500
     Top = 0
@@ -8274,29 +8274,44 @@ object fend: Tfend
     Stretch = True
     Transparent = True
   end
-  object bExit: TButton
-    Left = 19
+  object BExit: TButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideRight.Side = asrCenter
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 50
     Height = 35
-    Top = 352
-    Width = 263
-    Anchors = [akLeft, akRight]
+    Top = 345
+    Width = 200
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Bottom = 120
     Caption = 'Выйти'
+    DoubleBuffered = False
+    Font.CharSet = RUSSIAN_CHARSET
     Font.Height = -16
     Font.Name = 'Courier'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
     Font.Style = [fsBold]
-    OnClick = bExitClick
+    OnClick = BExitClick
+    ParentDoubleBuffered = False
     ParentFont = False
     TabOrder = 0
   end
-  object LabelEnd: TLabel
-    Left = 27
-    Height = 48
-    Top = 96
-    Width = 246
+  object LEnd: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = Owner
+    Left = 28
+    Height = 40
+    Top = 120
+    Width = 244
     Alignment = taCenter
-    Anchors = [akLeft, akRight]
     AutoSize = False
+    BorderSpacing.Top = 120
     Caption = 'Рассылка прошла успешно'
+    Font.CharSet = RUSSIAN_CHARSET
     Font.Height = -20
     Font.Name = 'Courier'
     Font.Style = [fsBold]

@@ -8276,7 +8276,7 @@ object Main: TMain
     Transparent = True
   end
   object bMail: TButton
-    Left = 19
+    Left = 16
     Height = 35
     Top = 168
     Width = 263

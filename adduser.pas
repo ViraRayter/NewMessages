@@ -12,11 +12,11 @@ type
   { TfAddUser }
 
   TfAddUser = class(TForm)
-    bAdd: TButton;
-    bBack: TButton;
-    eUserName: TEdit;
-    Image1: TImage;
-    Label1: TLabel;
+    BAdd: TButton;
+    BBack: TButton;
+    EUserName: TEdit;
+    Fon: TImage;
+    LUserName: TLabel;
   private
 
   public

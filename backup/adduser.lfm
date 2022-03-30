@@ -3,7 +3,7 @@ object fAddUser: TfAddUser
   Height = 500
   Top = 108
   Width = 300
-  Caption = 'fAddUser'
+  Caption = 'Добавить получателя'
   ClientHeight = 500
   ClientWidth = 300
   Position = poDesktopCenter

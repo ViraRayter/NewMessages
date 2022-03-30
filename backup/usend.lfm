@@ -3,7 +3,7 @@ object FSend: TFSend
   Height = 500
   Top = 109
   Width = 300
-  Caption = 'FSend'
+  Caption = 'Введите текст'
   ClientHeight = 500
   ClientWidth = 300
   Position = poDesktopCenter

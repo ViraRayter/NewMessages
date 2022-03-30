@@ -3,7 +3,7 @@ object fSelectU: TfSelectU
   Height = 500
   Top = 106
   Width = 300
-  Caption = 'fSelectU'
+  Caption = 'Выбрать получателей'
   ClientHeight = 500
   ClientWidth = 300
   Position = poDesktopCenter
@@ -8282,7 +8282,7 @@ object fSelectU: TfSelectU
     Font.Style = [fsBold]
     OnClick = bBackClick
     ParentFont = False
-    TabOrder = 0
+    TabOrder = 3
   end
   object Label1: TLabel
     Left = 26
@@ -8306,7 +8306,7 @@ object fSelectU: TfSelectU
     Font.Style = [fsBold]
     OnClick = bAddClick
     ParentFont = False
-    TabOrder = 1
+    TabOrder = 2
   end
   object bNext: TButton
     Left = 16
@@ -8319,7 +8319,7 @@ object fSelectU: TfSelectU
     Font.Style = [fsBold]
     OnClick = bNextClick
     ParentFont = False
-    TabOrder = 2
+    TabOrder = 1
   end
   object CheckUsers: TCheckListBox
     Left = 26
@@ -8350,7 +8350,7 @@ object fSelectU: TfSelectU
     )
     ItemHeight = 17
     ParentFont = False
-    TabOrder = 3
+    TabOrder = 0
     Data = {
       0F000000000000000000000000000000000000
     }

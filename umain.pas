@@ -12,14 +12,14 @@ type
   { TMain }
 
   TMain = class(TForm)
-    bMail: TButton;
-    bVK: TButton;
-    bDiscord: TButton;
-    Image1: TImage;
-    LabelMain: TLabel;
-    procedure bDiscordClick(Sender: TObject);
-    procedure bMailClick(Sender: TObject);
-    procedure bVKClick(Sender: TObject);
+    BMail: TButton;
+    BVK: TButton;
+    BDiscord: TButton;
+    Fon: TImage;
+    LMain: TLabel;
+    procedure BDiscordClick(Sender: TObject);
+    procedure BMailClick(Sender: TObject);
+    procedure BVKClick(Sender: TObject);
   private
 
   public
@@ -36,19 +36,19 @@ uses users;
 { TMain }
 
 
-procedure TMain.bMailClick(Sender: TObject);
+procedure TMain.BMailClick(Sender: TObject);
 begin
   Main.Visible:=false;
   fUsers.ShowModal;
 end;
 
-procedure TMain.bDiscordClick(Sender: TObject);
+procedure TMain.BDiscordClick(Sender: TObject);
 begin
   Main.Visible:=false;
   fUsers.ShowModal;
 end;
 
-procedure TMain.bVKClick(Sender: TObject);
+procedure TMain.BVKClick(Sender: TObject);
 begin
   Main.Visible:=false;
   fUsers.ShowModal;

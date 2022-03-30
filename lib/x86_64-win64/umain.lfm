@@ -1,7 +1,7 @@
 object Main: TMain
-  Left = 1052
+  Left = 1049
   Height = 500
-  Top = 109
+  Top = 138
   Width = 300
   BorderStyle = bsDialog
   Caption = 'New Messages'
@@ -9,7 +9,7 @@ object Main: TMain
   ClientWidth = 300
   Position = poDesktopCenter
   LCLVersion = '2.2.0.4'
-  object Image1: TImage
+  object Fon: TImage
     Left = 0
     Height = 500
     Top = 0
@@ -8275,29 +8275,40 @@ object Main: TMain
     Stretch = True
     Transparent = True
   end
-  object bMail: TButton
-    Left = 19
+  object BMail: TButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Side = asrCenter
+    AnchorSideBottom.Control = BVK
+    Left = 20
     Height = 35
     Top = 168
-    Width = 263
-    Anchors = [akLeft, akRight]
+    Width = 260
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Bottom = 30
     Caption = 'E-mail'
     Font.Height = -16
     Font.Name = 'Courier'
     Font.Style = [fsBold]
-    OnClick = bMailClick
+    OnClick = BMailClick
     ParentFont = False
     TabOrder = 0
     TabStop = False
   end
-  object LabelMain: TLabel
-    Left = 24
-    Height = 64
-    Top = 96
-    Width = 246
+  object LMain: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideRight.Side = asrCenter
+    AnchorSideBottom.Control = BMail
+    Left = 22
+    Height = 40
+    Top = 98
+    Width = 256
     Alignment = taCenter
-    Anchors = [akLeft, akRight]
+    Anchors = [akLeft, akBottom]
     AutoSize = False
+    BorderSpacing.Bottom = 30
     Caption = 'Выберите платформу для рассылки'
     Font.Height = -20
     Font.Name = 'Courier'
@@ -8306,32 +8317,41 @@ object Main: TMain
     ParentShowHint = False
     WordWrap = True
   end
-  object bVK: TButton
-    Left = 19
+  object BVK: TButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = Owner
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Side = asrCenter
+    Left = 20
     Height = 35
-    Top = 240
-    Width = 263
-    Anchors = [akLeft, akRight]
+    Top = 233
+    Width = 260
     Caption = 'VK'
     Font.Height = -16
     Font.Name = 'Courier'
     Font.Style = [fsBold]
-    OnClick = bVKClick
+    OnClick = BVKClick
     ParentFont = False
     TabOrder = 1
     TabStop = False
   end
-  object bDiscord: TButton
-    Left = 19
+  object BDiscord: TButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = BVK
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Side = asrCenter
+    Left = 20
     Height = 35
-    Top = 312
-    Width = 263
-    Anchors = [akLeft, akRight]
+    Top = 298
+    Width = 260
+    BorderSpacing.Top = 30
     Caption = 'Discord'
     Font.Height = -16
     Font.Name = 'Courier'
     Font.Style = [fsBold]
-    OnClick = bDiscordClick
+    OnClick = BDiscordClick
     ParentFont = False
     TabOrder = 2
     TabStop = False
