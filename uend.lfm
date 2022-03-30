@@ -1,7 +1,7 @@
 object fend: Tfend
-  Left = 741
+  Left = 271
   Height = 500
-  Top = 112
+  Top = 101
   Width = 300
   BorderStyle = bsDialog
   ClientHeight = 500
@@ -9,12 +9,15 @@ object fend: Tfend
   Position = poDesktopCenter
   LCLVersion = '2.2.0.4'
   object Image1: TImage
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = Owner
+    AnchorSideTop.Side = asrCenter
     Left = 0
     Height = 500
     Top = 0
     Width = 300
     Align = alClient
-    Anchors = [akLeft, akRight]
     Picture.Data = {
       1754506F727461626C654E6574776F726B477261706869639707040089504E47
       0D0A1A0A0000000D494844520000012C000001F4080200000008728760000000
@@ -8275,11 +8278,15 @@ object fend: Tfend
     Transparent = True
   end
   object bExit: TButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = LabelEnd
+    AnchorSideTop.Side = asrBottom
     Left = 19
     Height = 35
-    Top = 352
+    Top = 423
     Width = 263
-    Anchors = [akLeft, akRight]
+    BorderSpacing.Top = 280
     Caption = 'Выйти'
     Font.Height = -16
     Font.Name = 'Courier'
@@ -8289,13 +8296,16 @@ object fend: Tfend
     TabOrder = 0
   end
   object LabelEnd: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = Owner
     Left = 27
     Height = 48
-    Top = 96
+    Top = 95
     Width = 246
     Alignment = taCenter
-    Anchors = [akLeft, akRight]
     AutoSize = False
+    BorderSpacing.Top = 95
     Caption = 'Рассылка прошла успешно'
     Font.Height = -20
     Font.Name = 'Courier'

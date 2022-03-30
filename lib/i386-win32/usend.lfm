@@ -1,11 +1,12 @@
 object FSend: TFSend
-  Left = 751
+  Left = 572
   Height = 500
-  Top = 109
+  Top = 100
   Width = 300
-  Caption = 'FSend'
+  Caption = 'Введите текст'
   ClientHeight = 500
   ClientWidth = 300
+  Position = poDesktopCenter
   LCLVersion = '2.2.0.4'
   object Fon: TImage
     Left = 0
@@ -8284,15 +8285,11 @@ object FSend: TFSend
     Font.Name = 'Courier'
     Font.Pitch = fpFixed
     Font.Quality = fqDraft
-    Font.Style = [fsItalic]
-    Lines.Strings = (
-      'Привет'
-    )
     ParentFont = False
     ParentShowHint = False
     ScrollBars = ssAutoVertical
     ShowHint = True
-    TabOrder = 0
+    TabOrder = 1
   end
   object LText: TLabel
     AnchorSideLeft.Control = Owner
@@ -8330,9 +8327,8 @@ object FSend: TFSend
     Font.Name = 'Courier'
     Font.Pitch = fpFixed
     Font.Quality = fqDraft
-    Font.Style = [fsItalic]
     ParentFont = False
-    TabOrder = 1
+    TabOrder = 0
     TextHint = 'Тема'
   end
   object LTopic: TLabel
