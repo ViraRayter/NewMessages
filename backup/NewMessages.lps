@@ -31,7 +31,6 @@
         <ComponentName Value="Main"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <TopLine Value="31"/>
         <CursorPos X="32" Y="38"/>
         <UsageCount Value="23"/>
@@ -56,6 +55,7 @@
         <ComponentName Value="fend"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
         <TopLine Value="17"/>
         <CursorPos X="12" Y="30"/>
@@ -77,6 +77,17 @@
         <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
+        <Filename Value="adduser.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fAddUser"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="6"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
         <Filename Value="umain.lfm"/>
         <ComponentName Value="Main"/>
         <HasResources Value="True"/>
@@ -94,18 +105,8 @@
         <WindowIndex Value="-1"/>
         <UsageCount Value="10"/>
       </Unit>
-      <Unit>
-        <Filename Value="adduser.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="fAddUser"/>
-        <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="6"/>
-        <UsageCount Value="21"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
-      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="29">
+    <JumpHistory HistoryIndex="28">
       <Position>
         <Filename Value="selectuser.pas"/>
         <Caret Line="19" Column="28" TopLine="19"/>
@@ -217,10 +218,6 @@
       <Position>
         <Filename Value="users.pas"/>
         <Caret Line="41" Column="11" TopLine="29"/>
-      </Position>
-      <Position>
-        <Filename Value="selectuser.pas"/>
-        <Caret Line="9" Column="20" TopLine="29"/>
       </Position>
       <Position>
         <Filename Value="adduser.pas"/>

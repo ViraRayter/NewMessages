@@ -74,6 +74,7 @@
         <Filename Value="adduser.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="fAddUser"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit>
     </Units>

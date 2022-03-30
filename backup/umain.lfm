@@ -10,12 +10,15 @@ object Main: TMain
   Position = poDesktopCenter
   LCLVersion = '2.2.0.4'
   object Image1: TImage
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = Owner
+    AnchorSideTop.Side = asrCenter
     Left = 0
     Height = 500
     Top = 0
     Width = 300
     Align = alClient
-    Anchors = [akLeft, akRight]
     Picture.Data = {
       1754506F727461626C654E6574776F726B477261706869639707040089504E47
       0D0A1A0A0000000D494844520000012C000001F4080200000008728760000000
@@ -8291,13 +8294,16 @@ object Main: TMain
     TabStop = False
   end
   object LabelMain: TLabel
-    Left = 24
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = Owner
+    Left = 27
     Height = 64
-    Top = 96
+    Top = 95
     Width = 246
     Alignment = taCenter
-    Anchors = [akLeft, akRight]
     AutoSize = False
+    BorderSpacing.Top = 95
     Caption = 'Выберите платформу для рассылки'
     Font.Height = -20
     Font.Name = 'Courier'
