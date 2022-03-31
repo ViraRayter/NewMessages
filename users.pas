@@ -31,13 +31,15 @@ var
   fUsers: TfUsers;
 
 implementation
+
+uses uMain;
 {$R *.lfm}
 
 { TfUsers }
 
 procedure TfUsers.BNextClick(Sender: TObject);
 begin
-  fSelectU.Show;
+  Main.Show;
   fUsers.Hide;
 end;
 

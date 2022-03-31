@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
-  Buttons, Uend, Umain;
+  Buttons, uEnd;
 
 type
 
@@ -33,6 +33,8 @@ var
   FSend: TFSend;
 
 implementation
+
+uses uMain;
 
 {$R *.lfm}
 

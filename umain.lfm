@@ -8287,7 +8287,7 @@ object Main: TMain
     Anchors = [akLeft, akBottom]
     AutoSize = False
     BorderSpacing.Bottom = 30
-    Caption = 'Выберите платформы для рассылки'
+    Caption = 'Выберите платформу для рассылки'
     Font.Height = -20
     Font.Name = 'Courier'
     Font.Style = [fsBold]
@@ -8311,23 +8311,6 @@ object Main: TMain
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 0
-  end
-  object BNext: TButton
-    AnchorSideLeft.Control = Owner
-    AnchorSideLeft.Side = asrCenter
-    AnchorSideTop.Control = bDiscord
-    AnchorSideTop.Side = asrBottom
-    Left = 50
-    Height = 35
-    Top = 380
-    Width = 200
-    BorderSpacing.Top = 50
-    Caption = 'Далее'
-    Font.Height = -16
-    Font.Name = 'Courier'
-    Font.Style = [fsBold]
-    ParentFont = False
-    TabOrder = 1
   end
   object BAuthMail: TSpeedButton
     AnchorSideLeft.Control = bMail
@@ -8403,6 +8386,7 @@ object Main: TMain
       AE732000C318410820000000000020004108C31841088E730000000000000000
       0000000000000000000000000000
     }
+    OnClick = BAuthMailClick
   end
   object BAuthVK: TSpeedButton
     AnchorSideLeft.Control = bVK
@@ -8478,6 +8462,7 @@ object Main: TMain
       AE732000C318410820000000000020004108C31841088E730000000000000000
       0000000000000000000000000000
     }
+    OnClick = BAuthVKClick
   end
   object BAuthDiscord: TSpeedButton
     AnchorSideLeft.Control = bDiscord
@@ -8553,6 +8538,7 @@ object Main: TMain
       AE732000C318410820000000000020004108C31841088E730000000000000000
       0000000000000000000000000000
     }
+    OnClick = BAuthDiscordClick
   end
   object bMail: TButton
     AnchorSideLeft.Control = Owner
@@ -8571,8 +8557,9 @@ object Main: TMain
     Font.Pitch = fpFixed
     Font.Quality = fqDraft
     Font.Style = [fsBold]
+    OnClick = bMailClick
     ParentFont = False
-    TabOrder = 2
+    TabOrder = 1
   end
   object bVK: TButton
     AnchorSideLeft.Control = Owner
@@ -8591,8 +8578,9 @@ object Main: TMain
     Font.Pitch = fpFixed
     Font.Quality = fqDraft
     Font.Style = [fsBold]
+    OnClick = bVKClick
     ParentFont = False
-    TabOrder = 3
+    TabOrder = 2
   end
   object bDiscord: TButton
     AnchorSideLeft.Control = Owner
@@ -8611,7 +8599,8 @@ object Main: TMain
     Font.Pitch = fpFixed
     Font.Quality = fqDraft
     Font.Style = [fsBold]
+    OnClick = bDiscordClick
     ParentFont = False
-    TabOrder = 4
+    TabOrder = 3
   end
 end
