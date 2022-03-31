@@ -1,7 +1,7 @@
 object Main: TMain
-  Left = 545
+  Left = 682
   Height = 500
-  Top = 114
+  Top = 99
   Width = 300
   BorderStyle = bsDialog
   Caption = 'New Messages'
@@ -8287,68 +8287,13 @@ object Main: TMain
     Anchors = [akLeft, akBottom]
     AutoSize = False
     BorderSpacing.Bottom = 30
-    Caption = 'Выберите платформу для рассылки'
+    Caption = 'Выберите платформы для рассылки'
     Font.Height = -20
     Font.Name = 'Courier'
     Font.Style = [fsBold]
     ParentFont = False
     ParentShowHint = False
     WordWrap = True
-  end
-  object BMail: TToggleBox
-    AnchorSideLeft.Control = Owner
-    AnchorSideBottom.Control = BVK
-    Left = 15
-    Height = 40
-    Top = 170
-    Width = 225
-    Anchors = [akLeft, akBottom]
-    BorderSpacing.Left = 15
-    BorderSpacing.Bottom = 20
-    Caption = 'E-mail'
-    Font.CharSet = RUSSIAN_CHARSET
-    Font.Height = -16
-    Font.Name = 'Courier'
-    Font.Style = [fsBold]
-    ParentFont = False
-    TabOrder = 0
-  end
-  object BVK: TToggleBox
-    AnchorSideLeft.Control = Owner
-    AnchorSideLeft.Side = asrCenter
-    AnchorSideTop.Control = Owner
-    AnchorSideTop.Side = asrCenter
-    Left = 15
-    Height = 40
-    Top = 230
-    Width = 225
-    Anchors = [akTop]
-    BorderSpacing.Left = 5
-    Caption = 'VK'
-    Font.CharSet = RUSSIAN_CHARSET
-    Font.Height = -16
-    Font.Name = 'Courier'
-    Font.Style = [fsBold]
-    ParentFont = False
-    TabOrder = 1
-  end
-  object BDiscord: TToggleBox
-    AnchorSideLeft.Control = Owner
-    AnchorSideTop.Control = BVK
-    AnchorSideTop.Side = asrBottom
-    Left = 15
-    Height = 40
-    Top = 290
-    Width = 225
-    BorderSpacing.Left = 15
-    BorderSpacing.Top = 20
-    Caption = 'Discord'
-    Font.CharSet = RUSSIAN_CHARSET
-    Font.Height = -16
-    Font.Name = 'Courier'
-    Font.Style = [fsBold]
-    ParentFont = False
-    TabOrder = 2
   end
   object BBack: TButton
     AnchorSideLeft.Control = Owner
@@ -8365,12 +8310,11 @@ object Main: TMain
     Font.Name = 'Courier'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 3
+    TabOrder = 0
   end
   object BNext: TButton
     AnchorSideLeft.Control = Owner
     AnchorSideLeft.Side = asrCenter
-    AnchorSideTop.Control = BDiscord
     AnchorSideTop.Side = asrBottom
     Left = 50
     Height = 35
@@ -8382,12 +8326,10 @@ object Main: TMain
     Font.Name = 'Courier'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 4
+    TabOrder = 1
   end
-  object SpeedButton1: TSpeedButton
-    AnchorSideLeft.Control = BMail
+  object BAuthMail: TSpeedButton
     AnchorSideLeft.Side = asrBottom
-    AnchorSideTop.Control = BMail
     AnchorSideTop.Side = asrCenter
     Left = 245
     Height = 40
@@ -8456,10 +8398,8 @@ object Main: TMain
       0000000000000000000000000000
     }
   end
-  object SpeedButton2: TSpeedButton
-    AnchorSideLeft.Control = BVK
+  object BAuthVK: TSpeedButton
     AnchorSideLeft.Side = asrBottom
-    AnchorSideTop.Control = BVK
     AnchorSideTop.Side = asrCenter
     Left = 245
     Height = 40
@@ -8528,10 +8468,8 @@ object Main: TMain
       0000000000000000000000000000
     }
   end
-  object SpeedButton3: TSpeedButton
-    AnchorSideLeft.Control = BDiscord
+  object BAuthDiscord: TSpeedButton
     AnchorSideLeft.Side = asrBottom
-    AnchorSideTop.Control = BDiscord
     AnchorSideTop.Side = asrCenter
     Left = 245
     Height = 40
@@ -8599,5 +8537,64 @@ object Main: TMain
       AE732000C318410820000000000020004108C31841088E730000000000000000
       0000000000000000000000000000
     }
+  end
+  object Button1: TButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Side = asrBottom
+    Left = 15
+    Height = 40
+    Top = 168
+    Width = 225
+    BorderSpacing.Left = 15
+    BorderSpacing.Top = 17
+    Caption = 'E-mail'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -16
+    Font.Name = 'Courier'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+  end
+  object Button2: TButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Button1
+    AnchorSideTop.Side = asrBottom
+    Left = 15
+    Height = 40
+    Top = 228
+    Width = 225
+    BorderSpacing.Left = 15
+    BorderSpacing.Top = 20
+    Caption = 'VK'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -16
+    Font.Name = 'Courier'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 3
+  end
+  object Button3: TButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Button2
+    AnchorSideTop.Side = asrBottom
+    Left = 15
+    Height = 40
+    Top = 288
+    Width = 225
+    BorderSpacing.Left = 15
+    BorderSpacing.Top = 20
+    Caption = 'Discord'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -16
+    Font.Name = 'Courier'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 4
   end
 end
