@@ -1,7 +1,7 @@
 object Main: TMain
-  Left = 682
+  Left = 545
   Height = 500
-  Top = 99
+  Top = 114
   Width = 300
   BorderStyle = bsDialog
   Caption = 'New Messages'
@@ -8295,6 +8295,61 @@ object Main: TMain
     ParentShowHint = False
     WordWrap = True
   end
+  object BMail: TToggleBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideBottom.Control = BVK
+    Left = 15
+    Height = 40
+    Top = 170
+    Width = 225
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Left = 15
+    BorderSpacing.Bottom = 20
+    Caption = 'E-mail'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -16
+    Font.Name = 'Courier'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+  end
+  object BVK: TToggleBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = Owner
+    AnchorSideTop.Side = asrCenter
+    Left = 15
+    Height = 40
+    Top = 230
+    Width = 225
+    Anchors = [akTop]
+    BorderSpacing.Left = 5
+    Caption = 'VK'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -16
+    Font.Name = 'Courier'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 1
+  end
+  object BDiscord: TToggleBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = BVK
+    AnchorSideTop.Side = asrBottom
+    Left = 15
+    Height = 40
+    Top = 290
+    Width = 225
+    BorderSpacing.Left = 15
+    BorderSpacing.Top = 20
+    Caption = 'Discord'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -16
+    Font.Name = 'Courier'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+  end
   object BBack: TButton
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Owner
@@ -8310,21 +8365,38 @@ object Main: TMain
     Font.Name = 'Courier'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 0
+    TabOrder = 3
   end
+<<<<<<< HEAD
+=======
+  object BNext: TButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = BDiscord
+    AnchorSideTop.Side = asrBottom
+    Left = 50
+    Height = 35
+    Top = 380
+    Width = 200
+    BorderSpacing.Top = 50
+    Caption = 'Далее'
+    Font.Height = -16
+    Font.Name = 'Courier'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 4
+  end
+>>>>>>> parent of af44fe1 (Созданы некоторые переходы между формами)
   object BAuthMail: TSpeedButton
-    AnchorSideLeft.Control = bMail
+    AnchorSideLeft.Control = BMail
     AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = BMail
     AnchorSideTop.Side = asrCenter
-    AnchorSideRight.Control = Owner
-    AnchorSideRight.Side = asrBottom
     Left = 245
     Height = 40
     Top = 170
     Width = 40
-    Anchors = [akLeft, akRight]
     BorderSpacing.Left = 5
-    BorderSpacing.Right = 15
     Glyph.Data = {
       4A070000424D4A0700000000000042000000280000001E0000001E0000000100
       100003000000080700006400000064000000000000000000000000F80000E007
@@ -8389,18 +8461,15 @@ object Main: TMain
     OnClick = BAuthMailClick
   end
   object BAuthVK: TSpeedButton
-    AnchorSideLeft.Control = bVK
+    AnchorSideLeft.Control = BVK
     AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = BVK
     AnchorSideTop.Side = asrCenter
-    AnchorSideRight.Control = Owner
-    AnchorSideRight.Side = asrBottom
     Left = 245
     Height = 40
     Top = 230
     Width = 40
-    Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 5
-    BorderSpacing.Right = 15
     Glyph.Data = {
       4A070000424D4A0700000000000042000000280000001E0000001E0000000100
       100003000000080700006400000064000000000000000000000000F80000E007
@@ -8465,18 +8534,15 @@ object Main: TMain
     OnClick = BAuthVKClick
   end
   object BAuthDiscord: TSpeedButton
-    AnchorSideLeft.Control = bDiscord
+    AnchorSideLeft.Control = BDiscord
     AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = BDiscord
     AnchorSideTop.Side = asrCenter
-    AnchorSideRight.Control = Owner
-    AnchorSideRight.Side = asrBottom
     Left = 245
     Height = 40
     Top = 290
     Width = 40
-    Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 5
-    BorderSpacing.Right = 15
     Glyph.Data = {
       4A070000424D4A0700000000000042000000280000001E0000001E0000000100
       100003000000080700006400000064000000000000000000000000F80000E007
@@ -8540,6 +8606,7 @@ object Main: TMain
     }
     OnClick = BAuthDiscordClick
   end
+<<<<<<< HEAD
   object bMail: TButton
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = LMain
@@ -8603,4 +8670,6 @@ object Main: TMain
     ParentFont = False
     TabOrder = 3
   end
+=======
+>>>>>>> parent of af44fe1 (Созданы некоторые переходы между формами)
 end

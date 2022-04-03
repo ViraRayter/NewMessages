@@ -12,12 +12,11 @@ type
   { TfAddUser }
 
   TfAddUser = class(TForm)
-    BAdd: TButton;
-    BBack: TButton;
-    EUserName: TEdit;
-    Fon: TImage;
-    LUserName: TLabel;
-    procedure BAddClick(Sender: TObject);
+    bAdd: TButton;
+    bBack: TButton;
+    eUserName: TEdit;
+    Image1: TImage;
+    Label1: TLabel;
   private
 
   public
@@ -30,13 +29,6 @@ var
 implementation
 
 {$R *.lfm}
-
-{ TfAddUser }
-
-procedure TfAddUser.BAddClick(Sender: TObject);
-begin
-
-end;
 
 end.
 

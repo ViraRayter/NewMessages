@@ -1,14 +1,14 @@
 object fUsers: TfUsers
-  Left = 940
+  Left = 536
   Height = 500
-  Top = 102
+  Top = 113
   Width = 300
   Caption = 'Авторизация'
   ClientHeight = 500
   ClientWidth = 300
   Position = poDesktopCenter
   LCLVersion = '2.2.0.4'
-  object Fon: TImage
+  object Image1: TImage
     Left = 0
     Height = 500
     Top = 0
@@ -8271,9 +8271,9 @@ object fUsers: TfUsers
       6DF294E36287040000000049454E44AE426082
     }
   end
-  object LName: TLabel
-    AnchorSideLeft.Control = EName
-    AnchorSideBottom.Control = EName
+  object Label1: TLabel
+    AnchorSideLeft.Control = Edit1
+    AnchorSideBottom.Control = Edit1
     Left = 25
     Height = 16
     Top = 162
@@ -8286,13 +8286,15 @@ object fUsers: TfUsers
     Font.Color = clBlack
     Font.Height = -16
     Font.Name = 'Courier'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object BNext: TButton
+  object bNext: TButton
     AnchorSideLeft.Control = Owner
     AnchorSideLeft.Side = asrCenter
-    AnchorSideTop.Control = EPassword
+    AnchorSideTop.Control = Edit2
     AnchorSideTop.Side = asrBottom
     Left = 50
     Height = 35
@@ -8307,19 +8309,19 @@ object fUsers: TfUsers
     Font.Pitch = fpFixed
     Font.Quality = fqDraft
     Font.Style = [fsBold]
-    OnClick = BNextClick
+    OnClick = bNextClick
     ParentFont = False
     TabOrder = 2
   end
   object BBack: TButton
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Owner
-    Left = 15
+    Left = 25
     Height = 23
     Top = 15
     Width = 80
     AutoSize = True
-    BorderSpacing.Left = 15
+    BorderSpacing.Left = 25
     BorderSpacing.Top = 15
     Caption = '<Назад'
     Font.CharSet = RUSSIAN_CHARSET
@@ -8332,10 +8334,10 @@ object fUsers: TfUsers
     ParentFont = False
     TabOrder = 3
   end
-  object EName: TEdit
+  object Edit1: TEdit
     AnchorSideLeft.Control = Owner
     AnchorSideLeft.Side = asrCenter
-    AnchorSideBottom.Control = LPassword
+    AnchorSideBottom.Control = Label2
     Left = 25
     Height = 24
     Top = 183
@@ -8345,12 +8347,13 @@ object fUsers: TfUsers
     Font.CharSet = RUSSIAN_CHARSET
     Font.Height = -16
     Font.Name = 'Courier'
-    Font.Style = [fsItalic]
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
     ParentFont = False
     TabOrder = 0
     TextHint = 'Введите имя'
   end
-  object EPassword: TEdit
+  object Edit2: TEdit
     AnchorSideLeft.Control = Owner
     AnchorSideLeft.Side = asrCenter
     AnchorSideTop.Control = Owner
@@ -8363,15 +8366,16 @@ object fUsers: TfUsers
     Font.CharSet = RUSSIAN_CHARSET
     Font.Height = -16
     Font.Name = 'Courier'
-    Font.Style = [fsItalic]
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
     ParentFont = False
     PasswordChar = '*'
     TabOrder = 1
     TextHint = 'Введите пароль'
   end
-  object LPassword: TLabel
-    AnchorSideLeft.Control = EPassword
-    AnchorSideBottom.Control = EPassword
+  object Label2: TLabel
+    AnchorSideLeft.Control = Edit2
+    AnchorSideBottom.Control = Edit2
     Left = 25
     Height = 16
     Top = 217
@@ -8382,6 +8386,8 @@ object fUsers: TfUsers
     Font.CharSet = RUSSIAN_CHARSET
     Font.Height = -16
     Font.Name = 'Courier'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
     Font.Style = [fsBold]
     ParentFont = False
   end

@@ -8286,7 +8286,7 @@ object fend: Tfend
     Width = 200
     Anchors = [akLeft, akBottom]
     BorderSpacing.Bottom = 120
-    Caption = 'ОК'
+    Caption = 'Выйти'
     DoubleBuffered = False
     Font.CharSet = RUSSIAN_CHARSET
     Font.Height = -16

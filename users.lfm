@@ -1,7 +1,7 @@
 object fUsers: TfUsers
-  Left = 940
+  Left = -5
   Height = 500
-  Top = 102
+  Top = 101
   Width = 300
   Caption = 'Авторизация'
   ClientHeight = 500

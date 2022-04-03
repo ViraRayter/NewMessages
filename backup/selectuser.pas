@@ -13,15 +13,15 @@ type
   { TfSelectU }
 
   TfSelectU = class(TForm)
-    BBack: TButton;
-    BAdd: TButton;
-    BNext: TButton;
+    bBack: TButton;
+    bAdd: TButton;
+    bNext: TButton;
     CheckUsers: TCheckListBox;
-    Fon: TImage;
-    LCheck: TLabel;
-    procedure BAddClick(Sender: TObject);
-    procedure BBackClick(Sender: TObject);
-    procedure BNextClick(Sender: TObject);
+    Image1: TImage;
+    Label1: TLabel;
+    procedure bAddClick(Sender: TObject);
+    procedure bBackClick(Sender: TObject);
+    procedure bNextClick(Sender: TObject);
   private
 
   public
@@ -39,22 +39,37 @@ uses uMain;
 { TfSelectU }
 
 
-procedure TfSelectU.BNextClick(Sender: TObject);
+procedure TfSelectU.bNextClick(Sender: TObject);
 begin
+<<<<<<< HEAD
   FSend.Show;
   fSelectU.Hide;
+=======
+  fSelectU.Visible:=false;
+  FSend.ShowModal;
+>>>>>>> parent of af44fe1 (Созданы некоторые переходы между формами)
 end;
 
-procedure TfSelectU.BBackClick(Sender: TObject);
+procedure TfSelectU.bBackClick(Sender: TObject);
 begin
+<<<<<<< HEAD
   Main.Show;
   fSelectU.Hide;
+=======
+  fSelectU.Visible:=false;
+  fUsers.ShowModal;
+>>>>>>> parent of af44fe1 (Созданы некоторые переходы между формами)
 end;
 
-procedure TfSelectU.BAddClick(Sender: TObject);
+procedure TfSelectU.bAddClick(Sender: TObject);
 begin
+<<<<<<< HEAD
   fAddUser.Show;
   fSelectU.Hide;
+=======
+  fSelectU.Visible:=False;
+  fAddUser.ShowModal;
+>>>>>>> parent of af44fe1 (Созданы некоторые переходы между формами)
 end;
 
 end.
