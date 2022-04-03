@@ -41,25 +41,20 @@ uses uMain;
 
 procedure TfSelectU.BNextClick(Sender: TObject);
 begin
-  fSelectU.Visible:=false;
-  FSend.ShowModal;
+  FSend.Show;
+  fSelectU.Hide;
 end;
 
 procedure TfSelectU.BBackClick(Sender: TObject);
 begin
-<<<<<<< HEAD
   Main.Show;
   fSelectU.Hide;
-=======
-  fSelectU.Visible:=false;
-  fUsers.ShowModal;
->>>>>>> parent of af44fe1 (Созданы некоторые переходы между формами)
 end;
 
 procedure TfSelectU.BAddClick(Sender: TObject);
 begin
-  fSelectU.Visible:=False;
-  fAddUser.ShowModal;
+  fAddUser.Show;
+  fSelectU.Hide;
 end;
 
 end.

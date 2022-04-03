@@ -1,7 +1,7 @@
 object FSend: TFSend
-  Left = 296
+  Left = 478
   Height = 500
-  Top = 102
+  Top = 92
   Width = 300
   Caption = 'Введите текст'
   ClientHeight = 500
@@ -8283,6 +8283,8 @@ object FSend: TFSend
     Font.CharSet = RUSSIAN_CHARSET
     Font.Height = -16
     Font.Name = 'Courier'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
     Font.Style = [fsItalic]
     Lines.Strings = (
       'Привет'
@@ -8325,6 +8327,8 @@ object FSend: TFSend
     Font.CharSet = RUSSIAN_CHARSET
     Font.Height = -16
     Font.Name = 'Courier'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
     Font.Style = [fsItalic]
     ParentFont = False
     TabOrder = 0
@@ -8365,6 +8369,7 @@ object FSend: TFSend
     Font.Pitch = fpFixed
     Font.Quality = fqDraft
     Font.Style = [fsBold]
+    OnClick = BGoClick
     ParentFont = False
     TabOrder = 2
   end

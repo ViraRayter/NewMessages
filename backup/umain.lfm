@@ -1,7 +1,7 @@
 object Main: TMain
-  Left = 545
+  Left = 682
   Height = 500
-  Top = 114
+  Top = 99
   Width = 300
   BorderStyle = bsDialog
   Caption = 'New Messages'
@@ -8295,61 +8295,6 @@ object Main: TMain
     ParentShowHint = False
     WordWrap = True
   end
-  object BMail: TToggleBox
-    AnchorSideLeft.Control = Owner
-    AnchorSideBottom.Control = BVK
-    Left = 15
-    Height = 40
-    Top = 170
-    Width = 225
-    Anchors = [akLeft, akBottom]
-    BorderSpacing.Left = 15
-    BorderSpacing.Bottom = 20
-    Caption = 'E-mail'
-    Font.CharSet = RUSSIAN_CHARSET
-    Font.Height = -16
-    Font.Name = 'Courier'
-    Font.Style = [fsBold]
-    ParentFont = False
-    TabOrder = 0
-  end
-  object BVK: TToggleBox
-    AnchorSideLeft.Control = Owner
-    AnchorSideLeft.Side = asrCenter
-    AnchorSideTop.Control = Owner
-    AnchorSideTop.Side = asrCenter
-    Left = 15
-    Height = 40
-    Top = 230
-    Width = 225
-    Anchors = [akTop]
-    BorderSpacing.Left = 5
-    Caption = 'VK'
-    Font.CharSet = RUSSIAN_CHARSET
-    Font.Height = -16
-    Font.Name = 'Courier'
-    Font.Style = [fsBold]
-    ParentFont = False
-    TabOrder = 1
-  end
-  object BDiscord: TToggleBox
-    AnchorSideLeft.Control = Owner
-    AnchorSideTop.Control = BVK
-    AnchorSideTop.Side = asrBottom
-    Left = 15
-    Height = 40
-    Top = 290
-    Width = 225
-    BorderSpacing.Left = 15
-    BorderSpacing.Top = 20
-    Caption = 'Discord'
-    Font.CharSet = RUSSIAN_CHARSET
-    Font.Height = -16
-    Font.Name = 'Courier'
-    Font.Style = [fsBold]
-    ParentFont = False
-    TabOrder = 2
-  end
   object BBack: TButton
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Owner
@@ -8365,16 +8310,12 @@ object Main: TMain
     Font.Name = 'Courier'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 3
+    TabOrder = 0
   end
   object BNext: TButton
     AnchorSideLeft.Control = Owner
     AnchorSideLeft.Side = asrCenter
-<<<<<<< HEAD
     AnchorSideTop.Control = bDiscord
-=======
-    AnchorSideTop.Control = BDiscord
->>>>>>> parent of af44fe1 (Созданы некоторые переходы между формами)
     AnchorSideTop.Side = asrBottom
     Left = 50
     Height = 35
@@ -8386,17 +8327,11 @@ object Main: TMain
     Font.Name = 'Courier'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 4
+    TabOrder = 1
   end
-<<<<<<< HEAD
   object BAuthMail: TSpeedButton
     AnchorSideLeft.Control = bMail
-=======
-  object SpeedButton1: TSpeedButton
-    AnchorSideLeft.Control = BMail
->>>>>>> parent of af44fe1 (Созданы некоторые переходы между формами)
     AnchorSideLeft.Side = asrBottom
-    AnchorSideTop.Control = BMail
     AnchorSideTop.Side = asrCenter
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
@@ -8470,15 +8405,9 @@ object Main: TMain
     }
     OnClick = BAuthMailClick
   end
-<<<<<<< HEAD
   object BAuthVK: TSpeedButton
     AnchorSideLeft.Control = bVK
-=======
-  object SpeedButton2: TSpeedButton
-    AnchorSideLeft.Control = BVK
->>>>>>> parent of af44fe1 (Созданы некоторые переходы между формами)
     AnchorSideLeft.Side = asrBottom
-    AnchorSideTop.Control = BVK
     AnchorSideTop.Side = asrCenter
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
@@ -8552,15 +8481,9 @@ object Main: TMain
     }
     OnClick = BAuthVKClick
   end
-<<<<<<< HEAD
   object BAuthDiscord: TSpeedButton
     AnchorSideLeft.Control = bDiscord
-=======
-  object SpeedButton3: TSpeedButton
-    AnchorSideLeft.Control = BDiscord
->>>>>>> parent of af44fe1 (Созданы некоторые переходы между формами)
     AnchorSideLeft.Side = asrBottom
-    AnchorSideTop.Control = BDiscord
     AnchorSideTop.Side = asrCenter
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
@@ -8634,7 +8557,6 @@ object Main: TMain
     }
     OnClick = BAuthDiscordClick
   end
-<<<<<<< HEAD
   object bMail: TButton
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = LMain
@@ -8698,6 +8620,4 @@ object Main: TMain
     ParentFont = False
     TabOrder = 4
   end
-=======
->>>>>>> parent of af44fe1 (Созданы некоторые переходы между формами)
 end

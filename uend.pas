@@ -34,8 +34,7 @@ uses usend;
 
 procedure Tfend.BExitClick(Sender: TObject);
 begin
-  fend.Visible:=false;
-  fsend.ShowModal;
+  close;
 end;
 
 end.

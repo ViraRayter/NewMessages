@@ -6,11 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
-<<<<<<< HEAD
   Buttons, uEnd;
-=======
-  Buttons;
->>>>>>> parent of af44fe1 (Созданы некоторые переходы между формами)
 
 type
 
@@ -26,6 +22,7 @@ type
     LTopic: TLabel;
     MText: TMemo;
     BAdd: TSpeedButton;
+    procedure BGoClick(Sender: TObject);
   private
 
   public
@@ -39,7 +36,6 @@ implementation
 
 {$R *.lfm}
 
-<<<<<<< HEAD
 { TFSend }
 
 
@@ -50,7 +46,5 @@ begin
   Main.Show;
 end;
 
-=======
->>>>>>> parent of af44fe1 (Созданы некоторые переходы между формами)
 end.
 
