@@ -1,14 +1,14 @@
 object fSelectU: TfSelectU
-  Left = 595
+  Left = 572
   Height = 500
-  Top = 103
+  Top = 106
   Width = 300
   Caption = 'Выбрать получателей'
   ClientHeight = 500
   ClientWidth = 300
   Position = poDesktopCenter
   LCLVersion = '2.2.0.4'
-  object Fon: TImage
+  object Image1: TImage
     Left = 0
     Height = 500
     Top = 0
@@ -8271,86 +8271,61 @@ object fSelectU: TfSelectU
       6DF294E36287040000000049454E44AE426082
     }
   end
-  object BBack: TButton
-    AnchorSideLeft.Control = Owner
-    AnchorSideTop.Control = Owner
-    Left = 15
-    Height = 23
-    Top = 15
-    Width = 80
-    AutoSize = True
-    BorderSpacing.Left = 15
-    BorderSpacing.Top = 15
+  object bBack: TButton
+    Left = 8
+    Height = 25
+    Top = 8
+    Width = 75
     Caption = '<Назад'
     Font.Height = -13
     Font.Name = 'Courier'
     Font.Style = [fsBold]
-    OnClick = BBackClick
+    OnClick = bBackClick
     ParentFont = False
     TabOrder = 3
   end
-  object LCheck: TLabel
-    AnchorSideLeft.Control = Owner
-    AnchorSideLeft.Side = asrCenter
-    AnchorSideTop.Side = asrBottom
-    AnchorSideBottom.Control = CheckUsers
+  object Label1: TLabel
     Left = 26
     Height = 20
-    Top = 115
+    Top = 96
     Width = 248
-    Anchors = [akLeft, akBottom]
-    BorderSpacing.Bottom = 15
     Caption = 'Выберите получателя'
     Font.Height = -20
     Font.Name = 'Courier'
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object BAdd: TButton
-    AnchorSideLeft.Control = Owner
-    AnchorSideLeft.Side = asrCenter
-    AnchorSideTop.Control = CheckUsers
-    AnchorSideTop.Side = asrBottom
-    Left = 50
+  object bAdd: TButton
+    Left = 16
     Height = 35
-    Top = 380
-    Width = 200
-    BorderSpacing.Top = 30
+    Top = 384
+    Width = 263
     Caption = 'Добавить'
     Font.Height = -16
     Font.Name = 'Courier'
     Font.Style = [fsBold]
-    OnClick = BAddClick
+    OnClick = bAddClick
     ParentFont = False
     TabOrder = 2
   end
-  object BNext: TButton
-    AnchorSideLeft.Control = Owner
-    AnchorSideLeft.Side = asrCenter
-    AnchorSideTop.Control = BAdd
-    AnchorSideTop.Side = asrBottom
-    Left = 50
+  object bNext: TButton
+    Left = 16
     Height = 35
-    Top = 430
-    Width = 200
-    BorderSpacing.Top = 15
+    Top = 432
+    Width = 263
     Caption = 'Далее'
     Font.Height = -16
     Font.Name = 'Courier'
     Font.Style = [fsBold]
-    OnClick = BNextClick
+    OnClick = bNextClick
     ParentFont = False
     TabOrder = 1
   end
   object CheckUsers: TCheckListBox
-    AnchorSideLeft.Control = Owner
-    AnchorSideLeft.Side = asrCenter
-    AnchorSideTop.Control = Owner
-    AnchorSideTop.Side = asrCenter
-    Left = 25
-    Height = 200
-    Top = 150
-    Width = 250
+    Left = 26
+    Height = 208
+    Top = 136
+    Width = 248
     Font.CharSet = RUSSIAN_CHARSET
     Font.Height = -13
     Font.Name = 'Courier'

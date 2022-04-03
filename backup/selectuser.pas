@@ -13,15 +13,15 @@ type
   { TfSelectU }
 
   TfSelectU = class(TForm)
-    BBack: TButton;
-    BAdd: TButton;
-    BNext: TButton;
+    bBack: TButton;
+    bAdd: TButton;
+    bNext: TButton;
     CheckUsers: TCheckListBox;
-    Fon: TImage;
-    LCheck: TLabel;
-    procedure BAddClick(Sender: TObject);
-    procedure BBackClick(Sender: TObject);
-    procedure BNextClick(Sender: TObject);
+    Image1: TImage;
+    Label1: TLabel;
+    procedure bAddClick(Sender: TObject);
+    procedure bBackClick(Sender: TObject);
+    procedure bNextClick(Sender: TObject);
   private
 
   public
@@ -39,22 +39,22 @@ uses usend,users;
 { TfSelectU }
 
 
-procedure TfSelectU.BNextClick(Sender: TObject);
+procedure TfSelectU.bNextClick(Sender: TObject);
 begin
+  fSelectU.Visible:=false;
   FSend.ShowModal;
-  fSelectU.Hide;
 end;
 
-procedure TfSelectU.BBackClick(Sender: TObject);
+procedure TfSelectU.bBackClick(Sender: TObject);
 begin
+  fSelectU.Visible:=false;
   fUsers.ShowModal;
-  fSelectU.Hide;
 end;
 
-procedure TfSelectU.BAddClick(Sender: TObject);
+procedure TfSelectU.bAddClick(Sender: TObject);
 begin
+  fSelectU.Visible:=False;
   fAddUser.ShowModal;
-  fSelectU.Hide;
 end;
 
 end.

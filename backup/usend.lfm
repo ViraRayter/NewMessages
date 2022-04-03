@@ -1,7 +1,7 @@
 object FSend: TFSend
-  Left = 478
+  Left = 751
   Height = 500
-  Top = 92
+  Top = 109
   Width = 300
   Caption = 'Введите текст'
   ClientHeight = 500
@@ -8285,10 +8285,6 @@ object FSend: TFSend
     Font.Name = 'Courier'
     Font.Pitch = fpFixed
     Font.Quality = fqDraft
-    Font.Style = [fsItalic]
-    Lines.Strings = (
-      'Привет'
-    )
     ParentFont = False
     ParentShowHint = False
     ScrollBars = ssAutoVertical
@@ -8311,6 +8307,8 @@ object FSend: TFSend
     Font.Color = clBlack
     Font.Height = -20
     Font.Name = 'Courier'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
     Font.Style = [fsBold]
     ParentFont = False
   end
@@ -8329,7 +8327,6 @@ object FSend: TFSend
     Font.Name = 'Courier'
     Font.Pitch = fpFixed
     Font.Quality = fqDraft
-    Font.Style = [fsItalic]
     ParentFont = False
     TabOrder = 0
     TextHint = 'Тема'
@@ -8349,6 +8346,8 @@ object FSend: TFSend
     Font.Color = clBlack
     Font.Height = -20
     Font.Name = 'Courier'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
     Font.Style = [fsBold]
     ParentFont = False
   end
@@ -8369,7 +8368,6 @@ object FSend: TFSend
     Font.Pitch = fpFixed
     Font.Quality = fqDraft
     Font.Style = [fsBold]
-    OnClick = BGoClick
     ParentFont = False
     TabOrder = 2
   end
@@ -8557,17 +8555,19 @@ object FSend: TFSend
     Font.Color = clBlack
     Font.Height = -16
     Font.Name = 'Courier'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
     ParentFont = False
   end
   object BBack: TButton
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Owner
-    Left = 15
+    Left = 25
     Height = 23
     Top = 15
     Width = 80
     AutoSize = True
-    BorderSpacing.Left = 15
+    BorderSpacing.Left = 25
     BorderSpacing.Top = 15
     Caption = '<Назад'
     Font.CharSet = RUSSIAN_CHARSET

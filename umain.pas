@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
-  Buttons, selectuser;
+  Buttons;
 
 type
 
@@ -15,14 +15,17 @@ type
   TMain = class(TForm)
     BBack: TButton;
     BNext: TButton;
-    bMail: TButton;
-    bVK: TButton;
-    bDiscord: TButton;
     Fon: TImage;
     LMain: TLabel;
+    BMail: TToggleBox;
+    BVK: TToggleBox;
+    BDiscord: TToggleBox;
     BAuthMail: TSpeedButton;
     BAuthVK: TSpeedButton;
     BAuthDiscord: TSpeedButton;
+    procedure BDiscordClick(Sender: TObject);
+    procedure BMailClick(Sender: TObject);
+    procedure BVKClick(Sender: TObject);
   private
 
   public
@@ -37,6 +40,25 @@ uses users;
 {$R *.lfm}
 
 { TMain }
+
+
+procedure TMain.BMailClick(Sender: TObject);
+begin
+  Main.Visible:=false;
+  fUsers.ShowModal;
+end;
+
+procedure TMain.BDiscordClick(Sender: TObject);
+begin
+  Main.Visible:=false;
+  fUsers.ShowModal;
+end;
+
+procedure TMain.BVKClick(Sender: TObject);
+begin
+  Main.Visible:=false;
+  fUsers.ShowModal;
+end;
 
 end.
 

@@ -1,14 +1,14 @@
 object fAddUser: TfAddUser
-  Left = 757
+  Left = 915
   Height = 500
-  Top = 232
+  Top = 108
   Width = 300
   Caption = 'Добавить получателя'
   ClientHeight = 500
   ClientWidth = 300
   Position = poDesktopCenter
   LCLVersion = '2.2.0.4'
-  object Fon: TImage
+  object Image1: TImage
     Left = 0
     Height = 500
     Top = 0
@@ -8271,16 +8271,11 @@ object fAddUser: TfAddUser
       6DF294E36287040000000049454E44AE426082
     }
   end
-  object BBack: TButton
-    AnchorSideLeft.Control = Owner
-    AnchorSideTop.Control = Owner
-    Left = 15
-    Height = 23
-    Top = 15
-    Width = 80
-    AutoSize = True
-    BorderSpacing.Left = 15
-    BorderSpacing.Top = 15
+  object bBack: TButton
+    Left = 8
+    Height = 25
+    Top = 8
+    Width = 75
     Caption = '<Назад'
     Font.Height = -13
     Font.Name = 'Courier'
@@ -8288,55 +8283,45 @@ object fAddUser: TfAddUser
     ParentFont = False
     TabOrder = 2
   end
-  object LUserName: TLabel
-    AnchorSideLeft.Control = Owner
-    AnchorSideLeft.Side = asrCenter
-    AnchorSideTop.Control = Owner
-    Left = 46
+  object Label1: TLabel
+    Left = 48
     Height = 20
-    Top = 140
+    Top = 128
     Width = 209
     Alignment = taCenter
-    BorderSpacing.Top = 140
     Caption = 'Введите никнейм '
     Font.Height = -20
     Font.Name = 'Courier'
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object EUserName: TEdit
+  object eUserName: TEdit
     AnchorSideLeft.Control = Owner
     AnchorSideLeft.Side = asrCenter
-    AnchorSideTop.Control = LUserName
-    AnchorSideTop.Side = asrBottom
     Left = 25
     Height = 24
-    Top = 190
+    Top = 176
     Width = 250
-    BorderSpacing.Top = 30
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Bottom = 15
     Font.CharSet = RUSSIAN_CHARSET
     Font.Height = -16
     Font.Name = 'Courier'
-    Font.Style = [fsItalic]
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
     ParentFont = False
     TabOrder = 0
     TextHint = 'Username'
   end
-  object BAdd: TButton
-    AnchorSideLeft.Control = Owner
-    AnchorSideLeft.Side = asrCenter
-    AnchorSideTop.Control = EUserName
-    AnchorSideTop.Side = asrBottom
-    Left = 50
+  object bAdd: TButton
+    Left = 48
     Height = 35
-    Top = 244
-    Width = 200
-    BorderSpacing.Top = 30
+    Top = 240
+    Width = 195
     Caption = 'Добавить'
     Font.Height = -16
     Font.Name = 'Courier'
     Font.Style = [fsBold]
-    OnClick = BAddClick
     ParentFont = False
     TabOrder = 1
   end

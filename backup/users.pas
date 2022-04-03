@@ -14,13 +14,13 @@ type
 
   TfUsers = class(TForm)
     BBack: TButton;
-    BNext: TButton;
-    EName: TEdit;
-    EPassword: TEdit;
-    Fon: TImage;
-    LName: TLabel;
-    LPassword: TLabel;
-    procedure BNextClick(Sender: TObject);
+    bNext: TButton;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Image1: TImage;
+    Label1: TLabel;
+    Label2: TLabel;
+    procedure bNextClick(Sender: TObject);
   private
 
   public
@@ -35,10 +35,10 @@ implementation
 
 { TfUsers }
 
-procedure TfUsers.BNextClick(Sender: TObject);
+procedure TfUsers.bNextClick(Sender: TObject);
 begin
+  fUsers.Visible:=false;
   fSelectU.ShowModal;
-  fUsers.Hide;
 end;
 
 end.

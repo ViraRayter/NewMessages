@@ -41,20 +41,20 @@ uses usend,users;
 
 procedure TfSelectU.BNextClick(Sender: TObject);
 begin
-  FSend.Show;
-  fSelectU.Hide;
+  fSelectU.Visible:=false;
+  FSend.ShowModal;
 end;
 
 procedure TfSelectU.BBackClick(Sender: TObject);
 begin
-  fUsers.Show;
-  fSelectU.Hide;
+  fSelectU.Visible:=false;
+  fUsers.ShowModal;
 end;
 
 procedure TfSelectU.BAddClick(Sender: TObject);
 begin
-  fAddUser.Show;
-  fSelectU.Hide;
+  fSelectU.Visible:=False;
+  fAddUser.ShowModal;
 end;
 
 end.

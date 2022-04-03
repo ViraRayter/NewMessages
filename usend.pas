@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
-  Buttons, Uend, Umain;
+  Buttons;
 
 type
 
@@ -22,7 +22,6 @@ type
     LTopic: TLabel;
     MText: TMemo;
     BAdd: TSpeedButton;
-    procedure BGoClick(Sender: TObject);
   private
 
   public
@@ -35,16 +34,6 @@ var
 implementation
 
 {$R *.lfm}
-
-{ TFSend }
-
-
-procedure TFSend.BGoClick(Sender: TObject);
-begin
-  fEnd.ShowModal;
-  fSend.Hide;
-  Main.Show;
-end;
 
 end.
 
