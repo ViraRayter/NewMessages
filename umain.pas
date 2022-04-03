@@ -5,18 +5,23 @@ unit umain;
 interface
 
 uses
+<<<<<<< HEAD
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
 <<<<<<< HEAD
   Buttons, selectuser, adduser, uSend, uEnd, Users;
 =======
   Buttons;
 >>>>>>> parent of af44fe1 (Созданы некоторые переходы между формами)
+=======
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls;
+>>>>>>> parent of b110a2a (Change MainForm)
 
 type
 
   { TMain }
 
   TMain = class(TForm)
+<<<<<<< HEAD
     BBack: TButton;
 <<<<<<< HEAD
     bMail: TButton;
@@ -41,6 +46,13 @@ type
     procedure bMailClick(Sender: TObject);
     procedure bVKClick(Sender: TObject);
 =======
+=======
+    BMail: TButton;
+    BVK: TButton;
+    BDiscord: TButton;
+    Fon: TImage;
+    LMain: TLabel;
+>>>>>>> parent of b110a2a (Change MainForm)
     procedure BDiscordClick(Sender: TObject);
     procedure BMailClick(Sender: TObject);
     procedure BVKClick(Sender: TObject);

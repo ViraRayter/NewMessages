@@ -15,8 +15,12 @@
 =======
         <EditorIndex Value="3"/>
         <CursorPos Y="29"/>
+<<<<<<< HEAD
         <UsageCount Value="26"/>
 >>>>>>> parent of af44fe1 (Созданы некоторые переходы между формами)
+=======
+        <UsageCount Value="25"/>
+>>>>>>> parent of b110a2a (Change MainForm)
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -33,9 +37,14 @@
         <UsageCount Value="39"/>
 =======
         <EditorIndex Value="1"/>
+<<<<<<< HEAD
         <UsageCount Value="26"/>
 >>>>>>> parent of af44fe1 (Созданы некоторые переходы между формами)
+=======
+        <UsageCount Value="25"/>
+>>>>>>> parent of b110a2a (Change MainForm)
         <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="umain.pas"/>
@@ -43,6 +52,7 @@
         <ComponentName Value="Main"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
@@ -54,6 +64,11 @@
         <CursorPos X="32" Y="44"/>
         <UsageCount Value="26"/>
 >>>>>>> parent of af44fe1 (Созданы некоторые переходы между формами)
+=======
+        <TopLine Value="31"/>
+        <CursorPos X="32" Y="38"/>
+        <UsageCount Value="25"/>
+>>>>>>> parent of b110a2a (Change MainForm)
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -71,8 +86,12 @@
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="4"/>
         <CursorPos X="22" Y="9"/>
+<<<<<<< HEAD
         <UsageCount Value="26"/>
 >>>>>>> parent of af44fe1 (Созданы некоторые переходы между формами)
+=======
+        <UsageCount Value="25"/>
+>>>>>>> parent of b110a2a (Change MainForm)
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -91,9 +110,14 @@
         <EditorIndex Value="2"/>
         <TopLine Value="17"/>
         <CursorPos X="12" Y="30"/>
+<<<<<<< HEAD
         <UsageCount Value="26"/>
 >>>>>>> parent of af44fe1 (Созданы некоторые переходы между формами)
+=======
+        <UsageCount Value="25"/>
+>>>>>>> parent of b110a2a (Change MainForm)
         <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="selectuser.pas"/>
@@ -107,10 +131,14 @@
         <UsageCount Value="38"/>
 =======
         <EditorIndex Value="5"/>
-        <TopLine Value="39"/>
+        <TopLine Value="44"/>
         <CursorPos X="38" Y="48"/>
+<<<<<<< HEAD
         <UsageCount Value="25"/>
 >>>>>>> parent of af44fe1 (Созданы некоторые переходы между формами)
+=======
+        <UsageCount Value="24"/>
+>>>>>>> parent of b110a2a (Change MainForm)
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -127,9 +155,14 @@
         <UsageCount Value="37"/>
 =======
         <EditorIndex Value="6"/>
+<<<<<<< HEAD
         <UsageCount Value="24"/>
 >>>>>>> parent of af44fe1 (Созданы некоторые переходы между формами)
+=======
+        <UsageCount Value="23"/>
+>>>>>>> parent of b110a2a (Change MainForm)
         <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="umain.lfm"/>
@@ -150,7 +183,47 @@
         <UsageCount Value="10"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="29">
+    <JumpHistory HistoryIndex="28">
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="19" Column="28" TopLine="19"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="18" Column="20" TopLine="18"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="19" Column="20" TopLine="19"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="20" Column="28" TopLine="20"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="21" Column="28" TopLine="21"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="22" Column="28" TopLine="22"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="21" Column="28" TopLine="21"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="20" Column="28" TopLine="20"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="19" Column="20" TopLine="19"/>
+      </Position>
+      <Position>
+        <Filename Value="selectuser.pas"/>
+        <Caret Line="18" Column="20" TopLine="18"/>
+      </Position>
       <Position>
 <<<<<<< HEAD
         <Filename Value="umain.pas"/>
@@ -346,6 +419,7 @@
       <Position>
         <Filename Value="adduser.pas"/>
       </Position>
+<<<<<<< HEAD
       <Position>
         <Filename Value="umain.pas"/>
         <Caret Line="38" Column="32" TopLine="31"/>
@@ -391,6 +465,8 @@
         <Caret Line="43" Column="32" TopLine="36"/>
 >>>>>>> parent of af44fe1 (Созданы некоторые переходы между формами)
       </Position>
+=======
+>>>>>>> parent of b110a2a (Change MainForm)
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
