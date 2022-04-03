@@ -8,8 +8,10 @@
       <Unit>
         <Filename Value="NewMessages.lpr"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
-        <CursorPos Y="29"/>
+        <TopLine Value="8"/>
+        <CursorPos X="6" Y="29"/>
         <UsageCount Value="27"/>
         <Loaded Value="True"/>
       </Unit>
@@ -58,7 +60,6 @@
         <ComponentName Value="fend"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
         <TopLine Value="20"/>
         <CursorPos X="11" Y="30"/>
@@ -119,14 +120,6 @@
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="umain.pas"/>
-        <Caret Line="38" Column="32" TopLine="31"/>
-      </Position>
-      <Position>
-        <Filename Value="umain.pas"/>
-        <Caret Line="39" Column="32" TopLine="32"/>
-      </Position>
       <Position>
         <Filename Value="umain.pas"/>
         <Caret Line="40" Column="32" TopLine="33"/>
@@ -236,6 +229,14 @@
       <Position>
         <Filename Value="uend.pas"/>
         <Caret Line="31" Column="12" TopLine="21"/>
+      </Position>
+      <Position>
+        <Filename Value="uend.pas"/>
+        <Caret Line="30" Column="11" TopLine="20"/>
+      </Position>
+      <Position>
+        <Filename Value="NewMessages.lpr"/>
+        <Caret Line="29" TopLine="8"/>
       </Position>
     </JumpHistory>
     <RunParams>

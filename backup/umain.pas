@@ -24,6 +24,7 @@ type
     BAuthVK: TSpeedButton;
     BAuthDiscord: TSpeedButton;
     procedure BAuthDiscordClick(Sender: TObject);
+    procedure BBackClick(Sender: TObject);
     procedure BNextClick(Sender: TObject);
   private
 
@@ -50,6 +51,13 @@ procedure TMain.BAuthDiscordClick(Sender: TObject);
 begin
  FUsers.Show;
  FUsers.BBack.Visible:=true;
+ Main.Hide;
+end;
+
+procedure TMain.BBackClick(Sender: TObject);
+begin
+ FUsers.Show;
+ FUsers.BBack.Visible:=false;
  Main.Hide;
 end;
 
