@@ -1,7 +1,7 @@
 object Main: TMain
-  Left = 1049
+  Left = 545
   Height = 500
-  Top = 138
+  Top = 114
   Width = 300
   BorderStyle = bsDialog
   Caption = 'New Messages'
@@ -8275,32 +8275,10 @@ object Main: TMain
     Stretch = True
     Transparent = True
   end
-  object BMail: TButton
-    AnchorSideLeft.Control = Owner
-    AnchorSideLeft.Side = asrCenter
-    AnchorSideTop.Side = asrBottom
-    AnchorSideRight.Side = asrCenter
-    AnchorSideBottom.Control = BVK
-    Left = 20
-    Height = 35
-    Top = 168
-    Width = 260
-    Anchors = [akLeft, akBottom]
-    BorderSpacing.Bottom = 30
-    Caption = 'E-mail'
-    Font.Height = -16
-    Font.Name = 'Courier'
-    Font.Style = [fsBold]
-    OnClick = BMailClick
-    ParentFont = False
-    TabOrder = 0
-    TabStop = False
-  end
   object LMain: TLabel
     AnchorSideLeft.Control = Owner
     AnchorSideLeft.Side = asrCenter
     AnchorSideRight.Side = asrCenter
-    AnchorSideBottom.Control = BMail
     Left = 22
     Height = 40
     Top = 98
@@ -8317,44 +8295,60 @@ object Main: TMain
     ParentShowHint = False
     WordWrap = True
   end
-  object BVK: TButton
+  object BMail: TToggleBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideBottom.Control = BVK
+    Left = 15
+    Height = 40
+    Top = 170
+    Width = 225
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Left = 15
+    BorderSpacing.Bottom = 20
+    Caption = 'E-mail'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -16
+    Font.Name = 'Courier'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+  end
+  object BVK: TToggleBox
     AnchorSideLeft.Control = Owner
     AnchorSideLeft.Side = asrCenter
     AnchorSideTop.Control = Owner
     AnchorSideTop.Side = asrCenter
-    AnchorSideRight.Side = asrCenter
-    Left = 20
-    Height = 35
-    Top = 233
-    Width = 260
+    Left = 15
+    Height = 40
+    Top = 230
+    Width = 225
+    Anchors = [akTop]
+    BorderSpacing.Left = 5
     Caption = 'VK'
+    Font.CharSet = RUSSIAN_CHARSET
     Font.Height = -16
     Font.Name = 'Courier'
     Font.Style = [fsBold]
-    OnClick = BVKClick
     ParentFont = False
     TabOrder = 1
-    TabStop = False
   end
-  object BDiscord: TButton
+  object BDiscord: TToggleBox
     AnchorSideLeft.Control = Owner
-    AnchorSideLeft.Side = asrCenter
     AnchorSideTop.Control = BVK
     AnchorSideTop.Side = asrBottom
-    AnchorSideRight.Side = asrCenter
-    Left = 20
-    Height = 35
-    Top = 298
-    Width = 260
-    BorderSpacing.Top = 30
+    Left = 15
+    Height = 40
+    Top = 290
+    Width = 225
+    BorderSpacing.Left = 15
+    BorderSpacing.Top = 20
     Caption = 'Discord'
+    Font.CharSet = RUSSIAN_CHARSET
     Font.Height = -16
     Font.Name = 'Courier'
     Font.Style = [fsBold]
-    OnClick = BDiscordClick
     ParentFont = False
     TabOrder = 2
-<<<<<<< HEAD
   end
   object BBack: TButton
     AnchorSideLeft.Control = Owner
@@ -8611,9 +8605,6 @@ object Main: TMain
       0000000000000000000000000000
     }
     OnClick = BAuthDiscordClick
-=======
-    TabStop = False
->>>>>>> parent of b110a2a (Change MainForm)
   end
 <<<<<<< HEAD
   object bMail: TButton

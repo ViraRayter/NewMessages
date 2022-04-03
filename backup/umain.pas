@@ -5,23 +5,18 @@ unit umain;
 interface
 
 uses
-<<<<<<< HEAD
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
 <<<<<<< HEAD
   Buttons, selectuser, adduser, uSend, uEnd, Users;
 =======
   Buttons;
 >>>>>>> parent of af44fe1 (Созданы некоторые переходы между формами)
-=======
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls;
->>>>>>> parent of b110a2a (Change MainForm)
 
 type
 
   { TMain }
 
   TMain = class(TForm)
-<<<<<<< HEAD
     BBack: TButton;
     BNext: TButton;
 <<<<<<< HEAD
@@ -52,16 +47,6 @@ type
     procedure BMailClick(Sender: TObject);
     procedure BVKClick(Sender: TObject);
 >>>>>>> parent of af44fe1 (Созданы некоторые переходы между формами)
-=======
-    bMail: TButton;
-    bVK: TButton;
-    bDiscord: TButton;
-    Image1: TImage;
-    LabelMain: TLabel;
-    procedure bDiscordClick(Sender: TObject);
-    procedure bMailClick(Sender: TObject);
-    procedure bVKClick(Sender: TObject);
->>>>>>> parent of b110a2a (Change MainForm)
   private
 
   public
@@ -118,19 +103,19 @@ end;
 
 =======
 
-procedure TMain.bMailClick(Sender: TObject);
+procedure TMain.BMailClick(Sender: TObject);
 begin
   Main.Visible:=false;
   fUsers.ShowModal;
 end;
 
-procedure TMain.bDiscordClick(Sender: TObject);
+procedure TMain.BDiscordClick(Sender: TObject);
 begin
   Main.Visible:=false;
   fUsers.ShowModal;
 end;
 
-procedure TMain.bVKClick(Sender: TObject);
+procedure TMain.BVKClick(Sender: TObject);
 begin
   Main.Visible:=false;
   fUsers.ShowModal;
