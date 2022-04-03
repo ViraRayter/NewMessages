@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
-  Buttons, uEnd;
+  Buttons, Uend;
 
 type
 
@@ -43,7 +43,6 @@ procedure TFSend.BGoClick(Sender: TObject);
 begin
   fEnd.ShowModal;
   fSend.Hide;
-  Main.Show;
 end;
 
 end.

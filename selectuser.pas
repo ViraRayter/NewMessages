@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls,
-  CheckLst, AddUser, uSend;
+  CheckLst, AddUser;
 
 type
 
@@ -33,7 +33,7 @@ var
 
 implementation
 
-uses uMain;
+uses usend,users;
 {$R *.lfm}
 
 { TfSelectU }
@@ -47,7 +47,7 @@ end;
 
 procedure TfSelectU.BBackClick(Sender: TObject);
 begin
-  Main.Show;
+  fUsers.Show;
   fSelectU.Hide;
 end;
 

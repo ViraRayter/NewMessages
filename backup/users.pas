@@ -37,7 +37,7 @@ implementation
 
 procedure TfUsers.BNextClick(Sender: TObject);
 begin
-  Main.Show;
+  fSelectU.ShowModal;
   fUsers.Hide;
 end;
 

@@ -8287,7 +8287,7 @@ object Main: TMain
     Anchors = [akLeft, akBottom]
     AutoSize = False
     BorderSpacing.Bottom = 30
-    Caption = 'Выберите платформу для рассылки'
+    Caption = 'Выберите платформы для рассылки'
     Font.Height = -20
     Font.Name = 'Courier'
     Font.Style = [fsBold]
@@ -8315,7 +8315,6 @@ object Main: TMain
   object BNext: TButton
     AnchorSideLeft.Control = Owner
     AnchorSideLeft.Side = asrCenter
-    AnchorSideTop.Control = bDiscord
     AnchorSideTop.Side = asrBottom
     Left = 50
     Height = 35
@@ -8330,18 +8329,13 @@ object Main: TMain
     TabOrder = 1
   end
   object BAuthMail: TSpeedButton
-    AnchorSideLeft.Control = bMail
     AnchorSideLeft.Side = asrBottom
     AnchorSideTop.Side = asrCenter
-    AnchorSideRight.Control = Owner
-    AnchorSideRight.Side = asrBottom
     Left = 245
     Height = 40
     Top = 170
     Width = 40
-    Anchors = [akLeft, akRight]
     BorderSpacing.Left = 5
-    BorderSpacing.Right = 15
     Glyph.Data = {
       4A070000424D4A0700000000000042000000280000001E0000001E0000000100
       100003000000080700006400000064000000000000000000000000F80000E007
@@ -8403,21 +8397,15 @@ object Main: TMain
       AE732000C318410820000000000020004108C31841088E730000000000000000
       0000000000000000000000000000
     }
-    OnClick = BAuthMailClick
   end
   object BAuthVK: TSpeedButton
-    AnchorSideLeft.Control = bVK
     AnchorSideLeft.Side = asrBottom
     AnchorSideTop.Side = asrCenter
-    AnchorSideRight.Control = Owner
-    AnchorSideRight.Side = asrBottom
     Left = 245
     Height = 40
     Top = 230
     Width = 40
-    Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 5
-    BorderSpacing.Right = 15
     Glyph.Data = {
       4A070000424D4A0700000000000042000000280000001E0000001E0000000100
       100003000000080700006400000064000000000000000000000000F80000E007
@@ -8479,21 +8467,15 @@ object Main: TMain
       AE732000C318410820000000000020004108C31841088E730000000000000000
       0000000000000000000000000000
     }
-    OnClick = BAuthVKClick
   end
   object BAuthDiscord: TSpeedButton
-    AnchorSideLeft.Control = bDiscord
     AnchorSideLeft.Side = asrBottom
     AnchorSideTop.Side = asrCenter
-    AnchorSideRight.Control = Owner
-    AnchorSideRight.Side = asrBottom
     Left = 245
     Height = 40
     Top = 290
     Width = 40
-    Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 5
-    BorderSpacing.Right = 15
     Glyph.Data = {
       4A070000424D4A0700000000000042000000280000001E0000001E0000000100
       100003000000080700006400000064000000000000000000000000F80000E007
@@ -8555,18 +8537,16 @@ object Main: TMain
       AE732000C318410820000000000020004108C31841088E730000000000000000
       0000000000000000000000000000
     }
-    OnClick = BAuthDiscordClick
   end
-  object bMail: TButton
+  object Button1: TButton
     AnchorSideLeft.Control = Owner
-    AnchorSideTop.Control = LMain
     AnchorSideTop.Side = asrBottom
     Left = 15
     Height = 40
-    Top = 170
+    Top = 168
     Width = 225
     BorderSpacing.Left = 15
-    BorderSpacing.Top = 32
+    BorderSpacing.Top = 17
     Caption = 'E-mail'
     Font.CharSet = RUSSIAN_CHARSET
     Font.Height = -16
@@ -8574,17 +8554,16 @@ object Main: TMain
     Font.Pitch = fpFixed
     Font.Quality = fqDraft
     Font.Style = [fsBold]
-    OnClick = bMailClick
     ParentFont = False
     TabOrder = 2
   end
-  object bVK: TButton
+  object Button2: TButton
     AnchorSideLeft.Control = Owner
-    AnchorSideTop.Control = bMail
+    AnchorSideTop.Control = Button1
     AnchorSideTop.Side = asrBottom
     Left = 15
     Height = 40
-    Top = 230
+    Top = 228
     Width = 225
     BorderSpacing.Left = 15
     BorderSpacing.Top = 20
@@ -8595,17 +8574,16 @@ object Main: TMain
     Font.Pitch = fpFixed
     Font.Quality = fqDraft
     Font.Style = [fsBold]
-    OnClick = bVKClick
     ParentFont = False
     TabOrder = 3
   end
-  object bDiscord: TButton
+  object Button3: TButton
     AnchorSideLeft.Control = Owner
-    AnchorSideTop.Control = bVK
+    AnchorSideTop.Control = Button2
     AnchorSideTop.Side = asrBottom
     Left = 15
     Height = 40
-    Top = 290
+    Top = 288
     Width = 225
     BorderSpacing.Left = 15
     BorderSpacing.Top = 20
@@ -8616,7 +8594,6 @@ object Main: TMain
     Font.Pitch = fpFixed
     Font.Quality = fqDraft
     Font.Style = [fsBold]
-    OnClick = bDiscordClick
     ParentFont = False
     TabOrder = 4
   end
