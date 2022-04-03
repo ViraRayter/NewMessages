@@ -8285,6 +8285,7 @@ object fAddUser: TfAddUser
     Font.Height = -13
     Font.Name = 'Courier'
     Font.Style = [fsBold]
+    OnClick = BBackClick
     ParentFont = False
     TabOrder = 2
   end
@@ -8336,6 +8337,7 @@ object fAddUser: TfAddUser
     Font.Height = -16
     Font.Name = 'Courier'
     Font.Style = [fsBold]
+    OnClick = BAddClick
     ParentFont = False
     TabOrder = 1
   end

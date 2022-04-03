@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
-  Buttons;
+  Buttons, Selectuser;
 
 type
 
@@ -23,9 +23,9 @@ type
     BAuthMail: TSpeedButton;
     BAuthVK: TSpeedButton;
     BAuthDiscord: TSpeedButton;
-    procedure BDiscordClick(Sender: TObject);
-    procedure BMailClick(Sender: TObject);
-    procedure BVKClick(Sender: TObject);
+    procedure BAuthDiscordClick(Sender: TObject);
+    procedure BBackClick(Sender: TObject);
+    procedure BNextClick(Sender: TObject);
   private
 
   public
@@ -41,24 +41,31 @@ uses users;
 
 { TMain }
 
-
-procedure TMain.BMailClick(Sender: TObject);
+procedure TMain.BNextClick(Sender: TObject);
 begin
-  Main.Visible:=false;
-  fUsers.ShowModal;
+ FSelectU.Show;
+ Main.Hide;
 end;
 
-procedure TMain.BDiscordClick(Sender: TObject);
+procedure TMain.BAuthDiscordClick(Sender: TObject);
 begin
-  Main.Visible:=false;
-  fUsers.ShowModal;
+ FUsers.Show;
+ FUsers.BBack.Visible:=true;
+ Main.Hide;
 end;
 
-procedure TMain.BVKClick(Sender: TObject);
+procedure TMain.BBackClick(Sender: TObject);
 begin
-  Main.Visible:=false;
-  fUsers.ShowModal;
+ FUsers.Show;
+ FUsers.BBack.Visible:=false;
+ Main.Hide;
 end;
+
+{ TMain }
+
+
+{ TMain }
+
 
 end.
 

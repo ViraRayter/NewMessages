@@ -8329,8 +8329,10 @@ object fUsers: TfUsers
     Font.Pitch = fpFixed
     Font.Quality = fqDraft
     Font.Style = [fsBold]
+    OnClick = BBackClick
     ParentFont = False
     TabOrder = 3
+    Visible = False
   end
   object EName: TEdit
     AnchorSideLeft.Control = Owner

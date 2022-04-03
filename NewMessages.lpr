@@ -20,10 +20,10 @@ begin
   Application.Scaled:=True;
   Application.Initialize;
   Application.CreateForm(TfUsers, fUsers);
-  Application.CreateForm(TMain, Main);
   Application.CreateForm(TfSelectU, fSelectU);
   Application.CreateForm(TFSend, FSend);
   Application.CreateForm(Tfend, fend);
+  Application.CreateForm(TMain, Main);
   Application.CreateForm(TfAddUser, fAddUser);
   Application.Run;
 end.

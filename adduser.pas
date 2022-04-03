@@ -17,6 +17,8 @@ type
     EUserName: TEdit;
     Fon: TImage;
     LUserName: TLabel;
+    procedure BAddClick(Sender: TObject);
+    procedure BBackClick(Sender: TObject);
   private
 
   public
@@ -27,8 +29,21 @@ var
   fAddUser: TfAddUser;
 
 implementation
-
+  uses SelectUser;
 {$R *.lfm}
+
+{ TfAddUser }
+
+procedure TfAddUser.BBackClick(Sender: TObject);
+begin
+  fSelectU.Show;
+  fAddUser.Hide;
+end;
+
+procedure TfAddUser.BAddClick(Sender: TObject);
+begin
+  BBackClick(Sender);
+end;
 
 end.
 

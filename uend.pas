@@ -27,15 +27,15 @@ var
 
 implementation
 
-uses usend;
+uses umain;
 {$R *.lfm}
 
 { Tfend }
 
 procedure Tfend.BExitClick(Sender: TObject);
 begin
-  fend.Visible:=false;
-  fsend.ShowModal;
+  fend.hide;
+  Main.Show;
 end;
 
 end.

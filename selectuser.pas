@@ -33,7 +33,7 @@ var
 
 implementation
 
-uses usend,users;
+uses usend,umain;
 {$R *.lfm}
 
 { TfSelectU }
@@ -41,20 +41,20 @@ uses usend,users;
 
 procedure TfSelectU.BNextClick(Sender: TObject);
 begin
-  fSelectU.Visible:=false;
-  FSend.ShowModal;
+  fSelectU.Hide;
+  FSend.Show;
 end;
 
 procedure TfSelectU.BBackClick(Sender: TObject);
 begin
-  fSelectU.Visible:=false;
-  fUsers.ShowModal;
+  Main.Show;
+  fSelectU.Hide;
 end;
 
 procedure TfSelectU.BAddClick(Sender: TObject);
 begin
-  fSelectU.Visible:=False;
-  fAddUser.ShowModal;
+  fSelectU.Hide;
+  fAddUser.Show;
 end;
 
 end.

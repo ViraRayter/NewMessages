@@ -1,7 +1,7 @@
 object FSend: TFSend
-  Left = 296
+  Left = 80
   Height = 500
-  Top = 102
+  Top = 221
   Width = 300
   Caption = 'Введите текст'
   ClientHeight = 500
@@ -8365,6 +8365,7 @@ object FSend: TFSend
     Font.Pitch = fpFixed
     Font.Quality = fqDraft
     Font.Style = [fsBold]
+    OnClick = BGoClick
     ParentFont = False
     TabOrder = 2
   end
@@ -8572,6 +8573,7 @@ object FSend: TFSend
     Font.Pitch = fpFixed
     Font.Quality = fqDraft
     Font.Style = [fsBold]
+    OnClick = BBackClick
     ParentFont = False
     TabOrder = 3
   end

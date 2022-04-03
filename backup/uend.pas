@@ -12,10 +12,10 @@ type
   { Tfend }
 
   Tfend = class(TForm)
-    bExit: TButton;
-    Image1: TImage;
-    LabelEnd: TLabel;
-    procedure bExitClick(Sender: TObject);
+    BExit: TButton;
+    Fon: TImage;
+    LEnd: TLabel;
+    procedure BExitClick(Sender: TObject);
   private
 
   public
@@ -32,7 +32,7 @@ uses usend;
 
 { Tfend }
 
-procedure Tfend.bExitClick(Sender: TObject);
+procedure Tfend.BExitClick(Sender: TObject);
 begin
   fend.Visible:=false;
   fsend.ShowModal;

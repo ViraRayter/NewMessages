@@ -5,18 +5,20 @@ unit adduser;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls, SelectUser;
 
 type
 
   { TfAddUser }
 
   TfAddUser = class(TForm)
-    bAdd: TButton;
-    bBack: TButton;
-    eUserName: TEdit;
-    Image1: TImage;
-    Label1: TLabel;
+    BAdd: TButton;
+    BBack: TButton;
+    EUserName: TEdit;
+    Fon: TImage;
+    LUserName: TLabel;
+    procedure BAddClick(Sender: TObject);
+    procedure BBackClick(Sender: TObject);
   private
 
   public
@@ -29,6 +31,19 @@ var
 implementation
 
 {$R *.lfm}
+
+{ TfAddUser }
+
+procedure TfAddUser.BBackClick(Sender: TObject);
+begin
+  fSelectU.Show;
+  fAddUser.Hide;
+end;
+
+procedure TfAddUser.BAddClick(Sender: TObject);
+begin
+  BBackClick(Sender);
+end;
 
 end.
 

@@ -1,7 +1,7 @@
 object Main: TMain
-  Left = 545
+  Left = 951
   Height = 500
-  Top = 114
+  Top = 126
   Width = 300
   BorderStyle = bsDialog
   Caption = 'New Messages'
@@ -8364,6 +8364,7 @@ object Main: TMain
     Font.Height = -13
     Font.Name = 'Courier'
     Font.Style = [fsBold]
+    OnClick = BBackClick
     ParentFont = False
     TabOrder = 3
   end
@@ -8381,6 +8382,7 @@ object Main: TMain
     Font.Height = -16
     Font.Name = 'Courier'
     Font.Style = [fsBold]
+    OnClick = BNextClick
     ParentFont = False
     TabOrder = 4
   end
@@ -8455,6 +8457,7 @@ object Main: TMain
       AE732000C318410820000000000020004108C31841088E730000000000000000
       0000000000000000000000000000
     }
+    OnClick = BAuthDiscordClick
   end
   object BAuthVK: TSpeedButton
     AnchorSideLeft.Control = BVK
@@ -8527,6 +8530,7 @@ object Main: TMain
       AE732000C318410820000000000020004108C31841088E730000000000000000
       0000000000000000000000000000
     }
+    OnClick = BAuthDiscordClick
   end
   object BAuthDiscord: TSpeedButton
     AnchorSideLeft.Control = BDiscord
@@ -8599,5 +8603,6 @@ object Main: TMain
       AE732000C318410820000000000020004108C31841088E730000000000000000
       0000000000000000000000000000
     }
+    OnClick = BAuthDiscordClick
   end
 end

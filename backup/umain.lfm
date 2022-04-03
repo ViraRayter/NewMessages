@@ -1,7 +1,7 @@
 object Main: TMain
-  Left = 545
+  Left = 951
   Height = 500
-  Top = 114
+  Top = 126
   Width = 300
   BorderStyle = bsDialog
   Caption = 'New Messages'
@@ -8287,7 +8287,7 @@ object Main: TMain
     Anchors = [akLeft, akBottom]
     AutoSize = False
     BorderSpacing.Bottom = 30
-    Caption = 'Выберите платформу для рассылки'
+    Caption = 'Выберите платформы для рассылки'
     Font.Height = -20
     Font.Name = 'Courier'
     Font.Style = [fsBold]
@@ -8381,10 +8381,11 @@ object Main: TMain
     Font.Height = -16
     Font.Name = 'Courier'
     Font.Style = [fsBold]
+    OnClick = BNextClick
     ParentFont = False
     TabOrder = 4
   end
-  object SpeedButton1: TSpeedButton
+  object BAuthMail: TSpeedButton
     AnchorSideLeft.Control = BMail
     AnchorSideLeft.Side = asrBottom
     AnchorSideTop.Control = BMail
@@ -8455,8 +8456,9 @@ object Main: TMain
       AE732000C318410820000000000020004108C31841088E730000000000000000
       0000000000000000000000000000
     }
+    OnClick = BAuthDiscordClick
   end
-  object SpeedButton2: TSpeedButton
+  object BAuthVK: TSpeedButton
     AnchorSideLeft.Control = BVK
     AnchorSideLeft.Side = asrBottom
     AnchorSideTop.Control = BVK
@@ -8527,8 +8529,9 @@ object Main: TMain
       AE732000C318410820000000000020004108C31841088E730000000000000000
       0000000000000000000000000000
     }
+    OnClick = BAuthDiscordClick
   end
-  object SpeedButton3: TSpeedButton
+  object BAuthDiscord: TSpeedButton
     AnchorSideLeft.Control = BDiscord
     AnchorSideLeft.Side = asrBottom
     AnchorSideTop.Control = BDiscord
@@ -8599,5 +8602,6 @@ object Main: TMain
       AE732000C318410820000000000020004108C31841088E730000000000000000
       0000000000000000000000000000
     }
+    OnClick = BAuthDiscordClick
   end
 end
