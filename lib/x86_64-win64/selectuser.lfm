@@ -3,9 +3,12 @@ object fSelectU: TfSelectU
   Height = 500
   Top = 103
   Width = 300
-  Caption = 'Выбрать получателей'
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'NewMessages'
   ClientHeight = 500
   ClientWidth = 300
+  OnClose = FormClose
+  OnShow = FormShow
   Position = poDesktopCenter
   LCLVersion = '2.2.0.4'
   object Fon: TImage

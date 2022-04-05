@@ -3,9 +3,12 @@ object fAddUser: TfAddUser
   Height = 500
   Top = 84
   Width = 300
+  BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'Добавить получателя'
   ClientHeight = 500
   ClientWidth = 300
+  OnClose = FormClose
+  OnShow = FormShow
   Position = poDesktopCenter
   LCLVersion = '2.2.0.4'
   object Fon: TImage
@@ -8326,7 +8329,7 @@ object fAddUser: TfAddUser
   object BAdd: TButton
     AnchorSideLeft.Control = Owner
     AnchorSideLeft.Side = asrCenter
-    AnchorSideTop.Control = ComboBox1
+    AnchorSideTop.Control = Plat
     AnchorSideTop.Side = asrBottom
     Left = 50
     Height = 35
@@ -8341,7 +8344,7 @@ object fAddUser: TfAddUser
     ParentFont = False
     TabOrder = 1
   end
-  object ComboBox1: TComboBox
+  object Plat: TComboBox
     AnchorSideLeft.Control = Owner
     AnchorSideLeft.Side = asrCenter
     AnchorSideTop.Control = EUserName
@@ -8350,6 +8353,7 @@ object fAddUser: TfAddUser
     Height = 24
     Top = 229
     Width = 250
+    AutoSelect = False
     BorderSpacing.Top = 15
     Font.CharSet = RUSSIAN_CHARSET
     Font.Height = -16
@@ -8365,6 +8369,7 @@ object fAddUser: TfAddUser
       'Discord'
     )
     ParentFont = False
+    ReadOnly = True
     TabOrder = 3
     Text = 'E-mail'
   end

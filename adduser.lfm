@@ -3,9 +3,12 @@ object fAddUser: TfAddUser
   Height = 500
   Top = 84
   Width = 300
-  Caption = 'Добавить получателя'
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'NewMessages'
   ClientHeight = 500
   ClientWidth = 300
+  OnClose = FormClose
+  OnShow = FormShow
   Position = poDesktopCenter
   LCLVersion = '2.2.0.4'
   object Fon: TImage
@@ -8350,6 +8353,7 @@ object fAddUser: TfAddUser
     Height = 24
     Top = 229
     Width = 250
+    AutoSelect = False
     BorderSpacing.Top = 15
     Font.CharSet = RUSSIAN_CHARSET
     Font.Height = -16

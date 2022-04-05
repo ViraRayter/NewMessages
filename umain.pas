@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
-  Buttons, Selectuser;
+  Buttons;
 
 type
 
@@ -26,6 +26,8 @@ type
     procedure BAuthDiscordClick(Sender: TObject);
     procedure BBackClick(Sender: TObject);
     procedure BNextClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
+    procedure FormShow(Sender: TObject);
   private
 
   public
@@ -36,7 +38,7 @@ var
   Main: TMain;
 
 implementation
-uses users;
+uses users,selectuser;
 {$R *.lfm}
 
 { TMain }
@@ -45,6 +47,21 @@ procedure TMain.BNextClick(Sender: TObject);
 begin
  FSelectU.Show;
  Main.Hide;
+end;
+
+procedure TMain.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+begin
+  if MessageDlg('Закрыть приложение?', mtConfirmation, [mbYes, mbNo], 0) = mrYes
+  then FUsers.Close
+  else CloseAction:=caNone;
+end;
+
+procedure TMain.FormShow(Sender: TObject);
+begin
+  BMail.Checked:=False;
+  BVk.Checked:=False;
+  BDiscord.Checked:=False;
+  ActiveControl := nil;
 end;
 
 procedure TMain.BAuthDiscordClick(Sender: TObject);

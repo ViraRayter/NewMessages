@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls,
-  CheckLst, AddUser;
+  CheckLst, AddUser,umain;
 
 type
 
@@ -22,6 +22,8 @@ type
     procedure BAddClick(Sender: TObject);
     procedure BBackClick(Sender: TObject);
     procedure BNextClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
+    procedure FormShow(Sender: TObject);
   private
 
   public
@@ -33,7 +35,7 @@ var
 
 implementation
 
-uses usend,umain;
+uses usend,users;
 {$R *.lfm}
 
 { TfSelectU }
@@ -43,6 +45,18 @@ procedure TfSelectU.BNextClick(Sender: TObject);
 begin
   fSelectU.Hide;
   FSend.Show;
+end;
+
+procedure TfSelectU.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+begin
+  if MessageDlg('Закрыть приложение?', mtConfirmation, [mbYes, mbNo], 0) = mrYes
+  then FUsers.Close
+  else CloseAction:=caNone;
+end;
+
+procedure TfSelectU.FormShow(Sender: TObject);
+begin
+  ActiveControl := nil;
 end;
 
 procedure TfSelectU.BBackClick(Sender: TObject);

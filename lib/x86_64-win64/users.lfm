@@ -3,9 +3,11 @@ object fUsers: TfUsers
   Height = 500
   Top = 101
   Width = 300
-  Caption = 'Авторизация'
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'NewMessages'
   ClientHeight = 500
   ClientWidth = 300
+  OnShow = FormShow
   Position = poDesktopCenter
   LCLVersion = '2.2.0.4'
   object Fon: TImage
@@ -8343,6 +8345,7 @@ object fUsers: TfUsers
     Top = 183
     Width = 250
     Anchors = [akLeft, akBottom]
+    AutoSelect = False
     BorderSpacing.Bottom = 10
     Font.CharSet = RUSSIAN_CHARSET
     Font.Height = -16

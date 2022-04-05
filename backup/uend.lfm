@@ -3,9 +3,13 @@ object fend: Tfend
   Height = 500
   Top = 205
   Width = 300
+  BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsDialog
+  Caption = 'NewMessages'
   ClientHeight = 500
   ClientWidth = 300
+  OnClose = FormClose
+  OnShow = FormShow
   Position = poDesktopCenter
   LCLVersion = '2.2.0.4'
   object Fon: TImage

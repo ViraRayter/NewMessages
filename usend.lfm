@@ -3,9 +3,12 @@ object FSend: TFSend
   Height = 500
   Top = 85
   Width = 300
-  Caption = 'Введите текст'
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'NewMessages'
   ClientHeight = 500
   ClientWidth = 300
+  OnClose = FormClose
+  OnShow = FormShow
   Position = poDesktopCenter
   LCLVersion = '2.2.0.4'
   object Fon: TImage
@@ -8321,6 +8324,7 @@ object FSend: TFSend
     Top = 81
     Width = 250
     Anchors = [akLeft, akBottom]
+    AutoSelect = False
     BorderSpacing.Bottom = 15
     Font.CharSet = RUSSIAN_CHARSET
     Font.Height = -16
@@ -8552,7 +8556,7 @@ object FSend: TFSend
     ParentFont = False
     TabOrder = 3
   end
-  object BAdd1: TSpeedButton
+  object BDell: TSpeedButton
     AnchorSideTop.Control = MText
     AnchorSideTop.Side = asrBottom
     AnchorSideRight.Control = Owner
