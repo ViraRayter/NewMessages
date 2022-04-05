@@ -13,6 +13,7 @@ type
   { TFSend }
 
   TFSend = class(TForm)
+    BAdd1: TSpeedButton;
     BGo: TButton;
     BBack: TButton;
     ETopic: TEdit;

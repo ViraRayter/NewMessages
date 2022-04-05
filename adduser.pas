@@ -14,6 +14,7 @@ type
   TfAddUser = class(TForm)
     BAdd: TButton;
     BBack: TButton;
+    Plat: TComboBox;
     EUserName: TEdit;
     Fon: TImage;
     LUserName: TLabel;

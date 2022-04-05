@@ -5,7 +5,7 @@ unit adduser;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls, SelectUser;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls;
 
 type
 
@@ -14,6 +14,7 @@ type
   TfAddUser = class(TForm)
     BAdd: TButton;
     BBack: TButton;
+    ComboBox1: TComboBox;
     EUserName: TEdit;
     Fon: TImage;
     LUserName: TLabel;
@@ -29,7 +30,7 @@ var
   fAddUser: TfAddUser;
 
 implementation
-
+  uses SelectUser;
 {$R *.lfm}
 
 { TfAddUser }
