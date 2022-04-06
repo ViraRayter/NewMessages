@@ -4,7 +4,7 @@ object FSend: TFSend
   Top = 85
   Width = 300
   BorderIcons = [biSystemMenu, biMinimize]
-  Caption = 'Введите текст'
+  Caption = 'NewMessages'
   ClientHeight = 500
   ClientWidth = 300
   OnClose = FormClose

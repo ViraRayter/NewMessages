@@ -18,6 +18,7 @@ type
     EName: TEdit;
     EPassword: TEdit;
     Fon: TImage;
+    LMain: TLabel;
     LName: TLabel;
     LPassword: TLabel;
     SQLC: TSQLite3Connection;
@@ -36,6 +37,7 @@ type
 var
   fUsers: TfUsers;
   Name:string;
+  plat:0..3;
 implementation
 {$R *.lfm}
 
@@ -43,6 +45,7 @@ implementation
 
 procedure TfUsers.BNextClick(Sender: TObject);
 begin
+ if Plat=0 then begin    //Авторизация в нашем аккаунте
   SQLQ.Close;
   SQLQ.SQL.Text:='select * from Пользователи where Логин = :L';
   SQLQ.ParamByName('L').AsString :=EName.Text;
@@ -72,6 +75,28 @@ begin
      exit;
      end;
   Name:=EName.Text;
+  end
+  //Внесение данных от аккаунтов в сети
+  else begin
+    SQLQ.Close;
+
+     case Plat of
+     1: begin
+       SQLQ.SQL.Text := 'update Пользователи Set E-mail = :n , Пароль_E-mail=:p where Логин=:name';
+     end;
+     2: begin
+       SQLQ.SQL.Text := 'update Пользователи Set Логин_ВК = :n , Пароль_ВК=:p where Логин=:name';
+     end;
+     3: begin
+        SQLQ.SQL.Text := 'update Пользователи Set Логин_Discord = :n , Пароль_Discord=:p where Логин=:name';
+     end;
+     end;
+     SQLQ.ParamByName('n').AsString := EName.Text;
+     SQLQ.ParamByName('p').AsString := EPassword.Text;
+     SQLQ.ParamByName('name').AsString := Name;
+     SQLQ.ExecSQL;
+     SQLT.Commit;
+  end;
   Main.Show;
   FUsers.Hide;
 end;
@@ -95,7 +120,8 @@ end;
 
 procedure TfUsers.BBackClick(Sender: TObject);
 begin
- BNextClick(Sender);
+ Main.Show;
+ FUsers.Hide;
 end;
 
 end.

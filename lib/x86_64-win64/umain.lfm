@@ -8312,25 +8312,25 @@ object Main: TMain
     Font.Height = -16
     Font.Name = 'Courier'
     Font.Style = [fsBold]
+    OnClick = BMailClick
     ParentFont = False
     TabOrder = 0
   end
   object BVK: TToggleBox
     AnchorSideLeft.Control = Owner
-    AnchorSideLeft.Side = asrCenter
     AnchorSideTop.Control = Owner
     AnchorSideTop.Side = asrCenter
     Left = 15
     Height = 40
     Top = 230
     Width = 225
-    Anchors = [akTop]
-    BorderSpacing.Left = 5
+    BorderSpacing.Left = 15
     Caption = 'VK'
     Font.CharSet = RUSSIAN_CHARSET
     Font.Height = -16
     Font.Name = 'Courier'
     Font.Style = [fsBold]
+    OnClick = BVKClick
     ParentFont = False
     TabOrder = 1
   end
@@ -8349,6 +8349,7 @@ object Main: TMain
     Font.Height = -16
     Font.Name = 'Courier'
     Font.Style = [fsBold]
+    OnClick = BDiscordClick
     ParentFont = False
     TabOrder = 2
   end

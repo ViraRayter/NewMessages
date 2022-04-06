@@ -1,7 +1,7 @@
 object fUsers: TfUsers
-  Left = -5
+  Left = 683
   Height = 500
-  Top = 101
+  Top = 199
   Width = 300
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'NewMessages'
@@ -8390,6 +8390,26 @@ object fUsers: TfUsers
     Font.Name = 'Courier'
     Font.Style = [fsBold]
     ParentFont = False
+  end
+  object LMain: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideRight.Side = asrCenter
+    AnchorSideBottom.Control = LName
+    Left = 22
+    Height = 40
+    Top = 92
+    Width = 256
+    Alignment = taCenter
+    Anchors = [akLeft, akBottom]
+    AutoSize = False
+    BorderSpacing.Bottom = 30
+    Font.Height = -20
+    Font.Name = 'Courier'
+    Font.Style = [fsBold]
+    ParentFont = False
+    ParentShowHint = False
+    WordWrap = True
   end
   object SQLT: TSQLTransaction
     Active = False
