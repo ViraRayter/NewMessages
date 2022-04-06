@@ -7,7 +7,7 @@ object fAddUser: TfAddUser
   Caption = 'NewMessages'
   ClientHeight = 500
   ClientWidth = 300
-  OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
   OnShow = FormShow
   Position = poDesktopCenter
   LCLVersion = '2.2.0.4'

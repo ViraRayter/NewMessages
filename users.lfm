@@ -7,6 +7,7 @@ object fUsers: TfUsers
   Caption = 'NewMessages'
   ClientHeight = 500
   ClientWidth = 300
+  OnCreate = FormCreate
   OnShow = FormShow
   Position = poDesktopCenter
   LCLVersion = '2.2.0.4'
@@ -8389,5 +8390,31 @@ object fUsers: TfUsers
     Font.Name = 'Courier'
     Font.Style = [fsBold]
     ParentFont = False
+  end
+  object SQLT: TSQLTransaction
+    Active = False
+    Database = SQLC
+    Left = 120
+    Top = 88
+  end
+  object SQLC: TSQLite3Connection
+    Connected = False
+    LoginPrompt = False
+    DatabaseName = 'DataBase.db'
+    KeepConnection = False
+    Transaction = SQLT
+    CharSet = 'UTF8'
+    AlwaysUseBigint = False
+    Left = 48
+    Top = 88
+  end
+  object SQLQ: TSQLQuery
+    FieldDefs = <>
+    Database = SQLC
+    Transaction = SQLT
+    Params = <>
+    Macros = <>
+    Left = 192
+    Top = 88
   end
 end

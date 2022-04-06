@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls,
-  users;
+  users, SQLite3Conn, SQLDB;
 
 type
 
@@ -21,7 +21,7 @@ type
     LUserName: TLabel;
     procedure BAddClick(Sender: TObject);
     procedure BBackClick(Sender: TObject);
-    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
+    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure FormShow(Sender: TObject);
   private
 
@@ -44,11 +44,11 @@ begin
   fAddUser.Hide;
 end;
 
-procedure TfAddUser.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+procedure TfAddUser.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 begin
   if MessageDlg('Закрыть приложение?', mtConfirmation, [mbYes, mbNo], 0) = mrYes
   then FUsers.Close
-  else CloseAction:=caNone;
+  else CanClose:=false;
 end;
 
 procedure TfAddUser.FormShow(Sender: TObject);
