@@ -1,7 +1,7 @@
 object fUsers: TfUsers
-  Left = 683
+  Left = 736
   Height = 500
-  Top = 199
+  Top = 117
   Width = 300
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'NewMessages'

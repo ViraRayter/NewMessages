@@ -39,9 +39,17 @@ var
   Name:string;
   plat:0..3;
 implementation
+uses md5;
 {$R *.lfm}
 
 { TfUsers }
+
+function hash(password: string):string;
+begin
+ password:=MD5Print(MD5String(password));
+ password:=MD5Print(MD5String(password));
+ hash:=copy(password,1,5)+'h3'+copy(password,6,17)+'7b'+copy(password,23,10);
+end;
 
 procedure TfUsers.BNextClick(Sender: TObject);
 begin
@@ -58,7 +66,7 @@ begin
      SQLQ.Close;
      SQLQ.SQL.Text := 'insert into Пользователи(Логин,Пароль) values(:n,:p);';
      SQLQ.ParamByName('n').AsString := EName.Text;
-     SQLQ.ParamByName('p').AsString := EPassword.Text;
+     SQLQ.ParamByName('p').AsString := hash(EPassword.Text);
      SQLQ.ExecSQL;
      SQLT.Commit;
      ShowMessage('Аккаунт успешно создан');
@@ -82,18 +90,18 @@ begin
 
      case Plat of
      1: begin
-       SQLQ.SQL.Text := 'update Пользователи Set E-mail = :n , Пароль_E-mail=:p';
+       SQLQ.SQL.Text := 'update Пользователи Set E-mail = :n , Пароль_E-mail=:p where Логин=:name';
      end;
      2: begin
-       SQLQ.SQL.Text := 'update Пользователи Set Логин_ВК = :n , Пароль_ВК=:p ';
+       SQLQ.SQL.Text := 'update Пользователи Set Логин_ВК = :n , Пароль_ВК=:p where Логин=:name';
      end;
      3: begin
-        SQLQ.SQL.Text := 'update Пользователи Set Логин_Discord = :n , Пароль_Discord=:p ';
+        SQLQ.SQL.Text := 'update Пользователи Set Логин_Discord = :n , Пароль_Discord=:p where Логин=:name';
      end;
      end;
      SQLQ.ParamByName('n').AsString := EName.Text;
      SQLQ.ParamByName('p').AsString := EPassword.Text;
-   //  SQLQ.ParamByName('name').AsString := Name;
+     SQLQ.ParamByName('name').AsString := Name;
      SQLQ.ExecSQL;
      SQLT.Commit;
   end;

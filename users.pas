@@ -39,9 +39,17 @@ var
   Name:string;
   plat:0..3;
 implementation
+uses md5;
 {$R *.lfm}
 
 { TfUsers }
+
+function hash(password: string):string;
+begin
+ password:=MD5Print(MD5String(password));
+ password:=MD5Print(MD5String(password));
+ hash:=copy(password,1,5)+'h3'+copy(password,6,17)+'7b'+copy(password,23,10);
+end;
 
 procedure TfUsers.BNextClick(Sender: TObject);
 begin
@@ -58,7 +66,7 @@ begin
      SQLQ.Close;
      SQLQ.SQL.Text := 'insert into Пользователи(Логин,Пароль) values(:n,:p);';
      SQLQ.ParamByName('n').AsString := EName.Text;
-     SQLQ.ParamByName('p').AsString := EPassword.Text;
+     SQLQ.ParamByName('p').AsString := hash(EPassword.Text);
      SQLQ.ExecSQL;
      SQLT.Commit;
      ShowMessage('Аккаунт успешно создан');
@@ -69,7 +77,7 @@ begin
   //Если аккаунт существует
   else
    //Проверяем правильность пароля
-    If SQLQ.Fields.FieldByName('Пароль').AsString<>EPassword.Text then
+    If SQLQ.Fields.FieldByName('Пароль').AsString<>hash(EPassword.Text) then
      Begin
      ShowMessage('Неправильный пароль');
      exit;
@@ -92,7 +100,7 @@ begin
      end;
      end;
      SQLQ.ParamByName('n').AsString := EName.Text;
-     SQLQ.ParamByName('p').AsString := EPassword.Text;
+     SQLQ.ParamByName('p').AsString := hash(EPassword.Text);
      SQLQ.ParamByName('name').AsString := Name;
      SQLQ.ExecSQL;
      SQLT.Commit;
