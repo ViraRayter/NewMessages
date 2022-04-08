@@ -48,7 +48,7 @@ function hash(password: string):string; // хеширование паролей
 begin
  password:=MD5Print(MD5String(password));
  password:=MD5Print(MD5String(password));
- hash:=copy(password,1,5)+'h3'+copy(password,6,17)+'7b'+copy(password,23,10);
+ hash:=copy(password,1,5)+'e3'+copy(password,6,17)+'7b'+copy(password,23,10);
 end;
 
 

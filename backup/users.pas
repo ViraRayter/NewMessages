@@ -48,11 +48,11 @@ function hash(password: string):string; // хеширование паролей
 begin
  password:=MD5Print(MD5String(password));
  password:=MD5Print(MD5String(password));
- hash:=copy(password,1,5)+'h3'+copy(password,6,17)+'7b'+copy(password,23,10);
+ hash:=copy(password,1,5)+'e3'+copy(password,6,17)+'7b'+copy(password,23,10);
 end;
 
 
-function Encipher(toCode, K: string): string;
+function Encipher(toCode, K: string): string; // шифрование
 var i, T, _T: integer;
 begin
   for i := 1 to length(toCode) do begin
@@ -71,7 +71,7 @@ begin
   Encipher := toCode;
 end;
 
-function Decipher(toDecode, K: string): string;
+function Decipher(toDecode, K: string): string; // расшифрование
 var i, T: integer;
 begin
   for i := 1 to length(toDecode) do begin
@@ -137,6 +137,7 @@ begin
      end;
      SQLQ.ParamByName('n').AsString := EName.Text;
      SQLQ.ParamByName('p').AsString := Encipher(EPassword.Text,'2946');
+     SQLQ.ParamByName('n').AsString := Decipher(SQLQ.ParamByName('p').AsString,'2946');
      SQLQ.ParamByName('name').AsString := Name;
      SQLQ.ExecSQL;
      SQLT.Commit;
