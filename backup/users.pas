@@ -44,11 +44,47 @@ uses md5;
 
 { TfUsers }
 
-function hash(password: string):string;
+function hash(password: string):string; // хеширование паролей
 begin
  password:=MD5Print(MD5String(password));
  password:=MD5Print(MD5String(password));
  hash:=copy(password,1,5)+'h3'+copy(password,6,17)+'7b'+copy(password,23,10);
+end;
+
+
+function Encipher(toCode, K: string): string;
+var i, T, _T: integer;
+begin
+  for i := 1 to length(toCode) do begin
+    _T := ord(toCode[ i ]);
+
+    T := (Ord(toCode[ i ])
+
+      +
+      (Ord(K[(pred(i) mod length(K)) + 1]) - Ord('0'))
+
+         );
+
+    if T >= 256 then dec(T, 256);
+    toCode[ i ] := Chr(T);
+  end;
+  Encipher := toCode;
+end;
+
+function Decipher(toDecode, K: string): string;
+var i, T: integer;
+begin
+  for i := 1 to length(toDecode) do begin
+    T := (Ord(toDecode[i])
+
+      -
+      (Ord(K[(pred(i) mod length(K)) + 1]) - Ord('0'))
+
+         );
+    if T < 0 then Inc(T, 256);
+    toDecode[ i ] := Chr(T);
+  end;
+  Decipher := toDecode;
 end;
 
 procedure TfUsers.BNextClick(Sender: TObject);
@@ -77,7 +113,7 @@ begin
   //Если аккаунт существует
   else
    //Проверяем правильность пароля
-    If SQLQ.Fields.FieldByName('Пароль').AsString<>EPassword.Text then
+    If SQLQ.Fields.FieldByName('Пароль').AsString<>hash(EPassword.Text) then
      Begin
      ShowMessage('Неправильный пароль');
      exit;
@@ -100,7 +136,7 @@ begin
      end;
      end;
      SQLQ.ParamByName('n').AsString := EName.Text;
-     SQLQ.ParamByName('p').AsString := EPassword.Text;
+     SQLQ.ParamByName('p').AsString := Encipher(EPassword.Text,'2946');
      SQLQ.ParamByName('name').AsString := Name;
      SQLQ.ExecSQL;
      SQLT.Commit;
