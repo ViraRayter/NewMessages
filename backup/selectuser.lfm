@@ -1,10 +1,10 @@
 object fSelectU: TfSelectU
-  Left = 595
+  Left = 956
   Height = 500
-  Top = 103
+  Top = 82
   Width = 300
   BorderIcons = [biSystemMenu, biMinimize]
-  Caption = 'Выбрать получателей'
+  Caption = 'NewMessages'
   ClientHeight = 500
   ClientWidth = 300
   OnClose = FormClose
@@ -8290,16 +8290,16 @@ object fSelectU: TfSelectU
     Font.Style = [fsBold]
     OnClick = BBackClick
     ParentFont = False
-    TabOrder = 3
+    TabOrder = 2
   end
   object LCheck: TLabel
     AnchorSideLeft.Control = Owner
     AnchorSideLeft.Side = asrCenter
     AnchorSideTop.Side = asrBottom
-    AnchorSideBottom.Control = CheckUsers
+    AnchorSideBottom.Control = Field
     Left = 26
     Height = 20
-    Top = 115
+    Top = 90
     Width = 248
     Anchors = [akLeft, akBottom]
     BorderSpacing.Bottom = 15
@@ -8312,20 +8312,20 @@ object fSelectU: TfSelectU
   object BAdd: TButton
     AnchorSideLeft.Control = Owner
     AnchorSideLeft.Side = asrCenter
-    AnchorSideTop.Control = CheckUsers
+    AnchorSideTop.Control = Field
     AnchorSideTop.Side = asrBottom
     Left = 50
     Height = 35
-    Top = 380
+    Top = 385
     Width = 200
-    BorderSpacing.Top = 30
+    BorderSpacing.Top = 10
     Caption = 'Добавить'
     Font.Height = -16
     Font.Name = 'Courier'
     Font.Style = [fsBold]
     OnClick = BAddClick
     ParentFont = False
-    TabOrder = 2
+    TabOrder = 1
   end
   object BNext: TButton
     AnchorSideLeft.Control = Owner
@@ -8334,7 +8334,7 @@ object fSelectU: TfSelectU
     AnchorSideTop.Side = asrBottom
     Left = 50
     Height = 35
-    Top = 430
+    Top = 435
     Width = 200
     BorderSpacing.Top = 15
     Caption = 'Далее'
@@ -8343,44 +8343,28 @@ object fSelectU: TfSelectU
     Font.Style = [fsBold]
     OnClick = BNextClick
     ParentFont = False
-    TabOrder = 1
+    TabOrder = 0
   end
-  object CheckUsers: TCheckListBox
+  object Field: TScrollBox
     AnchorSideLeft.Control = Owner
     AnchorSideLeft.Side = asrCenter
     AnchorSideTop.Control = Owner
     AnchorSideTop.Side = asrCenter
     Left = 25
-    Height = 200
-    Top = 150
+    Height = 250
+    Top = 125
     Width = 250
+    HorzScrollBar.Page = 1
+    VertScrollBar.Page = 1
+    Color = clNone
     Font.CharSet = RUSSIAN_CHARSET
-    Font.Height = -13
+    Font.Height = -16
     Font.Name = 'Courier'
     Font.Pitch = fpFixed
     Font.Quality = fqDraft
-    Items.Strings = (
-      'Пример1'
-      'Пример2'
-      'Пример3'
-      'Пример4'
-      'Пример5'
-      'Пример6'
-      'Пример7'
-      'Пример8'
-      'Пример9'
-      'Пример10'
-      'Пример11'
-      'Пример12'
-      'Пример13'
-      'Пример14'
-      'Пример15'
-    )
-    ItemHeight = 17
+    ParentBackground = True
+    ParentColor = False
     ParentFont = False
-    TabOrder = 0
-    Data = {
-      0F000000000000000000000000000000000000
-    }
+    TabOrder = 3
   end
 end

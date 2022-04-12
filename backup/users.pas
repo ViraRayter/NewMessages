@@ -11,7 +11,7 @@ uses
 type
 
   { TfUsers }
-
+  TResipArray = array of  TCheckBox;
   TfUsers = class(TForm)
     BBack: TButton;
     BNext: TButton;
@@ -38,6 +38,9 @@ var
   fUsers: TfUsers;
   Name:string;
   plat:0..3;
+  platsel: array[1..3] of boolean;
+  platname: array[1..3] of TLabel;
+  resip:TResipArray;
 implementation
 uses md5;
 {$R *.lfm}
@@ -137,7 +140,6 @@ begin
      end;
      SQLQ.ParamByName('n').AsString := EName.Text;
      SQLQ.ParamByName('p').AsString := Encipher(EPassword.Text,'2946');
-     SQLQ.ParamByName('n').AsString := Decipher(SQLQ.ParamByName('p').AsString,'2946');
      SQLQ.ParamByName('name').AsString := Name;
      SQLQ.ExecSQL;
      SQLT.Commit;

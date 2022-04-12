@@ -48,6 +48,9 @@ uses users,selectuser;
 
 procedure TMain.BNextClick(Sender: TObject);
 begin
+ platsel[1]:=BMail.Checked;
+ platsel[2]:=BVK.Cheked;
+ platsel[3]:=BDiscord.Checked;
  FSelectU.Show;
  Main.Hide;
 end;

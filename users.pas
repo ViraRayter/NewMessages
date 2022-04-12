@@ -11,7 +11,7 @@ uses
 type
 
   { TfUsers }
-
+  TResipArray = array of  TCheckBox;
   TfUsers = class(TForm)
     BBack: TButton;
     BNext: TButton;
@@ -38,6 +38,10 @@ var
   fUsers: TfUsers;
   Name:string;
   plat:0..3;
+  platsel: array[1..3] of boolean;
+  platname: array[1..3] of TLabel;
+  resip:TResipArray;
+  Kol:integer;
 implementation
 uses md5;
 {$R *.lfm}
