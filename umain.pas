@@ -105,7 +105,7 @@ begin
  FUsers.Show;
  Plat:=0;
  Name:='';
- LMain.Caption:='';
+ FUsers.LMain.Caption:='';
  FUsers.BBack.Visible:=false;
  Main.Hide;
 end;
@@ -125,7 +125,7 @@ end;
 procedure TMain.BMailClick(Sender: TObject);
 begin
    if BMail.Checked=true then
-   if FUsers.SQLQ.Fields.FieldByName('E-mail').AsString='' then begin
+   if FUsers.SQLQ.Fields.FieldByName('Email').AsString='' then begin
    beep;
    ShowMessage('Введите данные от аккаунта!');
    BMail.Checked:=false;

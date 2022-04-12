@@ -45,6 +45,15 @@ uses usend,users;
 procedure TfSelectU.BNextClick(Sender: TObject);
 begin
   fSelectU.Hide;
+  with FSend do
+  if platsel[1]=false then begin
+   LTopic.Visible:=false;
+   ETopic.Visible:=false;
+  end
+  else begin
+   LTopic.Visible:=true;
+   ETopic.Visible:=true;
+  end;
   FSend.Show;
 end;
 
@@ -57,9 +66,14 @@ end;
 
 procedure TfSelectU.FormShow(Sender: TObject);
 const n:array[1..3] of string = ('E-mail','VK','Discord');
-var i,PL,x,yn,yr:integer;
+var i,PL,x,yn:integer; // i счетчик адресов, PL счетчик платформ
+                       //x переменная верт. расп, yn отступ для названия
 begin
   ActiveControl := nil;
+  for i:= Field.ControlCount - 1 downto 0 do
+    Field.Controls[i].Free;
+
+  // считаем количество адресов вообще
   with fUsers do begin
   SQLQ.Close;
   SQLQ.SQL.Text:='select Count(*) as Количество from Адреса where Пользователь = :L';
@@ -68,16 +82,20 @@ begin
   Kol:=SQLQ.Fields.FieldByName('Количество').AsInteger;
   end;
   SetLength(resip,Kol);
+
+  //Заполняем адреса с разделением по платформам
   i:=0;x:=0;yn:=20;
   for PL:=1 to 3 do
   if platsel[Pl]=true then begin
-   platname[Pl]:=TLabel.Create(self);
+   platname[Pl]:=TLabel.Create(self);    //Название платформы
    platname[Pl].Parent:=Field;
    platname[Pl].Top:=x;
    platname[Pl].Left:=yn;
    platname[Pl].Caption:=n[PL];
    platname[Pl].Font.Style:=[fsBold];
    x:=x+16;
+
+   //Заполнение адресов
    with fUsers do begin
    SQLQ.Close;
    SQLQ.SQL.Text:='select Данные from Адреса where Пользователь = :L  and Платформа= :p';
@@ -95,7 +113,7 @@ begin
      inc(i); SQLQ.Next; x:=x+16;
      end;
     end;
-    x:=x+16;
+    x:=x+16;  //Пустая строка
   end;
 end;
 

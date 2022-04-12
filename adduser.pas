@@ -60,7 +60,16 @@ end;
 
 procedure TfAddUser.BAddClick(Sender: TObject);
 begin
-  BBackClick(Sender);
+  with fUsers do begin
+   SQLQ.Close;
+   SQLQ.SQL.Text:='insert into Адреса(Данные,Пользователь,Платформа) values(:n,:p,:pl);';
+   SQLQ.ParamByName('n').AsString:=EUserName.Text;
+   SQLQ.ParamByName('p').AsString:=Name;
+   SQLQ.ParamByName('pl').AsInteger:=Plat.ItemIndex+1;
+   SQLQ.ExecSQL;
+   SQLT.Commit;
+  end;
+   BBackClick(Sender);
 end;
 
 end.

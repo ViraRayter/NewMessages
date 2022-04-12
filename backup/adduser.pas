@@ -21,7 +21,6 @@ type
     LUserName: TLabel;
     procedure BAddClick(Sender: TObject);
     procedure BBackClick(Sender: TObject);
-    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure FormShow(Sender: TObject);
   private
@@ -45,11 +44,6 @@ begin
   fAddUser.Hide;
 end;
 
-procedure TfAddUser.FormClose(Sender: TObject; var CloseAction: TCloseAction);
-begin
-
-end;
-
 procedure TfAddUser.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 begin
   if MessageDlg('Закрыть приложение?', mtConfirmation, [mbYes, mbNo], 0) = mrYes
@@ -66,7 +60,16 @@ end;
 
 procedure TfAddUser.BAddClick(Sender: TObject);
 begin
-  BBackClick(Sender);
+  with fUsers do begin
+   SQLQ.Close;
+   SQLQ.SQL.Text:='insert into Адреса(Данные,Пользователь,Платформа) values(:n,:p,:pl);';
+   SQLQ.ParamByName('n').AsString:=EUserName.Text;
+   SQLQ.ParamByName('p').AsString:=Name;
+   SQLQ.ParamByName('pl').AsInteger:=Plat.ItemIndex+1;
+   SQLQ.ExecSQL;
+   SQLT.Commit;
+  end;
+   BBackClick(Sender);
 end;
 
 end.

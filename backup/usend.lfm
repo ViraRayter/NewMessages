@@ -8332,7 +8332,7 @@ object FSend: TFSend
     Font.Style = [fsItalic]
     ParentFont = False
     TabOrder = 0
-    TextHint = 'Тема'
+    TextHint = 'Только для e-mail'
   end
   object LTopic: TLabel
     AnchorSideLeft.Control = Owner

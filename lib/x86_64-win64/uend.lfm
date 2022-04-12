@@ -1,10 +1,10 @@
 object fend: Tfend
-  Left = 285
+  Left = 311
   Height = 500
-  Top = 205
+  Top = 86
   Width = 300
   BorderIcons = [biSystemMenu, biMinimize]
-  BorderStyle = bsDialog
+  BorderStyle = bsSingle
   Caption = 'NewMessages'
   ClientHeight = 500
   ClientWidth = 300

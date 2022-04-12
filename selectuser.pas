@@ -45,6 +45,15 @@ uses usend,users;
 procedure TfSelectU.BNextClick(Sender: TObject);
 begin
   fSelectU.Hide;
+  with FSend do
+  if platsel[1]=false then begin
+   LTopic.Visible:=false;
+   ETopic.Visible:=false;
+  end
+  else begin
+   LTopic.Visible:=true;
+   ETopic.Visible:=true;
+  end;
   FSend.Show;
 end;
 
@@ -61,6 +70,8 @@ var i,PL,x,yn:integer; // i счетчик адресов, PL счетчик п�
                        //x переменная верт. расп, yn отступ для названия
 begin
   ActiveControl := nil;
+  for i:= Field.ControlCount - 1 downto 0 do
+    Field.Controls[i].Free;
 
   // считаем количество адресов вообще
   with fUsers do begin

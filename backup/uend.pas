@@ -50,7 +50,7 @@ end;
 
 procedure Tfend.FormShow(Sender: TObject);
 begin
-  ActiveControl := nil;
+  ActiveControl:= nil;
 end;
 
 end.

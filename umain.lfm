@@ -4,6 +4,7 @@ object Main: TMain
   Top = 126
   Width = 300
   BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
   Caption = 'New Messages'
   ClientHeight = 500
   ClientWidth = 300

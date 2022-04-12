@@ -4,6 +4,7 @@ object FSend: TFSend
   Top = 85
   Width = 300
   BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
   Caption = 'NewMessages'
   ClientHeight = 500
   ClientWidth = 300
@@ -8332,7 +8333,7 @@ object FSend: TFSend
     Font.Style = [fsItalic]
     ParentFont = False
     TabOrder = 0
-    TextHint = 'Тема'
+    TextHint = 'Только для e-mail'
   end
   object LTopic: TLabel
     AnchorSideLeft.Control = Owner

@@ -130,7 +130,7 @@ begin
 
      case Plat of
      1: begin
-       SQLQ.SQL.Text := 'update Пользователи Set E-mail = :n , Пароль_E-mail=:p where Логин=:name';
+       SQLQ.SQL.Text := 'update Пользователи Set Email = :n , Пароль_Email=:p where Логин=:name';
      end;
      2: begin
        SQLQ.SQL.Text := 'update Пользователи Set Логин_ВК = :n , Пароль_ВК=:p where Логин=:name';
