@@ -6,7 +6,8 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
-  ComboEx, Umain, SQLDB, SQLite3Conn;
+  ComboEx, IdSMTP, IdSSLOpenSSL, IdMailBox, IdMessage, Umain, SQLDB,
+  SQLite3Conn,IdText, IdExplicitTLSClientServerBase;
 
 type
 
@@ -18,6 +19,9 @@ type
     EName: TEdit;
     EPassword: TEdit;
     Fon: TImage;
+    IdMess: TIdMessage;
+    IdSMTP: TIdSMTP;
+    IdOpenSSL: TIdSSLIOHandlerSocketOpenSSL;
     LMain: TLabel;
     LName: TLabel;
     LPassword: TLabel;
@@ -28,6 +32,7 @@ type
     procedure BNextClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    function  Decipher(toDecode, K: string): string;
   private
 
   public
@@ -75,7 +80,7 @@ begin
   Encipher := toCode;
 end;
 
-function Decipher(toDecode, K: string): string; // расшифрование
+function TfUsers.Decipher(toDecode, K: string): string; // расшифрование
 var i, T: integer;
 begin
   for i := 1 to length(toDecode) do begin
