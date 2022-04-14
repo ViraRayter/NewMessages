@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
-  Buttons;
+  Buttons, IdText, IdExplicitTLSClientServerBase;
 
 type
 
@@ -123,14 +123,33 @@ end;
 
 
 procedure TMain.BMailClick(Sender: TObject);
+var
+    //imgpart : TIdAttachmentFile;
+    txtpart, htmpart : TIdText;
+  email,password,site:string;
 begin
+   email:=FUsers.SQLQ.Fields.FieldByName('Email').AsString;
    if BMail.Checked=true then
-   if FUsers.SQLQ.Fields.FieldByName('Email').AsString='' then begin
+   if email='' then begin
    beep;
    ShowMessage('Введите данные от аккаунта!');
    BMail.Checked:=false;
    BAuthDiscordClick(BAuthMail);
-   end;
+   end
+   else
+  begin
+  site:=copy(email,pos('@',email)+1,length(email)-pos('@',email));
+  password:=FUsers.Decipher(FUsers.SQLQ.Fields.FieldByName('Пароль_Email').AsString,'2946');
+  with FUsers do begin
+  IdSMTP.Host := 'mail.'+site; // проверял через gmail
+  IdSMTP.Port := 465;
+  IdSMTP.Username := email; // тут - полный username (у меня - включая @gmail.com)
+  IdSMTP.Password := password; // тут - пароль
+  IdSMTP.UseTLS := utUseImplicitTLS;
+  IdSMTP.AuthType:=satDefault;
+  IdSMTP.Connect();
+  end;
+  end;
 end;
 
 { TMain }

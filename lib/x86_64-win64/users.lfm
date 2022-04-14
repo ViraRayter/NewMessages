@@ -1,7 +1,7 @@
 object fUsers: TfUsers
-  Left = 736
+  Left = 773
   Height = 500
-  Top = 117
+  Top = 307
   Width = 300
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
@@ -8437,5 +8437,38 @@ object fUsers: TfUsers
     Macros = <>
     Left = 192
     Top = 88
+  end
+  object IdSMTP: TIdSMTP
+    IOHandler = IdOpenSSL
+    SASLMechanisms = <>
+    Left = 118
+    Top = 43
+  end
+  object IdOpenSSL: TIdSSLIOHandlerSocketOpenSSL
+    Destination = ':25'
+    MaxLineAction = maException
+    Port = 25
+    DefaultPort = 0
+    SSLOptions.Method = sslvSSLv3
+    SSLOptions.SSLVersions = [sslvSSLv3]
+    SSLOptions.Mode = sslmUnassigned
+    SSLOptions.VerifyMode = []
+    SSLOptions.VerifyDepth = 0
+    Left = 173
+    Top = 45
+  end
+  object IdMess: TIdMessage
+    AttachmentEncoding = 'UUE'
+    BccList = <>
+    CCList = <>
+    Encoding = meDefault
+    FromList = <    
+      item
+      end>
+    Recipients = <>
+    ReplyTo = <>
+    ConvertPreamble = True
+    Left = 33
+    Top = 54
   end
 end
