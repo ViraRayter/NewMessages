@@ -43,7 +43,20 @@ uses usend,users;
 
 
 procedure TfSelectU.BNextClick(Sender: TObject);
+var i,j:integer;
 begin
+  //Email
+  for i:=0 to KolOnPlat[1]-1 do               //Считаем отмеченные адреса
+   if resip[i].Checked=true then
+    inc(KolRes[1]);
+  SetLength(ResAdr,KolRes[1]-1);
+   j:=0;
+  for i:=0 to KolOnPlat[1]-1 do
+   if resip[i].Checked=true then begin
+    ResAdr[j]:=resip[i].Caption;
+    inc(j);
+   end;
+  //
   fSelectU.Hide;
   with FSend do
   if platsel[1]=false then begin
@@ -66,7 +79,7 @@ end;
 
 procedure TfSelectU.FormShow(Sender: TObject);
 const n:array[1..3] of string = ('E-mail','VK','Discord');
-var i,PL,x,yn:integer; // i счетчик адресов, PL счетчик платформ
+var i,PL,x,yn,j:integer; // i,j счетчики адресов, PL счетчик платформ
                        //x переменная верт. расп, yn отступ для названия
 begin
   ActiveControl := nil;
@@ -96,6 +109,7 @@ begin
    x:=x+16;
 
    //Заполнение адресов
+   j:=0;
    with fUsers do begin
    SQLQ.Close;
    SQLQ.SQL.Text:='select Данные from Адреса where Пользователь = :L  and Платформа= :p';
@@ -110,9 +124,10 @@ begin
      resip[i].Top:=x;
      resip[i].Caption:=fUsers.SQLQ.Fields.FieldByName('Данные').AsString;
      end;
-     inc(i); SQLQ.Next; x:=x+16;
+     inc(i);inc(j); SQLQ.Next; x:=x+16;
      end;
     end;
+   KolOnPlat[PL]:=j;
     x:=x+16;  //Пустая строка
   end;
 end;

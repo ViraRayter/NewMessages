@@ -145,15 +145,18 @@ begin
   begin
   site:=copy(email,pos('@',email)+1,length(email)-pos('@',email));
   password:=FUsers.Decipher(FUsers.SQLQ.Fields.FieldByName('Пароль_Email').AsString,'2946');
+   try
   with FUsers do begin
-  IdSMTP.Host := 'mail.'+site; // проверял через gmail
-  IdSMTP.Port := 465;
-  IdSMTP.Username := email; // тут - полный username (у меня - включая @gmail.com)
+  IdSMTP.Host := 'smtp.'+site;
+  IdSMTP.Port := 25;
+  IdSMTP.Username := email; // тут - полный username (включая @mail)
   IdSMTP.Password := password; // тут - пароль
-  IdSMTP.UseTLS := utUseImplicitTLS;
-  //IdSMTP.AuthType:=satDefault;
   IdSMTP.Connect();
   end;
+  except
+    ShowMessage('Ошибка подключения к аккаунту');
+    BMail.Checked:=false;
+   end;
   end;
 end;
 

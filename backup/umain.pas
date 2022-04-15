@@ -54,6 +54,7 @@ begin
  if (BMail.Checked = False) and (BVK.Checked = False) and (BDiscord.Checked = False) then
  begin
    ShowMessage('Выберите хотя бы одну платформу!');
+   exit;
  end;
  FSelectU.Show;
  Main.Hide;
@@ -145,11 +146,11 @@ begin
   site:=copy(email,pos('@',email)+1,length(email)-pos('@',email));
   password:=FUsers.Decipher(FUsers.SQLQ.Fields.FieldByName('Пароль_Email').AsString,'2946');
   with FUsers do begin
-  IdSMTP.Host := 'mail.'+site; // проверял через gmail
-  IdSMTP.Port := 465;
+  IdSMTP.Host := 'smtp.'+site; // проверял через gmail
+  IdSMTP.Port := 25;
   IdSMTP.Username := email; // тут - полный username (у меня - включая @gmail.com)
   IdSMTP.Password := password; // тут - пароль
-  IdSMTP.UseTLS := utUseImplicitTLS;
+  //IdSMTP.UseTLS := utUseImplicitTLS;
   //IdSMTP.AuthType:=satDefault;
   IdSMTP.Connect();
   end;

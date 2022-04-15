@@ -7,12 +7,13 @@ interface
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
   ComboEx, IdSMTP, IdSSLOpenSSL, IdMailBox, IdMessage, Umain, SQLDB,
-  SQLite3Conn,IdText, IdExplicitTLSClientServerBase, LazUTF8;
+  SQLite3Conn, IdText, IdExplicitTLSClientServerBase, LazUTF8;
 
 type
 
   { TfUsers }
   TResipArray = array of  TCheckBox;
+  TResAdrArray = array of string[320];
   TfUsers = class(TForm)
     BBack: TButton;
     BNext: TButton;
@@ -45,8 +46,11 @@ var
   plat:0..3;
   platsel: array[1..3] of boolean;
   platname: array[1..3] of TLabel;
+  KolRes:array[1..3]of integer; //Количество выбранных адресов (по платформе)
+  KolOnPlat:array[1..3] of integer;   //Количество адресов по платформе
   resip:TResipArray;
   Kol:integer;
+  ResAdr:TResAdrArray;
 implementation
 uses md5;
 {$R *.lfm}

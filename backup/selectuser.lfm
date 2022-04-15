@@ -4,6 +4,7 @@ object fSelectU: TfSelectU
   Top = 82
   Width = 300
   BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
   Caption = 'NewMessages'
   ClientHeight = 500
   ClientWidth = 300
