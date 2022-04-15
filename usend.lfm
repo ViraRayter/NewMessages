@@ -8353,13 +8353,13 @@ object FSend: TFSend
   object BGo: TButton
     AnchorSideLeft.Control = Owner
     AnchorSideLeft.Side = asrCenter
-    AnchorSideTop.Control = BAdd
+    AnchorSideTop.Control = MText
     AnchorSideTop.Side = asrBottom
     Left = 50
     Height = 35
     Top = 425
     Width = 200
-    BorderSpacing.Top = 25
+    BorderSpacing.Top = 75
     Caption = 'Готово'
     Font.CharSet = RUSSIAN_CHARSET
     Font.Height = -16
@@ -8513,6 +8513,7 @@ object FSend: TFSend
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000
     }
+    OnClick = BAddClick
   end
   object LAdd: TLabel
     AnchorSideLeft.Control = BAdd
@@ -8522,15 +8523,16 @@ object FSend: TFSend
     Left = 70
     Height = 16
     Top = 374
-    Width = 117
+    Width = 180
     BorderSpacing.Left = 10
     BorderSpacing.Bottom = 10
-    Caption = 'Добавить файл'
+    Caption = 'Добавить изображение'
     Font.CharSet = RUSSIAN_CHARSET
     Font.Color = clBlack
     Font.Height = -16
     Font.Name = 'Courier'
     ParentFont = False
+    OnClick = BAddClick
   end
   object BBack: TButton
     AnchorSideLeft.Control = Owner
@@ -8645,5 +8647,24 @@ object FSend: TFSend
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000007B7774007A767301746F6D077873710277737000
     }
+    OnClick = BDellClick
+  end
+  object Image: TImage
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = MText
+    AnchorSideTop.Side = asrBottom
+    Left = 25
+    Height = 48
+    Top = 360
+    Width = 47
+    BorderSpacing.Left = 25
+    BorderSpacing.Top = 10
+    OnDblClick = ImageDblClick
+    Stretch = True
+    Visible = False
+  end
+  object OpenPicture: TOpenPictureDialog
+    Left = 88
+    Top = 263
   end
 end
