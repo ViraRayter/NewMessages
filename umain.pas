@@ -145,19 +145,27 @@ begin
   begin
   site:=copy(email,pos('@',email)+1,length(email)-pos('@',email));
   password:=FUsers.Decipher(FUsers.SQLQ.Fields.FieldByName('Пароль_Email').AsString,'2946');
-   try
   with FUsers do begin
   IdSMTP.Host := 'smtp.'+site;
-  IdSMTP.Port := 25;
+  IdSMTP.Port := 465;
   IdSMTP.Username := email; // тут - полный username (включая @mail)
   IdSMTP.Password := password; // тут - пароль
+  IdSMTP.UseTLS := utUseImplicitTLS;
+  idMess.CharSet:='UTF8'; // Корректная отправка письма на русском языке
+  idMess.Body.Text:= 'dkfhjshdfk';
+  idMess.Subject:='dfjskajlksfd';
+  IdMess.Recipients.EMailAddresses:='cstud117667@vyatsu.ru';
   IdSMTP.Connect();
+  if IdSMTP.Connected then
+  IdSMTP.Send(IdMess)
+  else ShowMessage('подключиться не удалось');
+  IdSMTP.Disconnect();
+  {if not IdSMTP.Connected then begin
+   ShowMessage('Подключиться к почте не удалось');
+   BMail.Checked:=false;
+  end; }
   end;
-  except
-    ShowMessage('Ошибка подключения к аккаунту');
-    BMail.Checked:=false;
-   end;
-  end;
+end;
 end;
 
 { TMain }

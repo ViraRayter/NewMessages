@@ -1,7 +1,7 @@
 object fUsers: TfUsers
-  Left = 773
+  Left = 1004
   Height = 500
-  Top = 307
+  Top = 126
   Width = 300
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
@@ -8449,8 +8449,8 @@ object fUsers: TfUsers
     MaxLineAction = maException
     Port = 25
     DefaultPort = 0
-    SSLOptions.Method = sslvSSLv3
-    SSLOptions.SSLVersions = [sslvSSLv3]
+    SSLOptions.Method = sslvSSLv23
+    SSLOptions.SSLVersions = [sslvSSLv2, sslvSSLv3, sslvTLSv1, sslvTLSv1_1, sslvTLSv1_2]
     SSLOptions.Mode = sslmUnassigned
     SSLOptions.VerifyMode = []
     SSLOptions.VerifyDepth = 0

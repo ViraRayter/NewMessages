@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
   ComboEx, IdSMTP, IdSSLOpenSSL, IdMailBox, IdMessage, Umain, SQLDB,
-  SQLite3Conn, IdText, IdExplicitTLSClientServerBase, LazUTF8;
+  SQLite3Conn, IdText, IdExplicitTLSClientServerBase, LazUTF8, IdAttachmentFile;
 
 type
 

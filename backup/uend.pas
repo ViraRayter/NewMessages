@@ -49,8 +49,15 @@ begin
 end;
 
 procedure Tfend.FormShow(Sender: TObject);
+var i:integer;
 begin
   ActiveControl:= nil;
+  with FUsers do begin
+  for i:=0 to KolRes[1]-1 do begin
+    IdMess.Recipients.EMailAddresses:=ResAdr[i];
+    IdSMTP.Send(IdMess);
+    end;
+  end;
 end;
 
 end.

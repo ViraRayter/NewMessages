@@ -1,7 +1,7 @@
 object fUsers: TfUsers
-  Left = 773
+  Left = 1004
   Height = 500
-  Top = 307
+  Top = 126
   Width = 300
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle

@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
-  Buttons, ExtDlgs, SelectUser, UEnd, users, LazUTF8, uImage;
+  Buttons, ExtDlgs, SelectUser, UEnd, users, LazUTF8, uImage, IdAttachmentFile;
 
 type
 
@@ -82,7 +82,16 @@ begin
     ShowMessage('Вы не ввели сообщение!');
     exit;
   end;
+  //
+  with FUsers do begin
+  idMess.CharSet:='UTF8'; // Корректная отправка письма на русском языке
+  idMess.Body.Text:= MText.Text;
+  idMess.Subject:=ETopic.Caption;
+ // TIdAttachmentFile.Create(idMess.MessageParts, FSend.OpenPicture.FileName);
+  end;
+  //
   FEnd.Show;
+  FEnd.LEnd.Caption:='Отправка сообщений';
   FSend.Hide;
 end;
 
@@ -105,7 +114,6 @@ procedure TFSend.ImageDblClick(Sender: TObject);
 begin
   fImage.Height:=496;
   fImage.Image.Height:=496;
-
   fImage.Image.Picture:=fSend.Image.Picture;
   if fImage.Image.Picture.Height>=fImage.Image.Height then
     fImage.Image.Width:=fImage.Image.Height * fImage.Image.Picture.Width div fImage.Image.Picture.Height

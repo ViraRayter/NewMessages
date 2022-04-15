@@ -7,13 +7,13 @@ interface
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
   ComboEx, IdSMTP, IdSSLOpenSSL, IdMailBox, IdMessage, Umain, SQLDB,
-  SQLite3Conn, IdText, IdExplicitTLSClientServerBase, LazUTF8;
+  SQLite3Conn, IdText, IdExplicitTLSClientServerBase, LazUTF8, IdAttachmentFile;
 
 type
 
   { TfUsers }
   TResipArray = array of  TCheckBox;
-  TResAdrArray = array of string[320];
+  TResAdrArray = array of string[255];
   TfUsers = class(TForm)
     BBack: TButton;
     BNext: TButton;
