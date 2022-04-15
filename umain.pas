@@ -51,6 +51,11 @@ begin
  platsel[1]:=BMail.Checked;
  platsel[2]:=BVK.Checked;
  platsel[3]:=BDiscord.Checked;
+ if (BMail.Checked = False) and (BVK.Checked = False) and (BDiscord.Checked = False) then
+ begin
+   ShowMessage('Выберите хотя бы одну платформу!');
+   exit;
+ end;
  FSelectU.Show;
  Main.Hide;
 end;

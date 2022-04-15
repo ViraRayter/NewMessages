@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
-  Buttons,SelectUser,UEnd,users;
+  Buttons, SelectUser, UEnd, users, LazUTF8;
 
 type
 
@@ -50,6 +50,11 @@ end;
 
 procedure TFSend.BGoClick(Sender: TObject);
 begin
+  if UTF8Length(MText.Lines.Text) = 0 then
+  begin
+    ShowMessage('Вы не ввели сообщение!');
+    exit;
+  end;
   FEnd.Show;
   FSend.Hide;
 end;

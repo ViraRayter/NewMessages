@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
   ComboEx, IdSMTP, IdSSLOpenSSL, IdMailBox, IdMessage, Umain, SQLDB,
-  SQLite3Conn,IdText, IdExplicitTLSClientServerBase;
+  SQLite3Conn, IdText, IdExplicitTLSClientServerBase, LazUTF8;
 
 type
 
@@ -99,6 +99,21 @@ end;
 procedure TfUsers.BNextClick(Sender: TObject);
 begin
  if Plat=0 then begin    //Авторизация в нашем аккаунте
+
+  if UTF8Length(EName.Text)<5 then
+  begin
+    ShowMessage('Логин не может быть меньше 5 символов!');
+    EName.SetFocus;
+    exit;
+  end;
+
+  if UTF8Length(EPassword.Text)<8 then
+  begin
+    ShowMessage('Пароль не может быть меньше 8 символов!');
+    EPassword.SetFocus;
+    exit;
+  end;
+
   SQLQ.Close;
   SQLQ.SQL.Text:='select * from Пользователи where Логин = :L';
   SQLQ.ParamByName('L').AsString :=EName.Text;

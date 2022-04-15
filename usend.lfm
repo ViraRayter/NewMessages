@@ -8288,9 +8288,6 @@ object FSend: TFSend
     Font.Height = -16
     Font.Name = 'Courier'
     Font.Style = [fsItalic]
-    Lines.Strings = (
-      'Привет'
-    )
     ParentFont = False
     ParentShowHint = False
     ScrollBars = ssAutoVertical

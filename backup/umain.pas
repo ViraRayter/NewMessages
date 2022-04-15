@@ -51,6 +51,10 @@ begin
  platsel[1]:=BMail.Checked;
  platsel[2]:=BVK.Checked;
  platsel[3]:=BDiscord.Checked;
+ if (BMail.Checked = False) and (BVK.Checked = False) and (BDiscord.Checked = False) then
+ begin
+   ShowMessage('Выберите хотя бы одну платформу!');
+ end;
  FSelectU.Show;
  Main.Hide;
 end;
@@ -146,7 +150,7 @@ begin
   IdSMTP.Username := email; // тут - полный username (у меня - включая @gmail.com)
   IdSMTP.Password := password; // тут - пароль
   IdSMTP.UseTLS := utUseImplicitTLS;
-  IdSMTP.AuthType:=satDefault;
+  //IdSMTP.AuthType:=satDefault;
   IdSMTP.Connect();
   end;
   end;

@@ -8439,13 +8439,15 @@ object fUsers: TfUsers
     Top = 88
   end
   object IdSMTP: TIdSMTP
+    IOHandler = IdOpenSSL
     SASLMechanisms = <>
     Left = 118
     Top = 43
   end
   object IdOpenSSL: TIdSSLIOHandlerSocketOpenSSL
+    Destination = ':25'
     MaxLineAction = maException
-    Port = 0
+    Port = 25
     DefaultPort = 0
     SSLOptions.Method = sslvSSLv3
     SSLOptions.SSLVersions = [sslvSSLv3]
