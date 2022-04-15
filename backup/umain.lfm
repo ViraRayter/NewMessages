@@ -6,8 +6,8 @@ object Main: TMain
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'New Messages'
-  ClientHeight = 500
-  ClientWidth = 300
+  ClientHeight = 0
+  ClientWidth = 0
   OnClose = FormClose
   OnShow = FormShow
   Position = poDesktopCenter

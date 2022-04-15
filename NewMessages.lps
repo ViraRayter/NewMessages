@@ -11,7 +11,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="8"/>
         <CursorPos X="6" Y="29"/>
-        <UsageCount Value="66"/>
+        <UsageCount Value="69"/>
       </Unit>
       <Unit>
         <Filename Value="usend.pas"/>
@@ -20,10 +20,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="USend"/>
-        <EditorIndex Value="4"/>
-        <TopLine Value="86"/>
-        <CursorPos X="3" Y="87"/>
-        <UsageCount Value="66"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="83"/>
+        <CursorPos X="24" Y="88"/>
+        <UsageCount Value="69"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -33,9 +33,10 @@
         <ComponentName Value="Main"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <TopLine Value="155"/>
-        <CursorPos Y="160"/>
-        <UsageCount Value="66"/>
+        <TopLine Value="129"/>
+        <CursorPos X="45" Y="130"/>
+        <ComponentState Value="1"/>
+        <UsageCount Value="69"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -45,10 +46,10 @@
         <ComponentName Value="fUsers"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="5"/>
-        <TopLine Value="127"/>
-        <CursorPos X="36" Y="134"/>
-        <UsageCount Value="66"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="43"/>
+        <CursorPos X="39" Y="45"/>
+        <UsageCount Value="69"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -58,10 +59,11 @@
         <ComponentName Value="fend"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="6"/>
-        <TopLine Value="54"/>
-        <CursorPos X="4" Y="57"/>
-        <UsageCount Value="66"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="103"/>
+        <CursorPos Y="107"/>
+        <ComponentState Value="1"/>
+        <UsageCount Value="69"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -71,10 +73,11 @@
         <ComponentName Value="fSelectU"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="8"/>
+        <EditorIndex Value="7"/>
         <TopLine Value="101"/>
         <CursorPos X="14" Y="56"/>
-        <UsageCount Value="65"/>
+        <ComponentState Value="1"/>
+        <UsageCount Value="68"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -84,9 +87,10 @@
         <ComponentName Value="fAddUser"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="9"/>
+        <EditorIndex Value="8"/>
         <CursorPos X="13"/>
-        <UsageCount Value="64"/>
+        <ComponentState Value="1"/>
+        <UsageCount Value="67"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -99,7 +103,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="22"/>
         <CursorPos X="19" Y="15"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="34"/>
       </Unit>
       <Unit>
         <Filename Value="umain.lfm"/>
@@ -121,18 +125,20 @@
       </Unit>
       <Unit>
         <Filename Value="C:\lazarus\lcl\include\customform.inc"/>
-        <EditorIndex Value="7"/>
-        <TopLine Value="574"/>
-        <CursorPos Y="580"/>
-        <UsageCount Value="12"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="998"/>
+        <CursorPos Y="1004"/>
+        <UsageCount Value="14"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="C:\lazarus\lcl\include\control.inc"/>
-        <EditorIndex Value="-1"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="4"/>
         <TopLine Value="2952"/>
         <CursorPos Y="2957"/>
         <UsageCount Value="10"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\AppData\Local\lazarus\onlinepackagemanager\packages\Indy10\Protocols\IdExplicitTLSClientServerBase.pas"/>
@@ -144,19 +150,19 @@
       </Unit>
       <Unit>
         <Filename Value="..\..\AppData\Local\lazarus\onlinepackagemanager\packages\Indy10\Protocols\IdSMTP.pas"/>
-        <EditorIndex Value="-1"/>
+        <EditorIndex Value="5"/>
         <TopLine Value="369"/>
-        <CursorPos Y="376"/>
+        <CursorPos Y="375"/>
         <UsageCount Value="12"/>
+        <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\AppData\Local\lazarus\onlinepackagemanager\packages\Indy10\Protocols\IdSSLOpenSSLHeaders.pas"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="19484"/>
         <CursorPos Y="19489"/>
         <UsageCount Value="11"/>
-        <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -169,12 +175,10 @@
       </Unit>
       <Unit>
         <Filename Value="..\..\AppData\Local\lazarus\onlinepackagemanager\packages\Indy10\Protocols\IdReplySMTP.pas"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="497"/>
         <CursorPos Y="503"/>
         <UsageCount Value="12"/>
-        <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -188,133 +192,132 @@
       <Unit>
         <Filename Value="C:\lazarus\lcl\lclmessageglue.pas"/>
         <UnitName Value="LCLMessageGlue"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="111"/>
         <CursorPos Y="116"/>
         <UsageCount Value="12"/>
-        <Loaded Value="True"/>
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
       <Position>
-        <Filename Value="umain.pas"/>
-        <Caret Line="150" TopLine="146"/>
+        <Filename Value="uend.pas"/>
+        <Caret Line="58" TopLine="58"/>
       </Position>
       <Position>
-        <Filename Value="umain.pas"/>
-        <Caret Line="151" TopLine="146"/>
+        <Filename Value="usend.pas"/>
+        <Caret Line="85" Column="8" TopLine="80"/>
       </Position>
       <Position>
-        <Filename Value="umain.pas"/>
-        <Caret Line="152" TopLine="146"/>
+        <Filename Value="uend.pas"/>
+        <Caret Line="74" TopLine="69"/>
       </Position>
       <Position>
-        <Filename Value="umain.pas"/>
-        <Caret Line="153" TopLine="146"/>
+        <Filename Value="uend.pas"/>
+        <Caret Line="76" TopLine="69"/>
       </Position>
       <Position>
-        <Filename Value="umain.pas"/>
-        <Caret Line="155" TopLine="146"/>
+        <Filename Value="uend.pas"/>
+        <Caret Line="78" TopLine="72"/>
       </Position>
       <Position>
-        <Filename Value="umain.pas"/>
-        <Caret Line="156" TopLine="147"/>
+        <Filename Value="uend.pas"/>
+        <Caret Line="79" TopLine="75"/>
       </Position>
       <Position>
-        <Filename Value="umain.pas"/>
-        <Caret Line="158" TopLine="151"/>
+        <Filename Value="uend.pas"/>
+        <Caret Line="81" TopLine="75"/>
       </Position>
       <Position>
-        <Filename Value="umain.pas"/>
-        <Caret Line="166" TopLine="149"/>
+        <Filename Value="uend.pas"/>
+        <Caret Line="82" TopLine="78"/>
       </Position>
       <Position>
-        <Filename Value="C:\lazarus\lcl\lclmessageglue.pas"/>
-        <Caret Line="116" TopLine="111"/>
+        <Filename Value="uend.pas"/>
+        <Caret Line="84" TopLine="81"/>
       </Position>
       <Position>
-        <Filename Value="umain.pas"/>
-        <Caret Line="149" TopLine="144"/>
+        <Filename Value="uend.pas"/>
+        <Caret Line="85" TopLine="81"/>
       </Position>
       <Position>
-        <Filename Value="umain.pas"/>
-        <Caret Line="155" TopLine="150"/>
+        <Filename Value="uend.pas"/>
+        <Caret Line="86" TopLine="84"/>
       </Position>
       <Position>
-        <Filename Value="umain.pas"/>
-        <Caret Line="158" TopLine="150"/>
+        <Filename Value="uend.pas"/>
+        <Caret Line="87" TopLine="84"/>
       </Position>
       <Position>
-        <Filename Value="umain.pas"/>
-        <Caret Line="150" Column="21" TopLine="150"/>
+        <Filename Value="uend.pas"/>
+        <Caret Line="88" TopLine="84"/>
       </Position>
       <Position>
-        <Filename Value="umain.pas"/>
-        <Caret Line="158" TopLine="150"/>
+        <Filename Value="uend.pas"/>
+        <Caret Line="89" TopLine="84"/>
       </Position>
       <Position>
-        <Filename Value="umain.pas"/>
-        <Caret Line="148" TopLine="139"/>
+        <Filename Value="uend.pas"/>
+        <Caret Line="90" TopLine="84"/>
       </Position>
       <Position>
-        <Filename Value="umain.pas"/>
-        <Caret Line="149" TopLine="149"/>
+        <Filename Value="uend.pas"/>
+        <Caret Line="91" TopLine="87"/>
       </Position>
       <Position>
-        <Filename Value="umain.pas"/>
-        <Caret Line="158" TopLine="149"/>
+        <Filename Value="uend.pas"/>
+        <Caret Line="93" TopLine="90"/>
       </Position>
       <Position>
-        <Filename Value="umain.pas"/>
-        <Caret Line="150" Column="20" TopLine="149"/>
+        <Filename Value="uend.pas"/>
+        <Caret Line="94" TopLine="90"/>
       </Position>
       <Position>
-        <Filename Value="umain.pas"/>
-        <Caret Line="158" TopLine="153"/>
+        <Filename Value="uend.pas"/>
+        <Caret Line="95" TopLine="90"/>
       </Position>
       <Position>
-        <Filename Value="umain.pas"/>
-        <Caret Line="160" Column="68" TopLine="153"/>
+        <Filename Value="uend.pas"/>
+        <Caret Line="96" TopLine="90"/>
       </Position>
       <Position>
-        <Filename Value="umain.pas"/>
-        <Caret Line="115" TopLine="115"/>
+        <Filename Value="uend.pas"/>
+        <Caret Line="97" TopLine="90"/>
       </Position>
       <Position>
-        <Filename Value="umain.pas"/>
-        <Caret Line="159" TopLine="157"/>
+        <Filename Value="uend.pas"/>
+        <Caret Line="95" TopLine="90"/>
       </Position>
       <Position>
-        <Filename Value="umain.pas"/>
-        <Caret Line="154" Column="9" TopLine="147"/>
+        <Filename Value="uend.pas"/>
+        <Caret Line="100" TopLine="91"/>
       </Position>
       <Position>
-        <Filename Value="umain.pas"/>
-        <Caret Line="150" Column="21" TopLine="149"/>
+        <Filename Value="uend.pas"/>
+        <Caret Line="94" TopLine="91"/>
       </Position>
       <Position>
-        <Filename Value="umain.pas"/>
-        <Caret Line="154" Column="20" TopLine="149"/>
+        <Filename Value="uend.pas"/>
+        <Caret Line="100" Column="28" TopLine="84"/>
       </Position>
       <Position>
-        <Filename Value="umain.pas"/>
-        <Caret Line="153" Column="37" TopLine="152"/>
+        <Filename Value="uend.pas"/>
+        <Caret Line="9" Column="64" TopLine="4"/>
       </Position>
       <Position>
-        <Filename Value="..\..\AppData\Local\lazarus\onlinepackagemanager\packages\Indy10\Protocols\IdSSLOpenSSLHeaders.pas"/>
-        <Caret Line="19489" TopLine="19484"/>
+        <Filename Value="uend.pas"/>
+        <Caret Line="88" Column="50" TopLine="85"/>
       </Position>
       <Position>
-        <Filename Value="umain.pas"/>
-        <Caret Line="160" TopLine="152"/>
+        <Filename Value="uend.pas"/>
+        <Caret Line="95" Column="69" TopLine="91"/>
       </Position>
       <Position>
-        <Filename Value="umain.pas"/>
-        <Caret Line="158" Column="11" TopLine="155"/>
+        <Filename Value="usend.pas"/>
+        <Caret Line="88" Column="24" TopLine="83"/>
       </Position>
       <Position>
-        <Filename Value="umain.pas"/>
-        <Caret Line="160" TopLine="155"/>
+        <Filename Value="uend.pas"/>
+        <Caret Line="107" TopLine="103"/>
       </Position>
     </JumpHistory>
     <RunParams>
@@ -329,21 +332,7 @@
         <WatchScope Value="wpsLocal"/>
         <WatchKind Value="wpkWrite"/>
         <Source Value="uend.pas"/>
-        <Line Value="60"/>
-      </Item>
-      <Item>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="uend.pas"/>
-        <Line Value="57"/>
-      </Item>
-      <Item>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="umain.pas"/>
-        <Line Value="160"/>
+        <Line Value="107"/>
       </Item>
     </BreakPoints>
   </Debugging>

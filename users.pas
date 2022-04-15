@@ -42,14 +42,14 @@ type
 
 var
   fUsers: TfUsers;
-  Name:string;
+  Name,email,site,textm,topic,filepath:string;
   plat:0..3;
   platsel: array[1..3] of boolean;
   platname: array[1..3] of TLabel;
   KolRes:array[1..3]of integer; //Количество выбранных адресов (по платформе)
   KolOnPlat:array[1..3] of integer;   //Количество адресов по платформе
   resip:TResipArray;
-  Kol:integer;
+  Kol,port:integer;
   ResAdr:TResAdrArray;
 implementation
 uses md5;

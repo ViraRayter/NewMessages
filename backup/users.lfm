@@ -8440,17 +8440,19 @@ object fUsers: TfUsers
   end
   object IdSMTP: TIdSMTP
     IOHandler = IdOpenSSL
+    Port = 465
     SASLMechanisms = <>
+    UseTLS = utUseImplicitTLS
     Left = 118
     Top = 43
   end
   object IdOpenSSL: TIdSSLIOHandlerSocketOpenSSL
-    Destination = ':25'
+    Destination = ':465'
     MaxLineAction = maException
-    Port = 25
+    Port = 465
     DefaultPort = 0
-    SSLOptions.Method = sslvSSLv3
-    SSLOptions.SSLVersions = [sslvSSLv3]
+    SSLOptions.Method = sslvSSLv23
+    SSLOptions.SSLVersions = [sslvSSLv2, sslvSSLv3, sslvTLSv1, sslvTLSv1_1, sslvTLSv1_2]
     SSLOptions.Mode = sslmUnassigned
     SSLOptions.VerifyMode = []
     SSLOptions.VerifyDepth = 0

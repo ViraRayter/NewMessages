@@ -82,16 +82,12 @@ begin
     ShowMessage('Вы не ввели сообщение!');
     exit;
   end;
-  //
-  with FUsers do begin
-  idMess.CharSet:='UTF8'; // Корректная отправка письма на русском языке
-  idMess.Body.Text:= MText.Text;
-  idMess.Subject:=ETopic.Caption;
- // TIdAttachmentFile.Create(idMess.MessageParts, FSend.OpenPicture.FileName);
-  end;
-  //
+  textm:= MText.Text;
+  topic:=ETopic.Caption;
+  if OpenPicture.FileName<>'' then
+   Filepath:=OpenPicture.FileName;
   FEnd.Show;
-  FEnd.LEnd.Caption:='Отправка сообщений';
+  FEnd.LEnd.Caption:='Рассылка закончилась';
   FSend.Hide;
 end;
 
