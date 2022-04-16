@@ -77,7 +77,7 @@ begin
    idMess.Body.Text:= textm; //текст письма
    idMess.Subject:=topic; //тема
    IdMess.From.Address:=email; //отправитель
-   IdMess.ContentType := 'multipart/alternative';  //хз
+   IdMess.ContentType := 'multipart/mixed';  //хз
 
    txtpart := TIdText.Create(IdMess.MessageParts);
    txtpart.ContentType := 'text/plain';
@@ -89,7 +89,12 @@ begin
    htmpart.ContentType := 'text/html; charset=UTF-8'; // обяз кодировка
    htmpart.Body.Add('<html><head></head><body>');
    if filepath<>'' then
-     htmpart.Body.Add('<img src="cid:'+filepath+'" />');
+     htmpart.Body.Add('<img src="cid:'+filepath+'" /><br />');
+   for i:=1 to length(textm) do
+    if textm[i]=#13 then begin
+      delete(textm,i,1);
+      insert('<br />',textm,i);
+    end;
    htmpart.Body.Add(textm+'</body></html>');
    htmpart.ParentPart := 1;
 

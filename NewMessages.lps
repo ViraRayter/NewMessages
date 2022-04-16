@@ -11,7 +11,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="8"/>
         <CursorPos X="6" Y="29"/>
-        <UsageCount Value="75"/>
+        <UsageCount Value="77"/>
       </Unit>
       <Unit>
         <Filename Value="usend.pas"/>
@@ -20,10 +20,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="USend"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="47"/>
-        <CursorPos X="6" Y="51"/>
-        <UsageCount Value="75"/>
+        <TopLine Value="66"/>
+        <CursorPos X="97" Y="68"/>
+        <UsageCount Value="77"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -35,7 +36,7 @@
         <ResourceBaseClass Value="Form"/>
         <TopLine Value="146"/>
         <CursorPos Y="149"/>
-        <UsageCount Value="75"/>
+        <UsageCount Value="77"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -45,11 +46,10 @@
         <ComponentName Value="fUsers"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="52"/>
+        <TopLine Value="67"/>
         <CursorPos X="39" Y="50"/>
-        <UsageCount Value="75"/>
+        <UsageCount Value="77"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -60,9 +60,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="34"/>
-        <CursorPos Y="40"/>
-        <UsageCount Value="75"/>
+        <TopLine Value="86"/>
+        <CursorPos X="5" Y="93"/>
+        <UsageCount Value="77"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -72,10 +72,10 @@
         <ComponentName Value="fSelectU"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="5"/>
         <TopLine Value="86"/>
         <CursorPos X="9" Y="92"/>
-        <UsageCount Value="74"/>
+        <UsageCount Value="76"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -85,9 +85,9 @@
         <ComponentName Value="fAddUser"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="6"/>
         <CursorPos X="13"/>
-        <UsageCount Value="73"/>
+        <UsageCount Value="75"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -100,7 +100,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="22"/>
         <CursorPos X="19" Y="15"/>
-        <UsageCount Value="40"/>
+        <UsageCount Value="42"/>
       </Unit>
       <Unit>
         <Filename Value="umain.lfm"/>
@@ -218,8 +218,16 @@
         <CursorPos Y="2609"/>
         <UsageCount Value="10"/>
       </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\rtl\inc\sstrings.inc"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="66"/>
+        <CursorPos X="39" Y="70"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="15">
+    <JumpHistory HistoryIndex="24">
       <Position>
         <Filename Value="uend.pas"/>
         <Caret Line="41" TopLine="37"/>
@@ -243,10 +251,6 @@
       <Position>
         <Filename Value="umain.pas"/>
         <Caret Line="153" Column="8" TopLine="148"/>
-      </Position>
-      <Position>
-        <Filename Value="umain.pas"/>
-        <Caret Line="90" TopLine="96"/>
       </Position>
       <Position>
         <Filename Value="umain.pas"/>
@@ -283,6 +287,46 @@
       <Position>
         <Filename Value="uend.pas"/>
         <Caret Line="40" TopLine="37"/>
+      </Position>
+      <Position>
+        <Filename Value="uend.pas"/>
+        <Caret Line="98" TopLine="93"/>
+      </Position>
+      <Position>
+        <Filename Value="uend.pas"/>
+        <Caret Line="96" Column="7" TopLine="92"/>
+      </Position>
+      <Position>
+        <Filename Value="uend.pas"/>
+        <Caret Line="98" Column="21" TopLine="92"/>
+      </Position>
+      <Position>
+        <Filename Value="uend.pas"/>
+        <Caret Line="77" TopLine="73"/>
+      </Position>
+      <Position>
+        <Filename Value="uend.pas"/>
+        <Caret Line="79" TopLine="73"/>
+      </Position>
+      <Position>
+        <Filename Value="uend.pas"/>
+        <Caret Line="97" TopLine="93"/>
+      </Position>
+      <Position>
+        <Filename Value="uend.pas"/>
+        <Caret Line="98" TopLine="93"/>
+      </Position>
+      <Position>
+        <Filename Value="uend.pas"/>
+        <Caret Line="97" TopLine="93"/>
+      </Position>
+      <Position>
+        <Filename Value="uend.pas"/>
+        <Caret Line="98" TopLine="93"/>
+      </Position>
+      <Position>
+        <Filename Value="usend.pas"/>
+        <Caret Line="51" Column="6" TopLine="47"/>
       </Position>
     </JumpHistory>
     <RunParams>

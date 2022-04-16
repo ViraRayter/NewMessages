@@ -49,9 +49,6 @@ implementation
 
 procedure TFSend.BBackClick(Sender: TObject);
 begin
-  KolRes[1]:=0;
-  SetLength(ResAdr,0);
-  BDellClick(Sender);
   FSelectU.Show;
   FSend.Hide;
 end;
@@ -68,6 +65,7 @@ end;
 
 procedure TFSend.BAddClick(Sender: TObject);
 begin
+  ShowMessage('Внимание!'+#13+'На некоторых почтовых серверах изображение может не отображаться');
   if OpenPicture.Execute then
   begin
     Image.Picture.LoadFromFile(OpenPicture.FileName);
