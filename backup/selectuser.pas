@@ -46,16 +46,18 @@ procedure TfSelectU.BNextClick(Sender: TObject);
 var i,j:integer;
 begin
   //Email
+  if platsel[1]=true then begin
   for i:=0 to KolOnPlat[1]-1 do               //Считаем отмеченные адреса
    if resip[i].Checked=true then
     inc(KolRes[1]);
-  SetLength(ResAdr,KolRes[1]-1);
+  SetLength(ResAdr,KolRes[1]);
    j:=0;
   for i:=0 to KolOnPlat[1]-1 do
    if resip[i].Checked=true then begin
     ResAdr[j]:=resip[i].Caption;
     inc(j);
    end;
+  end;
   //
   fSelectU.Hide;
   with FSend do
@@ -98,6 +100,7 @@ begin
 
   //Заполняем адреса с разделением по платформам
   i:=0;x:=0;yn:=20;
+  KolOnPlat[1]:=0;KolOnPlat[2]:=0;KolOnPlat[3]:=0;
   for PL:=1 to 3 do
   if platsel[Pl]=true then begin
    platname[Pl]:=TLabel.Create(self);    //Название платформы
@@ -134,6 +137,9 @@ end;
 
 procedure TfSelectU.BBackClick(Sender: TObject);
 begin
+  platsel[1]:=false;
+  platsel[2]:=false;
+  platsel[3]:=false;
   Main.Show;
   fSelectU.Hide;
 end;

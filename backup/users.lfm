@@ -8296,11 +8296,11 @@ object fUsers: TfUsers
   object BNext: TButton
     AnchorSideLeft.Control = Owner
     AnchorSideLeft.Side = asrCenter
-    AnchorSideTop.Control = EPassword
+    AnchorSideTop.Control = GB
     AnchorSideTop.Side = asrBottom
     Left = 50
     Height = 35
-    Top = 287
+    Top = 352
     Width = 200
     BorderSpacing.Top = 25
     Caption = 'Далее'
@@ -8355,7 +8355,6 @@ object fUsers: TfUsers
     Font.Style = [fsItalic]
     ParentFont = False
     TabOrder = 0
-    TextHint = 'Введите имя'
   end
   object EPassword: TEdit
     AnchorSideLeft.Control = Owner
@@ -8374,7 +8373,6 @@ object fUsers: TfUsers
     ParentFont = False
     PasswordChar = '*'
     TabOrder = 1
-    TextHint = 'Введите пароль'
   end
   object LPassword: TLabel
     AnchorSideLeft.Control = EPassword
@@ -8411,6 +8409,82 @@ object fUsers: TfUsers
     ParentFont = False
     ParentShowHint = False
     WordWrap = True
+  end
+  object GB: TGroupBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = EPassword
+    AnchorSideTop.Side = asrBottom
+    Left = 25
+    Height = 65
+    Top = 262
+    Width = 250
+    ClientHeight = 45
+    ClientWidth = 246
+    TabOrder = 4
+    Visible = False
+    object EServer: TEdit
+      AnchorSideLeft.Control = LServer
+      AnchorSideTop.Control = LServer
+      AnchorSideTop.Side = asrBottom
+      Left = 93
+      Height = 24
+      Top = 21
+      Width = 155
+      BorderSpacing.Top = 5
+      Font.CharSet = RUSSIAN_CHARSET
+      Font.Height = -16
+      Font.Name = 'Courier'
+      Font.Style = [fsItalic]
+      ParentFont = False
+      TabOrder = 0
+    end
+    object LServer: TLabel
+      AnchorSideLeft.Control = GB
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideTop.Control = GB
+      Left = 93
+      Height = 16
+      Top = 0
+      Width = 61
+      Caption = 'Сервер'
+      Font.CharSet = RUSSIAN_CHARSET
+      Font.Height = -16
+      Font.Name = 'Courier'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object EPort: TEdit
+      AnchorSideLeft.Control = GB
+      AnchorSideTop.Control = LPort
+      AnchorSideTop.Side = asrBottom
+      Left = 0
+      Height = 24
+      Top = 21
+      Width = 70
+      BorderSpacing.Top = 5
+      Font.CharSet = RUSSIAN_CHARSET
+      Font.Height = -16
+      Font.Name = 'Courier'
+      Font.Style = [fsItalic]
+      NumbersOnly = True
+      ParentFont = False
+      TabOrder = 1
+    end
+    object LPort: TLabel
+      AnchorSideLeft.Control = GB
+      AnchorSideTop.Control = GB
+      Left = 0
+      Height = 16
+      Top = 0
+      Width = 41
+      Caption = 'Порт'
+      Font.CharSet = RUSSIAN_CHARSET
+      Font.Height = -16
+      Font.Name = 'Courier'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
   end
   object SQLT: TSQLTransaction
     Active = False

@@ -19,13 +19,18 @@ type
     BNext: TButton;
     EName: TEdit;
     EPassword: TEdit;
+    EPort: TEdit;
+    EServer: TEdit;
     Fon: TImage;
+    GB: TGroupBox;
     IdMess: TIdMessage;
     IdSMTP: TIdSMTP;
     IdOpenSSL: TIdSSLIOHandlerSocketOpenSSL;
     LMain: TLabel;
     LName: TLabel;
     LPassword: TLabel;
+    LPort: TLabel;
+    LServer: TLabel;
     SQLC: TSQLite3Connection;
     SQLQ: TSQLQuery;
     SQLT: TSQLTransaction;
@@ -43,14 +48,14 @@ type
 var
   fUsers: TfUsers;
   Name,email,site,textm,topic,filepath:string;
-  plat:0..3;
-  platsel: array[1..3] of boolean;
-  platname: array[1..3] of TLabel;
+  plat:0..3; //выбор платформы при авторизации
+  platsel: array[1..3] of boolean;//выбранные платформы для рассылки
+  platname: array[1..3] of TLabel;//Переменные для надписей на SelectU
   KolRes:array[1..3]of integer; //Количество выбранных адресов (по платформе)
   KolOnPlat:array[1..3] of integer;   //Количество адресов по платформе
-  resip:TResipArray;
-  Kol,port:integer;
-  ResAdr:TResAdrArray;
+  resip:TResipArray;//чекбоксы получателей
+  Kol,port:integer; //Kol количество адресов в базе пользователя port порт почты пользователя
+  ResAdr:TResAdrArray;//выбранные адреса для email
 implementation
 uses md5;
 {$R *.lfm}
@@ -154,20 +159,19 @@ begin
 
      case Plat of
      1: begin
-       SQLQ.SQL.Text := 'update Пользователи Set Email = :n , Пароль_Email=:p where Логин=:name';
+       SQLQ.SQL.Text := 'update Пользователи Set Email = :n , Пароль_Email=:p, Порт=:po, Сервер=:s where Логин=:name';
+       SQLQ.ParamByName('po').AsInteger := StrToInt(EPort.Text);
+       SQLQ.ParamByName('s').AsString := EServer.Text;
      end;
-     2: begin
-       SQLQ.SQL.Text := 'update Пользователи Set Логин_ВК = :n , Пароль_ВК=:p where Логин=:name';
-     end;
-     3: begin
-        SQLQ.SQL.Text := 'update Пользователи Set Логин_Discord = :n , Пароль_Discord=:p where Логин=:name';
-     end;
+     2:SQLQ.SQL.Text := 'update Пользователи Set Логин_ВК = :n , Пароль_ВК=:p where Логин=:name';
+     3:SQLQ.SQL.Text := 'update Пользователи Set Логин_Discord = :n , Пароль_Discord=:p where Логин=:name';
      end;
      SQLQ.ParamByName('n').AsString := EName.Text;
      SQLQ.ParamByName('p').AsString := Encipher(EPassword.Text,'2946');
      SQLQ.ParamByName('name').AsString := Name;
      SQLQ.ExecSQL;
      SQLT.Commit;
+     SQLQ.Close;
   end;
   Main.Show;
   FUsers.Hide;

@@ -49,6 +49,9 @@ implementation
 
 procedure TFSend.BBackClick(Sender: TObject);
 begin
+  KolRes[1]:=0;
+  SetLength(ResAdr,0);
+  BDellClick(Sender);
   FSelectU.Show;
   FSend.Hide;
 end;
@@ -84,8 +87,8 @@ begin
   end;
   textm:= MText.Text;
   topic:=ETopic.Caption;
-  if OpenPictute.FileName<>'' then
-   Filepath:=OpenPictute.FileName;
+  if OpenPicture.FileName<>'' then
+   Filepath:=OpenPicture.FileName;
   FEnd.Show;
   FEnd.LEnd.Caption:='Рассылка закончилась';
   FSend.Hide;

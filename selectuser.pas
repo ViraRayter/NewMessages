@@ -46,6 +46,7 @@ procedure TfSelectU.BNextClick(Sender: TObject);
 var i,j:integer;
 begin
   //Email
+  if platsel[1]=true then begin
   for i:=0 to KolOnPlat[1]-1 do               //Считаем отмеченные адреса
    if resip[i].Checked=true then
     inc(KolRes[1]);
@@ -56,6 +57,7 @@ begin
     ResAdr[j]:=resip[i].Caption;
     inc(j);
    end;
+  end;
   //
   fSelectU.Hide;
   with FSend do
@@ -85,6 +87,9 @@ begin
   ActiveControl := nil;
   for i:= Field.ControlCount - 1 downto 0 do
     Field.Controls[i].Free;
+  KolRes[1]:=0;
+  SetLength(ResAdr,0);
+  FSend.BDellClick(Sender);
 
   // считаем количество адресов вообще
   with fUsers do begin
@@ -98,6 +103,7 @@ begin
 
   //Заполняем адреса с разделением по платформам
   i:=0;x:=0;yn:=20;
+  KolOnPlat[1]:=0;KolOnPlat[2]:=0;KolOnPlat[3]:=0;
   for PL:=1 to 3 do
   if platsel[Pl]=true then begin
    platname[Pl]:=TLabel.Create(self);    //Название платформы

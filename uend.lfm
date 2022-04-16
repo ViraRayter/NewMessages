@@ -6,8 +6,8 @@ object fend: Tfend
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'NewMessages'
-  ClientHeight = 0
-  ClientWidth = 0
+  ClientHeight = 500
+  ClientWidth = 300
   OnClose = FormClose
   OnShow = FormShow
   Position = poDesktopCenter

@@ -37,6 +37,9 @@ uses umain;
 
 procedure Tfend.BExitClick(Sender: TObject);
 begin
+  textm:='';
+  topic:='';
+  filepath:='';
   fend.hide;
   Main.Show;
 end;
@@ -64,8 +67,7 @@ begin
    password:=FUsers.Decipher(FUsers.SQLQ.Fields.FieldByName('Пароль_Email').AsString,'2946');
    SQLQ.Close;
 
-   IdSMTP.Host := 'smtp.'+site;
-   port:=465;
+   IdSMTP.Host :=site;
    IdSMTP.Port := port;
    IdSMTP.Username := email; //имя аккаунта
    IdSMTP.Password := password;  //пароль аккаунта
