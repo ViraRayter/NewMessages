@@ -58,7 +58,7 @@ var i:integer;
   imgpart : TIdAttachmentFile;
 begin
   ActiveControl:= nil;
-
+  if platsel[1]=true then
   with FUsers do begin
    SQLQ.Close;
    SQLQ.SQL.Text:='select Пароль_Email from Пользователи where Логин = :L';

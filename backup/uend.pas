@@ -89,7 +89,7 @@ begin
    htmpart.ContentType := 'text/html; charset=UTF-8'; // обяз кодировка
    htmpart.Body.Add('<html><head></head><body>');
    if filepath<>'' then
-     htmpart.Body.Add('<br /><img src="cid:'+filepath+'" />');
+     htmpart.Body.Add('<img src="cid:'+filepath+'" /><br />');
    for i:=1 to length(textm) do
     if textm[i]=#13 then begin
       delete(textm,i,1);

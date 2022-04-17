@@ -87,6 +87,9 @@ end;
 
 procedure TMain.FormShow(Sender: TObject);
 begin
+  platsel[1]:=false;
+  platsel[2]:=false;
+  platsel[3]:=false;
   BMail.Checked:=False;
   BVk.Checked:=False;
   BDiscord.Checked:=False;
