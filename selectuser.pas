@@ -59,6 +59,22 @@ begin
    end;
   end;
   //
+
+  // Discord
+  if platsel[3]=true then begin
+  for i:=0 to KolOnPlat[3]-1 do
+   if resip[i].Checked=true then
+    inc(KolRes[3]);
+  SetLength(DisCount,KolRes[3]);
+   j:=0;
+  for i:=0 to KolOnPlat[3]-1 do
+   if resip[i].Checked=true then begin
+    DisCount[j]:=resip[i].Caption;
+    inc(j);
+   end;
+  end;
+
+
   fSelectU.Hide;
   with FSend do
   if platsel[1]=false then begin

@@ -56,6 +56,7 @@ var
   resip:TResipArray;//чекбоксы получателей
   Kol,port:integer; //Kol количество адресов в базе пользователя port порт почты пользователя
   ResAdr:TResAdrArray;//выбранные адреса для email
+  DisCount: TResAdrArray; //выбранные вебхуки для Дискорда
 implementation
 uses md5;
 {$R *.lfm}

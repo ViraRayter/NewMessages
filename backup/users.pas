@@ -53,9 +53,9 @@ var
   platname: array[1..3] of TLabel;//Переменные для надписей на SelectU
   KolRes:array[1..3]of integer; //Количество выбранных адресов (по платформе)
   KolOnPlat:array[1..3] of integer;   //Количество адресов по платформе
-  resip:TResipArray;
-  Kol,port:integer;
-  ResAdr:TResAdrArray;
+  resip:TResipArray;//чекбоксы получателей
+  Kol,port:integer; //Kol количество адресов в базе пользователя port порт почты пользователя
+  ResAdr:TResAdrArray;//выбранные адреса для email
 implementation
 uses md5;
 {$R *.lfm}

@@ -87,6 +87,9 @@ begin
   ActiveControl := nil;
   for i:= Field.ControlCount - 1 downto 0 do
     Field.Controls[i].Free;
+  KolRes[1]:=0;
+  SetLength(ResAdr,0);
+  FSend.BDellClick(Sender);
 
   // считаем количество адресов вообще
   with fUsers do begin
@@ -137,9 +140,6 @@ end;
 
 procedure TfSelectU.BBackClick(Sender: TObject);
 begin
-  platsel[1]:=false;
-  platsel[2]:=false;
-  platsel[3]:=false;
   Main.Show;
   fSelectU.Hide;
 end;

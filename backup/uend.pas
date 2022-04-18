@@ -59,6 +59,8 @@ var i:integer;
 begin
   ActiveControl:= nil;
 
+  if platsel[1]=true then
+  try
   with FUsers do begin
    SQLQ.Close;
    SQLQ.SQL.Text:='select Пароль_Email from Пользователи where Логин = :L';
@@ -117,6 +119,10 @@ begin
    IdSMTP.Disconnect();
 
 
+  end;
+
+  except
+    ShowMessage('Возникла ошибка! Проверьте пароль, порт и сервер');
   end;
 end;
 

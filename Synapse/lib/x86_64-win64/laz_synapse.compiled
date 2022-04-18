@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CONFIG>
-  <Compiler Value="C:\lazarus\fpc\3.2.2\bin\x86_64-win64\fpc.exe" Date="1411537227"/>
-  <Params Value=" -MObjFPC -Scghi -O1 -g -gl -l -vewnhibq -FuC:\lazarus\packager\units\x86_64-win64 -FuC:\Users\maksi\Downloads\synalist-code-r260-trunk\ -FUC:\Users\maksi\Downloads\synalist-code-r260-trunk\lib\x86_64-win64\ laz_synapse.pas"/>
-</CONFIG>

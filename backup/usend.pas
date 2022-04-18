@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
-  Buttons, ExtDlgs, SelectUser, UEnd, users, LazUTF8, uImage, IdAttachmentFile;
+  Buttons, ExtDlgs, SelectUser, UEnd, users, LazUTF8, uImage, IdAttachmentFile, Discord;
 
 type
 
@@ -65,7 +65,12 @@ end;
 
 procedure TFSend.BAddClick(Sender: TObject);
 begin
-  ShowMessage('Внимание!'+#13+'На некоторых почтовых серверах изображение может не отображаться');
+  if platsel[1]=true then
+  ShowMessage('Внимание!'+#13+'На некоторых почтовых серверах изображение может не отображаться.');
+
+  if platsel[3]=true then
+  ShowMessage('Изображение не будет отправлено в Дискорд. Только текст');
+
   if OpenPicture.Execute then
   begin
     Image.Picture.LoadFromFile(OpenPicture.FileName);
@@ -73,20 +78,47 @@ begin
     BAdd.Visible:=False;
     Image.Visible:=True;
     BDell.Visible:=True;
+    ShowMessage(OpenPicture.FileName);
   end;
 end;
 
 procedure TFSend.BGoClick(Sender: TObject);
+var
+  Discord: TDiscordMessage;
+  Embeds: TDiscordEmbeds;
+  DisImage: TDiscrodEmbedsImage;
+  i: integer;
 begin
   if UTF8Length(MText.Lines.Text) = 0 then
   begin
     ShowMessage('Вы не ввели сообщение!');
     exit;
   end;
-  textm:= MText.Text;
-  topic:=ETopic.Caption;
-  if OpenPicture.FileName<>'' then
-   Filepath:=OpenPicture.FileName;
+
+  // e-mail
+  if platsel[1]=true then
+  begin
+    textm:= MText.Text;
+    topic:=ETopic.Caption;
+    if OpenPicture.FileName<>'' then
+    Filepath:=OpenPicture.FileName;
+  end;
+
+  // Дискорд
+  if platsel[3]=true then
+  begin
+    for i:=0 to KolRes[3]-1 do
+    begin
+      Discord:=TDiscordMessage.Create(DisCount[i]);
+      try
+        Discord.Content:=MText.Lines.Text;
+        Discord.SendMessage;
+      finally
+        FreeAndNil(Discord);
+      end;
+    end;
+  end;
+
   FEnd.Show;
   FEnd.LEnd.Caption:='Рассылка закончилась';
   FSend.Hide;
@@ -105,6 +137,7 @@ begin
   MText.Text:='';
   BDell.Visible:=false;
   ActiveControl := nil;
+
 end;
 
 procedure TFSend.ImageDblClick(Sender: TObject);
