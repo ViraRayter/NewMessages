@@ -45,7 +45,6 @@ uses usend,users;
 procedure TfSelectU.BNextClick(Sender: TObject);
 var i,j,PL:integer;
 begin
-  //Email
   KolOnPlat[0]:=0;
   for PL:=1 to 3 do //перебираем платформы
   if platsel[PL]=true then begin //если платформу выбрали
@@ -61,7 +60,7 @@ begin
    end;
   end;
 
-  If (KolRes[1]=0) and (KolRes[2]=0) and (Kolres[3]=0) then begin
+  If { (KolRes[1]=0) and (KolRes[2]=0) and (Kolres[3]=0)} KolRes[1]+KolRes[2]+KolRes[3]=0 then begin
    ShowMessage('Выберите хотя бы одного получателя!');
    exit;
   end;
@@ -74,7 +73,7 @@ begin
       SQLQ.ParamByName('L').AsString :=Name;
       SQLQ.ParamByName('w').AsString :=ResAdr[3][i];
       SQLQ.Open;
-      ResAdr[3][i]:=SQLQ.Fields.FieldByName('Вебхук').AsString;
+      ResAdr[3][i]:=FUsers.Decipher(SQLQ.Fields.FieldByName('Вебхук').AsString,'2946');
     end;
 
   fSelectU.Hide;

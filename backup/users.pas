@@ -33,13 +33,14 @@ type
     LServer: TLabel;
     SQLC: TSQLite3Connection;
     SQLQ: TSQLQuery;
+    SQLQ2: TSQLQuery;
     SQLT: TSQLTransaction;
     procedure BBackClick(Sender: TObject);
     procedure BNextClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
-    function  Decipher(toDecode, K: string): string;
     function Encipher(toCode, K: string): string;
+    function  Decipher(toDecode, K: string): string;
   private
 
   public
@@ -72,7 +73,7 @@ begin
 end;
 
 
-function Encipher(toCode, K: string): string; // шифрование
+function TfUsers.Encipher(toCode, K: string): string; // шифрование
 var i, T, _T: integer;
 begin
   for i := 1 to length(toCode) do begin

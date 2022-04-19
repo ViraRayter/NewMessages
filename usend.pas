@@ -132,6 +132,18 @@ end;
 
 procedure TFSend.FormShow(Sender: TObject);
 begin
+  //если выбран только Дискорд, то не отображаем кнопку и надпись прикрепления изображения
+  if platsel[3] and not platsel[1] and not platsel[2] then
+  begin
+    bAdd.Visible:=False;
+    LAdd.Visible:=False;
+  end
+  else
+  begin
+    bAdd.Visible:=True;
+    LAdd.Visible:=True;
+  end;
+
   ETopic.Text:='';
   MText.Text:='';
   BDell.Visible:=false;

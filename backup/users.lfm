@@ -8547,4 +8547,13 @@ object fUsers: TfUsers
     Left = 33
     Top = 54
   end
+  object SQLQ2: TSQLQuery
+    FieldDefs = <>
+    Database = SQLC
+    Transaction = SQLT
+    Params = <>
+    Macros = <>
+    Left = 248
+    Top = 71
+  end
 end

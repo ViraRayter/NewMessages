@@ -142,7 +142,7 @@ begin
      beep;
      ShowMessage('Введите данные от аккаунта!');
      BMail.Checked:=false;
-     BAuthDiscordClick(BAuthMail);
+     BAuthMailClick(BAuthMail);
    end;
 end;
 

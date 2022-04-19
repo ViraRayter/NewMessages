@@ -37,6 +37,15 @@ uses umain;
 
 procedure Tfend.BExitClick(Sender: TObject);
 begin
+  { // код очистки бд
+  with fUsers do begin
+    SQlQ.Close;
+    SQLQ.SQL.Text:='delete from Адреса';
+    SQLQ.ExecSQL;
+    SQLT.Commit;
+  end;
+  }
+
   textm:='';
   topic:='';
   filepath:='';

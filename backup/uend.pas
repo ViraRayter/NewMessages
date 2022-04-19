@@ -37,6 +37,13 @@ uses umain;
 
 procedure Tfend.BExitClick(Sender: TObject);
 begin
+  with fUsers do begin
+    SQlQ.Close;
+    SQLQ.SQL.Text:='delete from Адреса';
+    SQLQ.ExecSQL;
+    SQLT.Commit;
+  end;
+
   textm:='';
   topic:='';
   filepath:='';
@@ -110,7 +117,7 @@ begin
    try
    IdSMTP.Connect();
    for i:=0 to KolRes[1]-1 do begin
-    IdMess.Recipients.EMailAddresses:=ResAdr[i];
+    IdMess.Recipients.EMailAddresses:=ResAdr[1][i];
     try
     IdSMTP.Send(IdMess);
     except

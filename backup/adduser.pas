@@ -70,7 +70,7 @@ begin
    SQLQ.ParamByName('n').AsString:=EUserName.Text;
    SQLQ.ParamByName('p').AsString:=Name;
    SQLQ.ParamByName('pl').AsInteger:=plat;
-   SQLQ.ParamByName('w').AsString:=EWebhook.Text;
+   SQLQ.ParamByName('w').AsString:=Encipher(EWebhook.Text,'2946');
    SQLQ.ExecSQL;
    SQLT.Commit;
   end;
