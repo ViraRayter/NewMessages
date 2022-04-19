@@ -22,10 +22,8 @@ type
     BDiscord: TToggleBox;
     BAuthMail: TSpeedButton;
     BAuthVK: TSpeedButton;
-    BAuthDiscord: TSpeedButton;
-    procedure BAuthDiscordClick(Sender: TObject);
+    procedure BAuthMailClick(Sender: TObject);
     procedure BBackClick(Sender: TObject);
-    procedure BDiscordClick(Sender: TObject);
     procedure BMailClick(Sender: TObject);
     procedure BNextClick(Sender: TObject);
     procedure BVKClick(Sender: TObject);
@@ -73,7 +71,7 @@ begin
    beep;
    ShowMessage('Введите данные от аккаунта!');
    BVK.Checked:=false;
-   BAuthDiscordClick(BAuthVK);
+   BAuthMailClick(BAuthVK);
    end;
    FUsers.SQLQ.Close;
 end;
@@ -96,9 +94,9 @@ begin
   ActiveControl := nil;
 end;
 
-procedure TMain.BAuthDiscordClick(Sender: TObject);
+procedure TMain.BAuthMailClick(Sender: TObject);
 begin
-if Sender = BAuthMail then begin
+  if Sender = BAuthMail then begin
    ShowMessage('Внимание!'+#13+'Для того, чтобы провести рассылку,'
    +'вам необходимо в настройках почты включить "Доступ к почтовому ящику с помощью почтовых клиентов".');
    Plat:=1;
@@ -106,17 +104,12 @@ if Sender = BAuthMail then begin
    FUsers.GB.Visible:=true;
    FUsers.EName.TextHint:='пользователь@имя.почты';
    end;
-if Sender = BAuthVK then
-begin Plat:=2;
-FUsers.LMain.Caption:='Авторизация ВК';
-FUsers.GB.Visible:=false;
-FUsers.EName.TextHint:='id99999999';
-end;
-if Sender = BAuthDiscord then
-begin Plat:=3; FUsers.LMain.Caption:='Авторизация в Дискорд';FUsers.GB.Visible:=false; end;
- FUsers.Show;
- FUsers.BBack.Visible:=true;
- Main.Hide;
+   if Sender = BAuthVK then
+   begin Plat:=2;
+    FUsers.LMain.Caption:='Авторизация ВК';
+    FUsers.GB.Visible:=false;
+    FUsers.EName.TextHint:='id99999999';
+   end;
 end;
 
 procedure TMain.BBackClick(Sender: TObject);
@@ -129,24 +122,6 @@ begin
  FUsers.LMain.Caption:='';
  FUsers.BBack.Visible:=false;
  Main.Hide;
-end;
-
-procedure TMain.BDiscordClick(Sender: TObject);
-begin
-   with FUsers do begin
-     SQLQ.Close;
-     SQLQ.SQL.Text:='select * from Пользователи where Логин = :L';
-     SQLQ.ParamByName('L').AsString :=Name;
-     SQLQ.Open;
-    end;
-   if BDiscord.Checked=true then
-   if FUsers.SQLQ.Fields.FieldByName('Логин_Discord').AsString='' then begin
-   beep;
-   ShowMessage('Введите данные от аккаунта!');
-   BDiscord.Checked:=false;
-   BAuthDiscordClick(BAuthDiscord);
-   end;
-   FUsers.SQLQ.Close;
 end;
 
 
@@ -167,7 +142,7 @@ begin
      beep;
      ShowMessage('Введите данные от аккаунта!');
      BMail.Checked:=false;
-     BAuthDiscordClick(BAuthMail);
+     BAuthMailClick(BAuthMail);
    end;
 end;
 

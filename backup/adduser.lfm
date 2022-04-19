@@ -1,7 +1,7 @@
 object fAddUser: TfAddUser
-  Left = 714
+  Left = 1028
   Height = 500
-  Top = 84
+  Top = 133
   Width = 300
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
@@ -8325,12 +8325,12 @@ object fAddUser: TfAddUser
     Font.Style = [fsItalic]
     ParentFont = False
     TabOrder = 0
-    TextHint = 'Логин'
+    TextHint = 'Имя'
   end
   object BAdd: TButton
     AnchorSideLeft.Control = Owner
     AnchorSideLeft.Side = asrCenter
-    AnchorSideTop.Control = Plat
+    AnchorSideTop.Control = EWebhook
     AnchorSideTop.Side = asrBottom
     Left = 50
     Height = 35
@@ -8345,7 +8345,7 @@ object fAddUser: TfAddUser
     ParentFont = False
     TabOrder = 1
   end
-  object Plat: TComboBox
+  object EWebhook: TEdit
     AnchorSideLeft.Control = Owner
     AnchorSideLeft.Side = asrCenter
     AnchorSideTop.Control = EUserName
@@ -8354,24 +8354,13 @@ object fAddUser: TfAddUser
     Height = 24
     Top = 229
     Width = 250
-    AutoSelect = False
     BorderSpacing.Top = 15
     Font.CharSet = RUSSIAN_CHARSET
     Font.Height = -16
     Font.Name = 'Courier'
-    Font.Pitch = fpFixed
-    Font.Quality = fqDraft
     Font.Style = [fsItalic]
-    ItemHeight = 16
-    ItemIndex = 0
-    Items.Strings = (
-      'E-mail'
-      'VK'
-      'Discord'
-    )
     ParentFont = False
-    ReadOnly = True
     TabOrder = 3
-    Text = 'E-mail'
+    TextHint = 'Ссылка на вебхук'
   end
 end

@@ -90,6 +90,12 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit>
+      <Unit>
+        <Filename Value="uselplat.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FSelPlat"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

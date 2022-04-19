@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls,
-  CheckLst, AddUser,umain;
+  CheckLst, uselplat,umain;
 
 type
 
@@ -60,6 +60,22 @@ begin
     inc(j);
    end;
   end;
+
+  If (KolRes[1]=0) and (KolRes[2]=0) and (Kolres[3]=0) then begin
+   ShowMessage('Выберите хотя бы одного получателя!');
+   exit;
+  end;
+
+  if platsel[3]=true then //считываем URL
+    for i:=0 to j-1 do
+      with fUsers do begin
+      SQLQ.Close;
+      SQLQ.SQL.Text:='select Вебхук from Адреса where Пользователь = :L and Данные=:w';
+      SQLQ.ParamByName('L').AsString :=Name;
+      SQLQ.ParamByName('w').AsString :=ResAdr[3][i];
+      SQLQ.Open;
+      ResAdr[3][i]:=SQLQ.Fields.FieldByName('Вебхук').AsString;
+    end;
 
   fSelectU.Hide;
   with FSend do
@@ -149,7 +165,10 @@ end;
 procedure TfSelectU.BAddClick(Sender: TObject);
 begin
   fSelectU.Hide;
-  fAddUser.Show;
+  fSelplat.BMail.Visible:=platsel[1];
+  fSelplat.BVK.Visible:=platsel[2];
+  fSelplat.BDiscord.Visible:=platsel[3];
+  fSelplat.Show;
 end;
 
 end.

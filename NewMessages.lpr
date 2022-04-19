@@ -10,7 +10,8 @@ uses
   athreads,
   {$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, indylaz, USend, umain, users, uend, selectuser, adduser, uimage
+  Forms, indylaz, USend, umain, users, uend, selectuser, adduser, uimage, 
+uselplat
   { you can add units after this };
 
 {$R *.res}
@@ -26,6 +27,7 @@ begin
   Application.CreateForm(TMain, Main);
   Application.CreateForm(TfAddUser, fAddUser);
   Application.CreateForm(TfImage, fImage);
+  Application.CreateForm(TFSelPlat, FSelPlat);
   Application.Run;
 end.
 

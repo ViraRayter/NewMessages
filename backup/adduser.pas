@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls,
-  users, SQLite3Conn, SQLDB;
+  users, SQLite3Conn, SQLDB,uselplat;
 
 type
 
@@ -15,7 +15,7 @@ type
   TfAddUser = class(TForm)
     BAdd: TButton;
     BBack: TButton;
-    Plat: TComboBox;
+    EWebhook: TEdit;
     EUserName: TEdit;
     Fon: TImage;
     LUserName: TLabel;
@@ -40,7 +40,7 @@ implementation
 
 procedure TfAddUser.BBackClick(Sender: TObject);
 begin
-  fSelectU.Show;
+  fselplat.Show;
   fAddUser.Hide;
 end;
 
@@ -54,26 +54,28 @@ end;
 procedure TfAddUser.FormShow(Sender: TObject);
 begin
   EUserName.Text:='';
-  Plat.ItemIndex:=0;
+  EWebhook.Text:='';
   ActiveControl := nil;
 end;
 
 procedure TfAddUser.BAddClick(Sender: TObject);
 begin
-  if EUserName='' then begin
+  if (EUserName.Text='') or ((plat=3) and (EWebhook.Text='')) then begin
   ShowMessage('Введите данные!');
   exit;
   end;
   with fUsers do begin
    SQLQ.Close;
-   SQLQ.SQL.Text:='insert into Адреса(Данные,Пользователь,Платформа) values(:n,:p,:pl);';
+   SQLQ.SQL.Text:='insert into Адреса(Данные,Пользователь,Платформа,Вебхук) values(:n,:p,:pl,:w);';
    SQLQ.ParamByName('n').AsString:=EUserName.Text;
    SQLQ.ParamByName('p').AsString:=Name;
-   SQLQ.ParamByName('pl').AsInteger:=Plat.ItemIndex+1;
+   SQLQ.ParamByName('pl').AsInteger:=plat;
+   SQLQ.ParamByName('w').AsString:=EWebhook.Text;
    SQLQ.ExecSQL;
    SQLT.Commit;
   end;
-   BBackClick(Sender);
+  fselectu.Show;
+  fAddUser.Hide;
 end;
 
 end.

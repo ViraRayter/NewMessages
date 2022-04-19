@@ -39,6 +39,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
     function  Decipher(toDecode, K: string): string;
+    function Encipher(toCode, K: string): string;
   private
 
   public
@@ -173,7 +174,6 @@ begin
        SQLQ.ParamByName('s').AsString := EServer.Text;
      end;
      2:SQLQ.SQL.Text := 'update Пользователи Set Логин_ВК = :n , Пароль_ВК=:p where Логин=:name';
-     3:SQLQ.SQL.Text := 'update Пользователи Set Логин_Discord = :n , Пароль_Discord=:p where Логин=:name';
      end;
      SQLQ.ParamByName('n').AsString := EName.Text;
      SQLQ.ParamByName('p').AsString := Encipher(EPassword.Text,'2946');
@@ -181,7 +181,6 @@ begin
      SQLQ.ExecSQL;
      SQLT.Commit;
      SQLQ.Close;
-    end;
   end;
   Main.Show;
   FUsers.Hide;
