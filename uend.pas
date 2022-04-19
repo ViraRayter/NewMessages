@@ -107,14 +107,19 @@ begin
    imgpart.DisplayName := filepath;
    imgpart.ParentPart := 1;
    end;
-
+   try
    IdSMTP.Connect();
-   if IdSMTP.Connected then
-     for i:=0 to KolRes[1]-1 do begin
-      IdMess.Recipients.EMailAddresses:=ResAdr[i];
-      IdSMTP.Send(IdMess);
-    end
-   else ShowMessage('Подключиться к почте не удалоссь');
+   for i:=0 to KolRes[1]-1 do begin
+    IdMess.Recipients.EMailAddresses:=ResAdr[1][i];
+    try
+    IdSMTP.Send(IdMess);
+    except
+    inc(errors);
+    end;
+   end
+   except
+     ShowMessage('Подключиться к почте не удалоссь');
+   end;
    IdSMTP.Disconnect();
 
   end;

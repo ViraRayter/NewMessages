@@ -43,22 +43,24 @@ uses usend,users;
 
 
 procedure TfSelectU.BNextClick(Sender: TObject);
-var i,j:integer;
+var i,j,PL:integer;
 begin
   //Email
-  if platsel[1]=true then begin
-  for i:=0 to KolOnPlat[1]-1 do               //Считаем отмеченные адреса
+  KolOnPlat[0]:=0;
+  for PL:=1 to 3 do //перебираем платформы
+  if platsel[PL]=true then begin //если платформу выбрали
+  for i:=KolOnPlat[Pl-1] to KolOnPlat[Pl]-1 do //перебираем акки на плат
    if resip[i].Checked=true then
-    inc(KolRes[1]);
-  SetLength(ResAdr,KolRes[1]);
+    inc(KolRes[PL]); //считаем кол-во выделенных
+  SetLength(ResAdr[PL],KolRes[PL]);//устанавливаем размер массива
    j:=0;
-  for i:=0 to KolOnPlat[1]-1 do
+  for i:=KolOnPlat[Pl-1] to KolOnPlat[Pl]-1 do
    if resip[i].Checked=true then begin
-    ResAdr[j]:=resip[i].Caption;
+    ResAdr[PL][j]:=resip[i].Caption; //записываем данные в массив
     inc(j);
    end;
   end;
-  //
+
   fSelectU.Hide;
   with FSend do
   if platsel[1]=false then begin
@@ -88,7 +90,7 @@ begin
   for i:= Field.ControlCount - 1 downto 0 do
     Field.Controls[i].Free;
   KolRes[1]:=0;
-  SetLength(ResAdr,0);
+  for i:=1 to 3 do SetLength(ResAdr[i],0);
   FSend.BDellClick(Sender);
 
   // считаем количество адресов вообще

@@ -52,11 +52,11 @@ var
   platsel: array[1..3] of boolean;//выбранные платформы для рассылки
   platname: array[1..3] of TLabel;//Переменные для надписей на SelectU
   KolRes:array[1..3]of integer; //Количество выбранных адресов (по платформе)
-  KolOnPlat:array[1..3] of integer;   //Количество адресов по платформе
+  KolOnPlat:array[0..3] of integer;   //Количество адресов по платформе
   resip:TResipArray;//чекбоксы получателей
   Kol,port:integer; //Kol количество адресов в базе пользователя port порт почты пользователя
-  ResAdr:TResAdrArray;//выбранные адреса для email
-  DisCount: TResAdrArray; //выбранные вебхуки для Дискорда
+  ResAdr:array [1..3] of TResAdrArray;//выбранные адреса для email, вебхуки для Дискорда
+  errors:integer;
 implementation
 uses md5;
 {$R *.lfm}
@@ -154,12 +154,20 @@ begin
      end;
   Name:=EName.Text;
   end
-  //Внесение данных от аккаунтов в сети
+
+  //Серверные аккаунты
   else begin
     SQLQ.Close;
-
+    if (EName.Text='') or (EPassword.Text='') then begin
+     ShowMessage('Введите данные!');
+     exit;
+    end;
      case Plat of
      1: begin
+       if (EPort.Text='') or (EServer.Text='') then begin
+         ShowMessage('Введите данные!');
+         exit;
+       end;
        SQLQ.SQL.Text := 'update Пользователи Set Email = :n , Пароль_Email=:p, Порт=:po, Сервер=:s where Логин=:name';
        SQLQ.ParamByName('po').AsInteger := StrToInt(EPort.Text);
        SQLQ.ParamByName('s').AsString := EServer.Text;

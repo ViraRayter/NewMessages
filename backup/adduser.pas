@@ -60,6 +60,10 @@ end;
 
 procedure TfAddUser.BAddClick(Sender: TObject);
 begin
+  if EUserName='' then begin
+  ShowMessage('Введите данные!');
+  exit;
+  end;
   with fUsers do begin
    SQLQ.Close;
    SQLQ.SQL.Text:='insert into Адреса(Данные,Пользователь,Платформа) values(:n,:p,:pl);';

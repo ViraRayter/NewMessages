@@ -60,7 +60,6 @@ begin
   ActiveControl:= nil;
 
   if platsel[1]=true then
-  try
   with FUsers do begin
    SQLQ.Close;
    SQLQ.SQL.Text:='select Пароль_Email from Пользователи where Логин = :L';
@@ -108,22 +107,23 @@ begin
    imgpart.DisplayName := filepath;
    imgpart.ParentPart := 1;
    end;
-
+   try
    IdSMTP.Connect();
-   if IdSMTP.Connected then
-     for i:=0 to KolRes[1]-1 do begin
-      IdMess.Recipients.EMailAddresses:=ResAdr[i];
-      IdSMTP.Send(IdMess);
-    end
-   else ShowMessage('Подключиться к почте не удалоссь');
+   for i:=0 to KolRes[1]-1 do begin
+    IdMess.Recipients.EMailAddresses:=ResAdr[i];
+    try
+    IdSMTP.Send(IdMess);
+    except
+    inc(errors);
+    end;
+   end
+   except
+     ShowMessage('Подключиться к почте не удалоссь');
+   end;
    IdSMTP.Disconnect();
 
-
   end;
 
-  except
-    ShowMessage('Возникла ошибка! Проверьте пароль, порт и сервер');
-  end;
 end;
 
 end.

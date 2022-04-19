@@ -78,7 +78,6 @@ begin
     BAdd.Visible:=False;
     Image.Visible:=True;
     BDell.Visible:=True;
-    ShowMessage(OpenPicture.FileName);
   end;
 end;
 

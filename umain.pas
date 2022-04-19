@@ -104,9 +104,14 @@ if Sender = BAuthMail then begin
    Plat:=1;
    FUsers.LMain.Caption:='Авторизация в e-mail';
    FUsers.GB.Visible:=true;
+   FUsers.EName.TextHint:='пользователь@имя.почты';
    end;
 if Sender = BAuthVK then
-begin Plat:=2; FUsers.LMain.Caption:='Авторизация ВК';FUsers.GB.Visible:=false; end;
+begin Plat:=2;
+FUsers.LMain.Caption:='Авторизация ВК';
+FUsers.GB.Visible:=false;
+FUsers.EName.TextHint:='id99999999';
+end;
 if Sender = BAuthDiscord then
 begin Plat:=3; FUsers.LMain.Caption:='Авторизация в Дискорд';FUsers.GB.Visible:=false; end;
  FUsers.Show;
@@ -119,6 +124,7 @@ begin
  FUsers.Show;
  Plat:=0;
  Name:='';
+ FUsers.EName.TextHint:='';
  FUsers.GB.Visible:=false;
  FUsers.LMain.Caption:='';
  FUsers.BBack.Visible:=false;

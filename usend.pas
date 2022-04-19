@@ -108,7 +108,7 @@ begin
   begin
     for i:=0 to KolRes[3]-1 do
     begin
-      Discord:=TDiscordMessage.Create(DisCount[i]);
+      Discord:=TDiscordMessage.Create(ResAdr[3][i]);
       try
         Discord.Content:=MText.Lines.Text;
         Discord.SendMessage;
