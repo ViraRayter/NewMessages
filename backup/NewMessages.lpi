@@ -26,6 +26,9 @@
     </RunParams>
     <RequiredPackages>
       <Item>
+        <PackageName Value="fptelegram"/>
+      </Item>
+      <Item>
         <PackageName Value="indylaz"/>
       </Item>
       <Item>
@@ -80,13 +83,6 @@
         <Filename Value="adduser.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="fAddUser"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-      </Unit>
-      <Unit>
-        <Filename Value="uimage.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="fImage"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit>

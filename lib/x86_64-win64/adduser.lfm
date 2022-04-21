@@ -11,6 +11,7 @@ object fAddUser: TfAddUser
   OnCloseQuery = FormCloseQuery
   OnShow = FormShow
   Position = poDesktopCenter
+  ShowInTaskBar = stAlways
   LCLVersion = '2.2.0.4'
   object Fon: TImage
     Left = 0
@@ -8361,6 +8362,6 @@ object fAddUser: TfAddUser
     Font.Style = [fsItalic]
     ParentFont = False
     TabOrder = 3
-    TextHint = 'Ссылка на вебхук'
+    TextHint = 'ID (только цифры!)'
   end
 end

@@ -6,12 +6,12 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls,
-  users, IdText, IdExplicitTLSClientServerBase,IdAttachmentFile;
+  users, IdText, IdExplicitTLSClientServerBase,IdAttachmentFile, tgsendertypes,fptelegram;
 
 type
 
   { Tfend }
-
+  TMyBot = class(TTelegramSender);
   Tfend = class(TForm)
     BExit: TButton;
     Fon: TImage;
@@ -61,22 +61,16 @@ begin
 end;
 
 procedure Tfend.FormShow(Sender: TObject);
+const AToken:string ='5307772407:AAFbFOnOzXOos6wnMCbmjFssimglfSy-AVs';
 var i:integer;
-  password:string;
   txtpart, htmpart : TIdText;
   imgpart : TIdAttachmentFile;
+  ABot: TMyBot;
 begin
   ActiveControl:= nil;
 
   if platsel[1]=true then
-  with FUsers do begin
-   SQLQ.Close;
-   SQLQ.SQL.Text:='select Пароль_Email from Пользователи where Логин = :L';
-   SQLQ.ParamByName('L').AsString :=Name;
-   SQLQ.Open;
-   password:=FUsers.Decipher(FUsers.SQLQ.Fields.FieldByName('Пароль_Email').AsString,'2946');
-   SQLQ.Close;
-
+   with FUsers do begin
    IdSMTP.Host :=site;
    IdSMTP.Port := port;
    IdSMTP.Username := email; //имя аккаунта
@@ -99,7 +93,7 @@ begin
    htmpart.ContentType := 'text/html; charset=UTF-8'; // обяз кодировка
    htmpart.Body.Add('<html><head></head><body>');
    if filepath<>'' then
-     htmpart.Body.Add('<img src="cid:'+filepath+'" /><br />');
+     htmpart.Body.Add('<img src="'+filepath+'" border="0">');
    for i:=1 to length(textm) do
     if textm[i]=#13 then begin
       delete(textm,i,1);
@@ -108,14 +102,14 @@ begin
    htmpart.Body.Add(textm+'</body></html>');
    htmpart.ParentPart := 1;
 
-   if filepath<>'' then begin
+   {if filepath<>'' then begin
    imgpart := TIdAttachmentFile.Create(IdMess.MessageParts, filepath);
    imgpart.ContentType := 'image/jpeg';
    imgpart.ContentDisposition := 'inline';
    imgpart.ContentID := filepath;
    imgpart.DisplayName := filepath;
    imgpart.ParentPart := 1;
-   end;
+   end;}
    try
    IdSMTP.Connect();
    for i:=0 to KolRes[1]-1 do begin
@@ -133,6 +127,17 @@ begin
 
   end;
 
+  try
+  ABot:=TMyBot.Create(AToken);
+  for i:=0 to KolRes[2]-1 do begin
+   if (filepath='') then
+     ABot.sendMessage(StrToInt(ResAdr[2][i]), textm)
+   else
+      ABot.sendPhoto(StrToInt(ResAdr[2][i]), filepath, textm)
+  end;
+  finally
+    ABot.Free;
+  end;
 end;
 
 end.

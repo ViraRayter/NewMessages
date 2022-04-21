@@ -13,25 +13,19 @@ type
   { TFSend }
 
   TFSend = class(TForm)
-    BDell: TSpeedButton;
     BGo: TButton;
     BBack: TButton;
     ETopic: TEdit;
+    EURL: TEdit;
     Fon: TImage;
-    Image: TImage;
     LText: TLabel;
     LAdd: TLabel;
     LTopic: TLabel;
     MText: TMemo;
-    BAdd: TSpeedButton;
-    OpenPicture: TOpenPictureDialog;
-    procedure BAddClick(Sender: TObject);
     procedure BBackClick(Sender: TObject);
-    procedure BDellClick(Sender: TObject);
     procedure BGoClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormShow(Sender: TObject);
-    procedure ImageDblClick(Sender: TObject);
   private
 
   public
@@ -53,34 +47,6 @@ begin
   FSend.Hide;
 end;
 
-procedure TFSend.BDellClick(Sender: TObject);
-begin
-  BDell.Visible:=False;
-  Image.Visible:=False;
-  BAdd.Visible:=True;
-  LAdd.Visible:=True;
-  OpenPicture.FileName:='';
-  Image.Picture:=nil;
-end;
-
-procedure TFSend.BAddClick(Sender: TObject);
-begin
-  if platsel[1]=true then
-  ShowMessage('Внимание!'+#13+'На некоторых почтовых серверах изображение может не отображаться.');
-
-  if platsel[3]=true then
-  ShowMessage('Изображение не будет отправлено в Дискорд. Только текст');
-
-  if OpenPicture.Execute then
-  begin
-    Image.Picture.LoadFromFile(OpenPicture.FileName);
-    LAdd.Visible:=False;
-    BAdd.Visible:=False;
-    Image.Visible:=True;
-    BDell.Visible:=True;
-  end;
-end;
-
 procedure TFSend.BGoClick(Sender: TObject);
 var
   Discord: TDiscordMessage;
@@ -95,13 +61,12 @@ begin
   end;
 
   // e-mail
+  textm:= MText.Text;
   if platsel[1]=true then
   begin
-    textm:= MText.Text;
     topic:=ETopic.Caption;
-    if OpenPicture.FileName<>'' then
-    Filepath:=OpenPicture.FileName;
   end;
+  Filepath:=EURL.Text;
 
   // Дискорд
   if platsel[3]=true then
@@ -110,7 +75,17 @@ begin
     begin
       Discord:=TDiscordMessage.Create(ResAdr[3][i]);
       try
+
         Discord.Content:=MText.Lines.Text;
+        if not( EURL.Text='') then   begin
+          Embeds := TDiscordEmbeds.Create;
+          DisImage := TDiscrodEmbedsImage.Create;
+          DisImage.URL :=Filepath;
+          Embeds.SetImage(DisImage);
+          FreeAndNil(Disimage);
+          Discord.AddEmbeds(Embeds);
+          FreeAndNil(Embeds);
+        end;
         Discord.SendMessage;
       finally
         FreeAndNil(Discord);
@@ -132,41 +107,11 @@ end;
 
 procedure TFSend.FormShow(Sender: TObject);
 begin
-  //если выбран только Дискорд, то не отображаем кнопку и надпись прикрепления изображения
-  if platsel[3] and not platsel[1] and not platsel[2] then
-  begin
-    bAdd.Visible:=False;
-    LAdd.Visible:=False;
-  end
-  else
-  begin
-    bAdd,Visible:=True;
-    LAdd.Visible:=True;
-  end;
-
   ETopic.Text:='';
   MText.Text:='';
-  BDell.Visible:=false;
+  EURL.Text:='';
   ActiveControl := nil;
 
-end;
-
-procedure TFSend.ImageDblClick(Sender: TObject);
-begin
-  fImage.Height:=496;
-  fImage.Image.Height:=496;
-  fImage.Image.Picture:=fSend.Image.Picture;
-  if fImage.Image.Picture.Height>=fImage.Image.Height then
-    fImage.Image.Width:=fImage.Image.Height * fImage.Image.Picture.Width div fImage.Image.Picture.Height
-  else
-    begin
-      fImage.Image.Width:=fImage.Image.Picture.Width;
-      fImage.Image.Height:=fImage.Image.Picture.Height;
-    end;
-
-  fImage.Width:=fImage.Image.Width;
-  fImage.Height:=fImage.Image.Height;
-  fImage.ShowModal;
 end;
 
 end.

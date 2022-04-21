@@ -8296,7 +8296,6 @@ object fUsers: TfUsers
   object BNext: TButton
     AnchorSideLeft.Control = Owner
     AnchorSideLeft.Side = asrCenter
-    AnchorSideTop.Control = GB
     AnchorSideTop.Side = asrBottom
     Left = 50
     Height = 35
@@ -8314,29 +8313,6 @@ object fUsers: TfUsers
     OnClick = BNextClick
     ParentFont = False
     TabOrder = 2
-  end
-  object BBack: TButton
-    AnchorSideLeft.Control = Owner
-    AnchorSideTop.Control = Owner
-    Left = 15
-    Height = 23
-    Top = 15
-    Width = 80
-    AutoSize = True
-    BorderSpacing.Left = 15
-    BorderSpacing.Top = 15
-    Caption = '<Назад'
-    Font.CharSet = RUSSIAN_CHARSET
-    Font.Color = clBlack
-    Font.Height = -13
-    Font.Name = 'Courier'
-    Font.Pitch = fpFixed
-    Font.Quality = fqDraft
-    Font.Style = [fsBold]
-    OnClick = BBackClick
-    ParentFont = False
-    TabOrder = 3
-    Visible = False
   end
   object EName: TEdit
     AnchorSideLeft.Control = Owner
@@ -8389,102 +8365,6 @@ object fUsers: TfUsers
     Font.Name = 'Courier'
     Font.Style = [fsBold]
     ParentFont = False
-  end
-  object LMain: TLabel
-    AnchorSideLeft.Control = Owner
-    AnchorSideLeft.Side = asrCenter
-    AnchorSideRight.Side = asrCenter
-    AnchorSideBottom.Control = LName
-    Left = 22
-    Height = 40
-    Top = 92
-    Width = 256
-    Alignment = taCenter
-    Anchors = [akLeft, akBottom]
-    AutoSize = False
-    BorderSpacing.Bottom = 30
-    Font.Height = -20
-    Font.Name = 'Courier'
-    Font.Style = [fsBold]
-    ParentFont = False
-    ParentShowHint = False
-    WordWrap = True
-  end
-  object GB: TGroupBox
-    AnchorSideLeft.Control = Owner
-    AnchorSideLeft.Side = asrCenter
-    AnchorSideTop.Control = EPassword
-    AnchorSideTop.Side = asrBottom
-    Left = 25
-    Height = 65
-    Top = 262
-    Width = 250
-    ClientHeight = 45
-    ClientWidth = 246
-    TabOrder = 4
-    Visible = False
-    object EServer: TEdit
-      AnchorSideLeft.Control = LServer
-      AnchorSideTop.Control = LServer
-      AnchorSideTop.Side = asrBottom
-      Left = 93
-      Height = 24
-      Top = 21
-      Width = 155
-      BorderSpacing.Top = 5
-      Font.CharSet = RUSSIAN_CHARSET
-      Font.Height = -16
-      Font.Name = 'Courier'
-      Font.Style = [fsItalic]
-      ParentFont = False
-      TabOrder = 0
-    end
-    object LServer: TLabel
-      AnchorSideLeft.Control = GB
-      AnchorSideLeft.Side = asrCenter
-      AnchorSideTop.Control = GB
-      Left = 93
-      Height = 16
-      Top = 0
-      Width = 61
-      Caption = 'Сервер'
-      Font.CharSet = RUSSIAN_CHARSET
-      Font.Height = -16
-      Font.Name = 'Courier'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-    object EPort: TEdit
-      AnchorSideLeft.Control = GB
-      AnchorSideTop.Control = LPort
-      AnchorSideTop.Side = asrBottom
-      Left = 0
-      Height = 24
-      Top = 21
-      Width = 70
-      BorderSpacing.Top = 5
-      Font.CharSet = RUSSIAN_CHARSET
-      Font.Height = -16
-      Font.Name = 'Courier'
-      Font.Style = [fsItalic]
-      NumbersOnly = True
-      ParentFont = False
-      TabOrder = 1
-    end
-    object LPort: TLabel
-      AnchorSideLeft.Control = GB
-      AnchorSideTop.Control = GB
-      Left = 0
-      Height = 16
-      Top = 0
-      Width = 41
-      Caption = 'Порт'
-      Font.CharSet = RUSSIAN_CHARSET
-      Font.Height = -16
-      Font.Name = 'Courier'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
   end
   object SQLT: TSQLTransaction
     Active = False
@@ -8546,14 +8426,5 @@ object fUsers: TfUsers
     ConvertPreamble = True
     Left = 33
     Top = 54
-  end
-  object SQLQ2: TSQLQuery
-    FieldDefs = <>
-    Database = SQLC
-    Transaction = SQLT
-    Params = <>
-    Macros = <>
-    Left = 248
-    Top = 71
   end
 end

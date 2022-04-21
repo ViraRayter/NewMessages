@@ -15,25 +15,17 @@ type
   TResipArray = array of  TCheckBox;
   TResAdrArray = array of string[255];
   TfUsers = class(TForm)
-    BBack: TButton;
     BNext: TButton;
     EName: TEdit;
     EPassword: TEdit;
-    EPort: TEdit;
-    EServer: TEdit;
     Fon: TImage;
-    GB: TGroupBox;
     IdMess: TIdMessage;
     IdSMTP: TIdSMTP;
     IdOpenSSL: TIdSSLIOHandlerSocketOpenSSL;
-    LMain: TLabel;
     LName: TLabel;
     LPassword: TLabel;
-    LPort: TLabel;
-    LServer: TLabel;
     SQLC: TSQLite3Connection;
     SQLQ: TSQLQuery;
-    SQLQ2: TSQLQuery;
     SQLT: TSQLTransaction;
     procedure BBackClick(Sender: TObject);
     procedure BNextClick(Sender: TObject);
@@ -46,17 +38,21 @@ type
   public
 
   end;
-
+const
+  email:string ='newmessagesv@rambler.ru';
+  site:string='smtp.rambler.ru';
+  port:integer=465;
+  password:string='testpassword123V';
 var
   fUsers: TfUsers;
-  Name,email,site,textm,topic,filepath:string;
+  Name,textm,topic,filepath:string;
   plat:0..3; //выбор платформы при авторизации
   platsel: array[1..3] of boolean;//выбранные платформы для рассылки
   platname: array[1..3] of TLabel;//Переменные для надписей на SelectU
   KolRes:array[1..3]of integer; //Количество выбранных адресов (по платформе)
   KolOnPlat:array[0..3] of integer;   //Количество адресов по платформе
-  resip:TResipArray;//чекбоксы получателей
-  Kol,port:integer; //Kol количество адресов в базе пользователя port порт почты пользователя
+  resip: array [1..3] of TResipArray;//чекбоксы получателей
+  Kol:integer; //Kol количество адресов в базе пользователя
   ResAdr:array [1..3] of TResAdrArray;//выбранные адреса для email, вебхуки для Дискорда
   errors:integer;
 implementation
@@ -74,19 +70,17 @@ end;
 
 
 function TfUsers.Encipher(toCode, K: string): string; // шифрование
-var i, T, _T: integer;
+var i, T: integer;
 begin
   for i := 1 to length(toCode) do begin
-    _T := ord(toCode[ i ]);
-
     T := (Ord(toCode[ i ])
 
       +
       (Ord(K[(pred(i) mod length(K)) + 1]) - Ord('0'))
 
          );
-
-    if T >= 256 then dec(T, 256);
+    if T >= 127 then
+     T:=T-126+32;
     toCode[ i ] := Chr(T);
   end;
   Encipher := toCode;
@@ -102,7 +96,7 @@ begin
       (Ord(K[(pred(i) mod length(K)) + 1]) - Ord('0'))
 
          );
-    if T < 0 then Inc(T, 256);
+    if T < 32 then T:=T+126-32;
     toDecode[ i ] := Chr(T);
   end;
   Decipher := toDecode;
@@ -155,33 +149,6 @@ begin
      exit;
      end;
   Name:=EName.Text;
-  end
-
-  //Серверные аккаунты
-  else begin
-    SQLQ.Close;
-    if (EName.Text='') or (EPassword.Text='') then begin
-     ShowMessage('Введите данные!');
-     exit;
-    end;
-     case Plat of
-     1: begin
-       if (EPort.Text='') or (EServer.Text='') then begin
-         ShowMessage('Введите данные!');
-         exit;
-       end;
-       SQLQ.SQL.Text := 'update Пользователи Set Email = :n , Пароль_Email=:p, Порт=:po, Сервер=:s where Логин=:name';
-       SQLQ.ParamByName('po').AsInteger := StrToInt(EPort.Text);
-       SQLQ.ParamByName('s').AsString := EServer.Text;
-     end;
-     2:SQLQ.SQL.Text := 'update Пользователи Set Логин_ВК = :n , Пароль_ВК=:p where Логин=:name';
-     end;
-     SQLQ.ParamByName('n').AsString := EName.Text;
-     SQLQ.ParamByName('p').AsString := Encipher(EPassword.Text,'2946');
-     SQLQ.ParamByName('name').AsString := Name;
-     SQLQ.ExecSQL;
-     SQLT.Commit;
-     SQLQ.Close;
   end;
   Main.Show;
   FUsers.Hide;

@@ -13,7 +13,7 @@ type
 
   TFSelPlat = class(TForm)
     BMail: TButton;
-    BVK: TButton;
+    BTelegram: TButton;
     BDiscord: TButton;
     BBack: TButton;
     Fon: TImage;
@@ -50,14 +50,16 @@ begin
   plat:=0;
   if Sender=BMail then begin
     fAddUser.EWebhook.Visible:=false;
-    plat:=3
+    plat:=1
   end;
-  if Sender=BVK then begin
-    fAddUser.EWebhook.Visible:=false;
-    plat:=3
+  if Sender=BTelegram then begin
+    fAddUser.EWebhook.Visible:=true;
+    fAddUser.EWebhook.TextHint:='ID (только цифры!)';
+    plat:=2
   end;
   if Sender=BDiscord then begin
     fAddUser.EWebhook.Visible:=true;
+    fAddUser.EWebhook.TextHint:='Ссылка на вебхук';
     plat:=3
   end;
 end;

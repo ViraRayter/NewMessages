@@ -10,6 +10,7 @@ object FSelPlat: TFSelPlat
   OnCloseQuery = FormCloseQuery
   OnShow = FormShow
   Position = poDesktopCenter
+  ShowInTaskBar = stAlways
   LCLVersion = '2.2.0.4'
   object Fon: TImage
     Left = 0
@@ -8326,7 +8327,7 @@ object FSelPlat: TFSelPlat
     ParentFont = False
     TabOrder = 1
   end
-  object BVK: TButton
+  object BTelegram: TButton
     AnchorSideLeft.Control = Owner
     AnchorSideLeft.Side = asrCenter
     AnchorSideTop.Control = BMail
@@ -8336,7 +8337,7 @@ object FSelPlat: TFSelPlat
     Top = 245
     Width = 200
     BorderSpacing.Top = 25
-    Caption = 'VK'
+    Caption = 'Telegram'
     Font.Height = -16
     Font.Name = 'Courier'
     Font.Style = [fsBold]
@@ -8347,7 +8348,7 @@ object FSelPlat: TFSelPlat
   object BDiscord: TButton
     AnchorSideLeft.Control = Owner
     AnchorSideLeft.Side = asrCenter
-    AnchorSideTop.Control = BVK
+    AnchorSideTop.Control = BTelegram
     AnchorSideTop.Side = asrBottom
     Left = 50
     Height = 35

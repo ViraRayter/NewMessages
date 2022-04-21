@@ -8361,6 +8361,6 @@ object fAddUser: TfAddUser
     Font.Style = [fsItalic]
     ParentFont = False
     TabOrder = 3
-    TextHint = 'Ссылка на вебхук'
+    TextHint = 'ID (только цифры!)'
   end
 end

@@ -59,11 +59,19 @@ begin
 end;
 
 procedure TfAddUser.BAddClick(Sender: TObject);
+var i:integer;
 begin
-  if (EUserName.Text='') or ((plat=3) and (EWebhook.Text='')) then begin
+  if (EUserName.Text='') or (((plat=3) or (plat=2)) and (EWebhook.Text='')) then begin
   ShowMessage('Введите данные!');
   exit;
   end;
+  if plat=2 then
+   try
+     i:=strtoint(EWebhook.Text);
+   except
+     ShowMessage('Неправильный формат ID!');
+     exit;
+   end;
   with fUsers do begin
    SQLQ.Close;
    SQLQ.SQL.Text:='insert into Адреса(Данные,Пользователь,Платформа,Вебхук) values(:n,:p,:pl,:w);';
