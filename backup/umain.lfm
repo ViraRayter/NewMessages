@@ -11,6 +11,7 @@ object Main: TMain
   OnClose = FormClose
   OnShow = FormShow
   Position = poDesktopCenter
+  ShowInTaskBar = stAlways
   LCLVersion = '2.2.0.4'
   object Fon: TImage
     Left = 0
@@ -8387,12 +8388,5 @@ object Main: TMain
     OnClick = BNextClick
     ParentFont = False
     TabOrder = 4
-  end
-  object SQLQuery1: TSQLQuery
-    FieldDefs = <>
-    Params = <>
-    Macros = <>
-    Left = 8
-    Top = 8
   end
 end

@@ -72,7 +72,7 @@ begin
       with fUsers do begin
       SQLQ.Close;
       SQLQ.SQL.Text:='select Вебхук from Адреса where Пользователь = :L and Данные=:w';
-      SQLQ.ParamByName('L').AsString :=Name;
+      SQLQ.ParamByName('L').AsString :=login_name;
       SQLQ.ParamByName('w').AsString :=ResAdr[j][i];
       SQLQ.Open;
       test:=FUsers.Decipher(SQLQ.Fields.FieldByName('Вебхук').AsString,'2946');
@@ -123,7 +123,7 @@ begin
   with fUsers do begin
    SQLQ.Close;
    SQLQ.SQL.Text:='select Count(*) as Количество from Адреса where Пользователь = :L and Платформа=:p';
-   SQLQ.ParamByName('L').AsString :=Name;
+   SQLQ.ParamByName('L').AsString :=login_name;
    SQLQ.ParamByName('p').AsInteger :=PL;
    SQLQ.Open;
    KolOnPlat[PL]:=SQLQ.Fields.FieldByName('Количество').AsInteger;
@@ -142,9 +142,10 @@ begin
    //Заполнение адресов
    i:=0;
    with fUsers do begin
+   x:=x+5;  //мое дополне
    SQLQ.Close;
    SQLQ.SQL.Text:='select Данные from Адреса where Пользователь = :L  and Платформа= :p';
-   SQLQ.ParamByName('L').AsString :=Name;
+   SQLQ.ParamByName('L').AsString :=login_name;
    SQLQ.ParamByName('p').AsInteger :=PL;
    SQLQ.Open;
    SQLQ.First;
@@ -155,7 +156,7 @@ begin
      resip[PL][i].Top:=x;
      resip[PL][i].Caption:=fUsers.SQLQ.Fields.FieldByName('Данные').AsString;
      end;
-     inc(i);SQLQ.Next; x:=x+16;
+     inc(i);SQLQ.Next; x:=x+20;
      end;
     end;
     x:=x+16;  //Пустая строка

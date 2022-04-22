@@ -20,7 +20,6 @@ type
     BMail: TToggleBox;
     BTelegram: TToggleBox;
     BDiscord: TToggleBox;
-    SQLQuery1: TSQLQuery;
     procedure BBackClick(Sender: TObject);
     procedure BNextClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);

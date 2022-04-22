@@ -11,6 +11,7 @@ object fUsers: TfUsers
   OnCreate = FormCreate
   OnShow = FormShow
   Position = poDesktopCenter
+  ShowInTaskBar = stAlways
   LCLVersion = '2.2.0.4'
   object Fon: TImage
     Left = 0

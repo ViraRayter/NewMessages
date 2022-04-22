@@ -8358,6 +8358,8 @@ object fSelectU: TfSelectU
     Width = 250
     HorzScrollBar.Page = 1
     VertScrollBar.Page = 1
+    VertScrollBar.Smooth = True
+    VertScrollBar.Tracking = True
     Color = clNone
     Font.CharSet = RUSSIAN_CHARSET
     Font.Height = -16

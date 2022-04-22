@@ -45,7 +45,7 @@ const
   password:string='testpassword123V';
 var
   fUsers: TfUsers;
-  Name,textm,topic,filepath:string;
+  login_name,textm,topic,filepath:string;
   plat:0..3; //выбор платформы при авторизации
   platsel: array[1..3] of boolean;//выбранные платформы для рассылки
   platname: array[1..3] of TLabel;//Переменные для надписей на SelectU
@@ -148,7 +148,7 @@ begin
      ShowMessage('Неправильный пароль');
      exit;
      end;
-  Name:=EName.Text;
+  login_name:=EName.Text;
   end;
   Main.Show;
   FUsers.Hide;

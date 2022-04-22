@@ -74,7 +74,7 @@ end;
 procedure TMain.BBackClick(Sender: TObject);
 begin
  FUsers.Show;
- Name:='';
+ login_name:='';
  Main.Hide;
 end;
 

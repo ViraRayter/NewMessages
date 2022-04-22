@@ -76,7 +76,7 @@ begin
    SQLQ.Close;
    SQLQ.SQL.Text:='insert into Адреса(Данные,Пользователь,Платформа,Вебхук) values(:n,:p,:pl,:w);';
    SQLQ.ParamByName('n').AsString:=EUserName.Text;
-   SQLQ.ParamByName('p').AsString:=Name;
+   SQLQ.ParamByName('p').AsString:=login_name;
    SQLQ.ParamByName('pl').AsInteger:=plat;
    SQLQ.ParamByName('w').AsString:=Encipher(EWebhook.Text,'2946');
    SQLQ.ExecSQL;
